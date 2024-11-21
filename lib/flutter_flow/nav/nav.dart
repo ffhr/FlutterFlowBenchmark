@@ -29,12 +29,38 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) => const HomePageWidget(),
+      errorBuilder: (context, state) => appStateNotifier.showSplashImage
+          ? Builder(
+              builder: (context) => Container(
+                color: const Color(0xFF0A0712),
+                child: Center(
+                  child: Image.asset(
+                    'assets/images/ff_benchmark_1024.png',
+                    width: 256.0,
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+            )
+          : const HomePageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => const HomePageWidget(),
+          builder: (context, _) => appStateNotifier.showSplashImage
+              ? Builder(
+                  builder: (context) => Container(
+                    color: const Color(0xFF0A0712),
+                    child: Center(
+                      child: Image.asset(
+                        'assets/images/ff_benchmark_1024.png',
+                        width: 256.0,
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ),
+                )
+              : const HomePageWidget(),
         ),
         FFRoute(
           name: 'HomePage',
