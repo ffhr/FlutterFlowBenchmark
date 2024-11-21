@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'login_page_model.dart';
 export 'login_page_model.dart';
 
@@ -80,8 +81,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                         context.goNamedAuth('HomePage', context.mounted);
                       },
                       text: 'Login with Google',
-                      icon: Icon(
-                        Icons.toggle_on,
+                      icon: FaIcon(
+                        FontAwesomeIcons.google,
                         color: FlutterFlowTheme.of(context).primaryText,
                         size: 16.0,
                       ),
