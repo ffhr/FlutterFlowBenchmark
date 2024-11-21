@@ -70,6 +70,17 @@ android {
 		checkReleaseBuilds false
 		disable 'InvalidPackage'
 	}
+
+    //LOCAL_START
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+        
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+    //LOCAL_END
 }
 
 flutter {
