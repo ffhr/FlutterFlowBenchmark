@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '/index.dart';
+import '/main.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
 export 'package:go_router/go_router.dart';
@@ -42,7 +43,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 ),
               ),
             )
-          : const HomePageWidget(),
+          : const NavBarPage(),
       routes: [
         FFRoute(
           name: '_initialize',
@@ -60,12 +61,21 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                     ),
                   ),
                 )
-              : const HomePageWidget(),
+              : const NavBarPage(),
         ),
         FFRoute(
           name: 'HomePage',
           path: '/homePage',
-          builder: (context, params) => const HomePageWidget(),
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'HomePage')
+              : const HomePageWidget(),
+        ),
+        FFRoute(
+          name: 'LoginPage',
+          path: '/loginPage',
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'LoginPage')
+              : const LoginPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
