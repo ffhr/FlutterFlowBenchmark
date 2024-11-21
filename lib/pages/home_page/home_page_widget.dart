@@ -67,7 +67,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 onPressed: () {
                   print('Button pressed ...');
                 },
-                text: 'Matej Emanuel Stepanic',
+                text: 'hey',
                 options: FFButtonOptions(
                   width: double.infinity,
                   height: 265.0,
