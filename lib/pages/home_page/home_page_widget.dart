@@ -1,3 +1,4 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -64,13 +65,16 @@ class _HomePageWidgetState extends State<HomePageWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               FFButtonWidget(
-                onPressed: () {
-                  print('Button pressed ...');
+                onPressed: () async {
+                  GoRouter.of(context).prepareAuthEvent();
+                  await authManager.signOut();
+                  GoRouter.of(context).clearRedirectLocation();
+
+                  context.goNamedAuth('LoginPage', context.mounted);
                 },
-                text: 'hey',
+                text: 'Logout',
                 options: FFButtonOptions(
-                  width: double.infinity,
-                  height: 265.0,
+                  height: 40.0,
                   padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   iconPadding:
                       const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
@@ -78,27 +82,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                         fontFamily: 'Inter Tight',
                         color: Colors.white,
-                        fontSize: 128.0,
                         letterSpacing: 0.0,
                       ),
                   elevation: 0.0,
                   borderRadius: BorderRadius.circular(8.0),
                 ),
-              ),
-              Container(
-                width: 100.0,
-                height: 100.0,
-                decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
-                ),
-              ),
-              const Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [],
-              ),
-              const Column(
-                mainAxisSize: MainAxisSize.max,
-                children: [],
               ),
             ],
           ),
