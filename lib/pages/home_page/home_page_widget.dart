@@ -115,7 +115,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                 ),
-              ],
+              ].divide(SizedBox(height: 16.0)),
             ),
           ),
         ),
