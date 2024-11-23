@@ -74,7 +74,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
 
                   context.goNamedAuth('LoginPage', context.mounted);
                 },
-                text: 'Logout 21',
+                text: 'Logout 22',
                 options: FFButtonOptions(
                   height: 40.0,
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
