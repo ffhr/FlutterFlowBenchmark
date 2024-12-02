@@ -96,9 +96,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'LoginPage',
           path: '/login',
+          builder: (context, params) => LoginPageWidget(),
+        ),
+        FFRoute(
+          name: 'ProfilePage',
+          path: '/profilePage',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'LoginPage')
-              : LoginPageWidget(),
+              ? NavBarPage(initialPage: 'ProfilePage')
+              : ProfilePageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
