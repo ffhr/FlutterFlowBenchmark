@@ -64,10 +64,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
         body: SafeArea(
           top: true,
           child: Align(
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: AlignmentDirectional(-1.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 FFButtonWidget(
                   onPressed: () async {
@@ -77,14 +78,14 @@ class _HomePageWidgetState extends State<HomePageWidget> {
 
                     context.goNamedAuth('LoginPage', context.mounted);
                   },
-                  text: 'Logout 26',
+                  text: 'Logout 27',
                   options: FFButtonOptions(
                     height: 90.0,
                     padding:
                         EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                     iconPadding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: FlutterFlowTheme.of(context).secondary,
+                    color: FlutterFlowTheme.of(context).tertiary,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Inter Tight',
                           color: Colors.white,
