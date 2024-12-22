@@ -201,7 +201,14 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           child: Padding(
                                             padding: EdgeInsets.all(8.0),
                                             child: Text(
-                                              'A',
+                                              valueOrDefault<String>(
+                                                (String input) {
+                                                  return input.isEmpty
+                                                      ? '?'
+                                                      : input[0].toUpperCase();
+                                                }(columnReadWidgetsRow.title),
+                                                '?',
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
