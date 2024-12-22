@@ -1,18 +1,26 @@
-import '/backend/sqlite/sqlite_manager.dart';
+import '/components/widgets_from_sql_lite_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'home_page_widget.dart' show HomePageWidget;
-import 'package:sticky_headers/sticky_headers.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class HomePageModel extends FlutterFlowModel<HomePageWidget> {
-  @override
-  void initState(BuildContext context) {}
+  ///  State fields for stateful widgets in this page.
+
+  // Model for WidgetsFromSqlLite component.
+  late WidgetsFromSqlLiteModel widgetsFromSqlLiteModel;
 
   @override
-  void dispose() {}
+  void initState(BuildContext context) {
+    widgetsFromSqlLiteModel =
+        createModel(context, () => WidgetsFromSqlLiteModel());
+  }
+
+  @override
+  void dispose() {
+    widgetsFromSqlLiteModel.dispose();
+  }
 }
