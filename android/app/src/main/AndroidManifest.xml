@@ -5,7 +5,7 @@
 
 
     <application
-        android:label="FF Banchmark"
+        android:label="FF Benchmark"
         tools:replace="android:label"
         android:icon="@mipmap/ic_launcher"
         android:requestLegacyExternalStorage="true">
