@@ -6,8 +6,13 @@ import '/widgets/components/base_elements/widget_text/widget_text_widget.dart';
 import '/widgets/components/layout_elements/widget_card/widget_card_widget.dart';
 import '/widgets/components/layout_elements/widget_column/widget_column_widget.dart';
 import '/widgets/components/layout_elements/widget_container/widget_container_widget.dart';
+import '/widgets/components/layout_elements/widget_divider/widget_divider_widget.dart';
+import '/widgets/components/layout_elements/widget_grid_view/widget_grid_view_widget.dart';
+import '/widgets/components/layout_elements/widget_list_view/widget_list_view_widget.dart';
 import '/widgets/components/layout_elements/widget_row/widget_row_widget.dart';
+import '/widgets/components/layout_elements/widget_spacer/widget_spacer_widget.dart';
 import '/widgets/components/layout_elements/widget_stack/widget_stack_widget.dart';
+import '/widgets/components/layout_elements/widget_vertical_divider/widget_vertical_divider_widget.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -101,7 +106,7 @@ class _WidgetPageWidgetState extends State<WidgetPageWidget> {
                 builder: (context) {
                   if (widget!.widgetTitle == 'Text') {
                     return wrapWithModel(
-                      model: _model.widgetTextModel1,
+                      model: _model.widgetTextModel,
                       updateCallback: () => safeSetState(() {}),
                       child: WidgetTextWidget(),
                     );
@@ -135,11 +140,43 @@ class _WidgetPageWidgetState extends State<WidgetPageWidget> {
                       updateCallback: () => safeSetState(() {}),
                       child: WidgetCardWidget(),
                     );
-                  } else {
+                  } else if (widget!.widgetTitle == 'ListView') {
                     return wrapWithModel(
-                      model: _model.widgetTextModel2,
+                      model: _model.widgetListViewModel,
                       updateCallback: () => safeSetState(() {}),
-                      child: WidgetTextWidget(),
+                      child: WidgetListViewWidget(),
+                    );
+                  } else if (widget!.widgetTitle == 'GridView') {
+                    return wrapWithModel(
+                      model: _model.widgetGridViewModel,
+                      updateCallback: () => safeSetState(() {}),
+                      child: WidgetGridViewWidget(),
+                    );
+                  } else if (widget!.widgetTitle == 'Spacer') {
+                    return wrapWithModel(
+                      model: _model.widgetSpacerModel,
+                      updateCallback: () => safeSetState(() {}),
+                      child: WidgetSpacerWidget(),
+                    );
+                  } else if (widget!.widgetTitle == 'Divider') {
+                    return wrapWithModel(
+                      model: _model.widgetDividerModel,
+                      updateCallback: () => safeSetState(() {}),
+                      child: WidgetDividerWidget(),
+                    );
+                  } else if (widget!.widgetTitle == 'VerticalDivider') {
+                    return wrapWithModel(
+                      model: _model.widgetVerticalDividerModel,
+                      updateCallback: () => safeSetState(() {}),
+                      child: WidgetVerticalDividerWidget(),
+                    );
+                  } else {
+                    return Text(
+                      'Hello World',
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                            fontFamily: 'Inter',
+                            letterSpacing: 0.0,
+                          ),
                     );
                   }
                 },
