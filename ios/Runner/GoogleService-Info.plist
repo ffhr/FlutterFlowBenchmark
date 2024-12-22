@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>328882098159-v645fegofji1e0m7hqrf5l60h6i2sk6t.apps.googleusercontent.com</string>
+	<string>328882098159-vjmu4vi4i4s3ucehtulpgcbaamiadui5.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.328882098159-v645fegofji1e0m7hqrf5l60h6i2sk6t</string>
+	<string>com.googleusercontent.apps.328882098159-vjmu4vi4i4s3ucehtulpgcbaamiadui5</string>
 	<key>ANDROID_CLIENT_ID</key>
 	<string>328882098159-6669tk34o3clsf2gpa0b3r1u6phms1qb.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
@@ -15,7 +15,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>hr.ff.flutterflowbenchmark</string>
+	<string>hr.ff.ffbenchmark</string>
 	<key>PROJECT_ID</key>
 	<string>ff-benchmark-production</string>
 	<key>STORAGE_BUCKET</key>
@@ -31,6 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:328882098159:ios:9a0a54fd56826b8f3d701a</string>
+	<string>1:328882098159:ios:c725598d6a50c1213d701a</string>
 </dict>
 </plist>

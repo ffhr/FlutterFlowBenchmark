@@ -1,4 +1,4 @@
-package hr.ff.flutterflowbenchmark
+package hr.ff.ffbenchmark
 
 import io.flutter.embedding.android.FlutterActivity
 
