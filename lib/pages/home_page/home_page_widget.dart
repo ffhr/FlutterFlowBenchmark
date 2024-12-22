@@ -154,108 +154,133 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             return Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 1.0),
-                              child: Container(
-                                width: double.infinity,
-                                height: 70.0,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
-                                  boxShadow: [
-                                    BoxShadow(
-                                      blurRadius: 0.0,
+                              child: InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  context.pushNamed(
+                                    'WidgetPage',
+                                    pathParameters: {
+                                      'slug': serializeParam(
+                                        columnReadWidgetsRow.id,
+                                        ParamType.String,
+                                      ),
+                                    }.withoutNulls,
+                                    queryParameters: {
+                                      'widgetTitle': serializeParam(
+                                        columnReadWidgetsRow.title,
+                                        ParamType.String,
+                                      ),
+                                    }.withoutNulls,
+                                  );
+                                },
+                                child: Container(
+                                  width: double.infinity,
+                                  height: 70.0,
+                                  decoration: BoxDecoration(
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    boxShadow: [
+                                      BoxShadow(
+                                        blurRadius: 0.0,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryBackground,
+                                        offset: Offset(
+                                          0.0,
+                                          1.0,
+                                        ),
+                                        spreadRadius: 0.0,
+                                      )
+                                    ],
+                                    borderRadius: BorderRadius.circular(1.0),
+                                    border: Border.all(
                                       color: FlutterFlowTheme.of(context)
                                           .primaryBackground,
-                                      offset: Offset(
-                                        0.0,
-                                        1.0,
-                                      ),
-                                      spreadRadius: 0.0,
-                                    )
-                                  ],
-                                  borderRadius: BorderRadius.circular(1.0),
-                                  border: Border.all(
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryBackground,
+                                    ),
                                   ),
-                                ),
-                                alignment: AlignmentDirectional(0.0, 0.0),
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      16.0, 12.0, 16.0, 12.0),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Container(
-                                        width: 50.0,
-                                        height: 50.0,
-                                        decoration: BoxDecoration(
-                                          color: FlutterFlowTheme.of(context)
-                                              .primary,
-                                          shape: BoxShape.circle,
-                                        ),
-                                        child: Align(
-                                          alignment:
-                                              AlignmentDirectional(0.0, 0.0),
-                                          child: Padding(
-                                            padding: EdgeInsets.all(8.0),
-                                            child: Text(
-                                              valueOrDefault<String>(
-                                                (String input) {
-                                                  return input.isEmpty
-                                                      ? '?'
-                                                      : input[0].toUpperCase();
-                                                }(columnReadWidgetsRow.title),
-                                                '?',
-                                              ),
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily: 'Inter',
-                                                        color: Colors.white,
-                                                        fontSize: 20.0,
-                                                        letterSpacing: 0.0,
-                                                      ),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Expanded(
-                                        child: Container(
-                                          width: 100.0,
-                                          height: 100.0,
+                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        16.0, 12.0, 16.0, 12.0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Container(
+                                          width: 50.0,
+                                          height: 50.0,
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
-                                                .secondaryBackground,
+                                                .primary,
+                                            shape: BoxShape.circle,
                                           ),
                                           child: Align(
                                             alignment:
-                                                AlignmentDirectional(-1.0, 0.0),
+                                                AlignmentDirectional(0.0, 0.0),
                                             child: Padding(
                                               padding: EdgeInsets.all(8.0),
                                               child: Text(
-                                                columnReadWidgetsRow.title,
+                                                valueOrDefault<String>(
+                                                  (String input) {
+                                                    return input.isEmpty
+                                                        ? '?'
+                                                        : input[0]
+                                                            .toUpperCase();
+                                                  }(columnReadWidgetsRow.title),
+                                                  '?',
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
-                                                        .bodyLarge
+                                                        .bodyMedium
                                                         .override(
                                                           fontFamily: 'Inter',
+                                                          color: Colors.white,
+                                                          fontSize: 20.0,
                                                           letterSpacing: 0.0,
                                                         ),
                                               ),
                                             ),
                                           ),
                                         ),
-                                      ),
-                                      Icon(
-                                        Icons.chevron_right_rounded,
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryText,
-                                        size: 24.0,
-                                      ),
-                                    ].divide(SizedBox(width: 16.0)),
+                                        Expanded(
+                                          child: Container(
+                                            width: 100.0,
+                                            height: 100.0,
+                                            decoration: BoxDecoration(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryBackground,
+                                            ),
+                                            child: Align(
+                                              alignment: AlignmentDirectional(
+                                                  -1.0, 0.0),
+                                              child: Padding(
+                                                padding: EdgeInsets.all(8.0),
+                                                child: Text(
+                                                  columnReadWidgetsRow.title,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyLarge
+                                                      .override(
+                                                        fontFamily: 'Inter',
+                                                        letterSpacing: 0.0,
+                                                      ),
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        Icon(
+                                          Icons.chevron_right_rounded,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryText,
+                                          size: 24.0,
+                                        ),
+                                      ].divide(SizedBox(width: 16.0)),
+                                    ),
                                   ),
                                 ),
                               ),
