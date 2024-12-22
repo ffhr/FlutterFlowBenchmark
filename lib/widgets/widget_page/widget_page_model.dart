@@ -6,7 +6,11 @@ import '/widgets/components/base_elements/widget_text/widget_text_widget.dart';
 import '/widgets/components/layout_elements/widget_card/widget_card_widget.dart';
 import '/widgets/components/layout_elements/widget_column/widget_column_widget.dart';
 import '/widgets/components/layout_elements/widget_container/widget_container_widget.dart';
+import '/widgets/components/layout_elements/widget_divider/widget_divider_widget.dart';
+import '/widgets/components/layout_elements/widget_grid_view/widget_grid_view_widget.dart';
+import '/widgets/components/layout_elements/widget_list_view/widget_list_view_widget.dart';
 import '/widgets/components/layout_elements/widget_row/widget_row_widget.dart';
+import '/widgets/components/layout_elements/widget_spacer/widget_spacer_widget.dart';
 import '/widgets/components/layout_elements/widget_stack/widget_stack_widget.dart';
 import 'dart:ui';
 import 'widget_page_widget.dart' show WidgetPageWidget;
@@ -18,7 +22,7 @@ class WidgetPageModel extends FlutterFlowModel<WidgetPageWidget> {
   ///  State fields for stateful widgets in this page.
 
   // Model for WidgetText component.
-  late WidgetTextModel widgetTextModel1;
+  late WidgetTextModel widgetTextModel;
   // Model for WidgetContainer component.
   late WidgetContainerModel widgetContainerModel;
   // Model for WidgetRow component.
@@ -29,28 +33,40 @@ class WidgetPageModel extends FlutterFlowModel<WidgetPageWidget> {
   late WidgetStackModel widgetStackModel;
   // Model for WidgetCard component.
   late WidgetCardModel widgetCardModel;
-  // Model for WidgetText component.
-  late WidgetTextModel widgetTextModel2;
+  // Model for WidgetListView component.
+  late WidgetListViewModel widgetListViewModel;
+  // Model for WidgetGridView component.
+  late WidgetGridViewModel widgetGridViewModel;
+  // Model for WidgetSpacer component.
+  late WidgetSpacerModel widgetSpacerModel;
+  // Model for WidgetDivider component.
+  late WidgetDividerModel widgetDividerModel;
 
   @override
   void initState(BuildContext context) {
-    widgetTextModel1 = createModel(context, () => WidgetTextModel());
+    widgetTextModel = createModel(context, () => WidgetTextModel());
     widgetContainerModel = createModel(context, () => WidgetContainerModel());
     widgetRowModel = createModel(context, () => WidgetRowModel());
     widgetColumnModel = createModel(context, () => WidgetColumnModel());
     widgetStackModel = createModel(context, () => WidgetStackModel());
     widgetCardModel = createModel(context, () => WidgetCardModel());
-    widgetTextModel2 = createModel(context, () => WidgetTextModel());
+    widgetListViewModel = createModel(context, () => WidgetListViewModel());
+    widgetGridViewModel = createModel(context, () => WidgetGridViewModel());
+    widgetSpacerModel = createModel(context, () => WidgetSpacerModel());
+    widgetDividerModel = createModel(context, () => WidgetDividerModel());
   }
 
   @override
   void dispose() {
-    widgetTextModel1.dispose();
+    widgetTextModel.dispose();
     widgetContainerModel.dispose();
     widgetRowModel.dispose();
     widgetColumnModel.dispose();
     widgetStackModel.dispose();
     widgetCardModel.dispose();
-    widgetTextModel2.dispose();
+    widgetListViewModel.dispose();
+    widgetGridViewModel.dispose();
+    widgetSpacerModel.dispose();
+    widgetDividerModel.dispose();
   }
 }
