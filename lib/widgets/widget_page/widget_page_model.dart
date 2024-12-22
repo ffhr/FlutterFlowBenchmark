@@ -12,6 +12,7 @@ import '/widgets/components/layout_elements/widget_list_view/widget_list_view_wi
 import '/widgets/components/layout_elements/widget_row/widget_row_widget.dart';
 import '/widgets/components/layout_elements/widget_spacer/widget_spacer_widget.dart';
 import '/widgets/components/layout_elements/widget_stack/widget_stack_widget.dart';
+import '/widgets/components/layout_elements/widget_vertical_divider/widget_vertical_divider_widget.dart';
 import 'dart:ui';
 import 'widget_page_widget.dart' show WidgetPageWidget;
 import 'package:flutter/material.dart';
@@ -41,6 +42,8 @@ class WidgetPageModel extends FlutterFlowModel<WidgetPageWidget> {
   late WidgetSpacerModel widgetSpacerModel;
   // Model for WidgetDivider component.
   late WidgetDividerModel widgetDividerModel;
+  // Model for WidgetVerticalDivider component.
+  late WidgetVerticalDividerModel widgetVerticalDividerModel;
 
   @override
   void initState(BuildContext context) {
@@ -54,6 +57,8 @@ class WidgetPageModel extends FlutterFlowModel<WidgetPageWidget> {
     widgetGridViewModel = createModel(context, () => WidgetGridViewModel());
     widgetSpacerModel = createModel(context, () => WidgetSpacerModel());
     widgetDividerModel = createModel(context, () => WidgetDividerModel());
+    widgetVerticalDividerModel =
+        createModel(context, () => WidgetVerticalDividerModel());
   }
 
   @override
@@ -68,5 +73,6 @@ class WidgetPageModel extends FlutterFlowModel<WidgetPageWidget> {
     widgetGridViewModel.dispose();
     widgetSpacerModel.dispose();
     widgetDividerModel.dispose();
+    widgetVerticalDividerModel.dispose();
   }
 }

@@ -12,6 +12,7 @@ import '/widgets/components/layout_elements/widget_list_view/widget_list_view_wi
 import '/widgets/components/layout_elements/widget_row/widget_row_widget.dart';
 import '/widgets/components/layout_elements/widget_spacer/widget_spacer_widget.dart';
 import '/widgets/components/layout_elements/widget_stack/widget_stack_widget.dart';
+import '/widgets/components/layout_elements/widget_vertical_divider/widget_vertical_divider_widget.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -162,6 +163,12 @@ class _WidgetPageWidgetState extends State<WidgetPageWidget> {
                       model: _model.widgetDividerModel,
                       updateCallback: () => safeSetState(() {}),
                       child: WidgetDividerWidget(),
+                    );
+                  } else if (widget!.widgetTitle == 'VerticalDivider') {
+                    return wrapWithModel(
+                      model: _model.widgetVerticalDividerModel,
+                      updateCallback: () => safeSetState(() {}),
+                      child: WidgetVerticalDividerWidget(),
                     );
                   } else {
                     return Text(
