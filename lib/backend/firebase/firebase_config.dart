@@ -10,8 +10,8 @@ Future initFirebase() async {
             projectId: "ff-benchmark-production",
             storageBucket: "ff-benchmark-production.firebasestorage.app",
             messagingSenderId: "328882098159",
-            appId: "1:328882098159:web:3446d4ed63a9989e3d701a",
-            measurementId: "G-LY95XZPNNS"));
+            appId: "1:328882098159:web:6b6582f87505b1023d701a",
+            measurementId: "G-L5G6QE9MG0"));
   } else {
     await Firebase.initializeApp();
   }
