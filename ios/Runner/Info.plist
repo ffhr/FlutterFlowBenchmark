@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>FF Benchmark Development</string>
+	<string>FF Benchmark Staging</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -28,7 +28,7 @@
             <string>Editor</string>
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>com.googleusercontent.apps.1015621602831-v1vj7fkdnbqvcpocvftaefcb1e6ra6be</string>
+                <string>com.googleusercontent.apps.776187583115-dqo4fisuurn6b046jqni8tloht7gdhpb</string>
                 
             </array>
         </dict>
