@@ -192,18 +192,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
         ),
         body: SafeArea(
           top: true,
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                wrapWithModel(
-                  model: _model.widgetsFromSqlLiteModel,
-                  updateCallback: () => safeSetState(() {}),
-                  child: WidgetsFromSqlLiteWidget(),
-                ),
-              ],
-            ),
+          child: wrapWithModel(
+            model: _model.widgetsFromSqlLiteModel,
+            updateCallback: () => safeSetState(() {}),
+            child: WidgetsFromSqlLiteWidget(),
           ),
         ),
       ),
