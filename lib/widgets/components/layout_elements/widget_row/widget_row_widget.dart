@@ -42,9 +42,39 @@ class _WidgetRowWidgetState extends State<WidgetRowWidget> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(),
-      child: Row(
+      child: Column(
         mainAxisSize: MainAxisSize.min,
-        children: [],
+        children: [
+          Container(
+            decoration: BoxDecoration(),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Container(
+                  width: 100.0,
+                  height: 100.0,
+                  decoration: BoxDecoration(
+                    color: FlutterFlowTheme.of(context).primary,
+                  ),
+                ),
+                Container(
+                  width: 100.0,
+                  height: 100.0,
+                  decoration: BoxDecoration(
+                    color: FlutterFlowTheme.of(context).secondary,
+                  ),
+                ),
+                Container(
+                  width: 100.0,
+                  height: 100.0,
+                  decoration: BoxDecoration(
+                    color: FlutterFlowTheme.of(context).tertiary,
+                  ),
+                ),
+              ].divide(SizedBox(width: 16.0)),
+            ),
+          ),
+        ],
       ),
     );
   }
