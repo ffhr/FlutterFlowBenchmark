@@ -1,4 +1,5 @@
 import '/flutter_flow/flutter_flow_util.dart';
+import 'dart:ui';
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -40,10 +41,32 @@ class _WidgetContainerWidgetState extends State<WidgetContainerWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 100.0,
-      height: 100.0,
-      decoration: BoxDecoration(
-        color: FlutterFlowTheme.of(context).secondaryBackground,
+      decoration: BoxDecoration(),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+            width: 100.0,
+            height: 100.0,
+            decoration: BoxDecoration(
+              color: FlutterFlowTheme.of(context).primary,
+            ),
+          ),
+          Container(
+            width: 100.0,
+            height: 100.0,
+            decoration: BoxDecoration(
+              color: FlutterFlowTheme.of(context).secondary,
+            ),
+          ),
+          Container(
+            width: 100.0,
+            height: 100.0,
+            decoration: BoxDecoration(
+              color: FlutterFlowTheme.of(context).tertiary,
+            ),
+          ),
+        ].divide(SizedBox(height: 16.0)),
       ),
     );
   }
