@@ -53,49 +53,53 @@ class _HomePageWidgetState extends State<HomePageWidget> {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                width: double.infinity,
-                height: 56.0,
-                decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).primary,
-                ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    InkWell(
-                      splashColor: Colors.transparent,
-                      focusColor: Colors.transparent,
-                      hoverColor: Colors.transparent,
-                      highlightColor: Colors.transparent,
-                      onTap: () async {
-                        if (scaffoldKey.currentState!.isDrawerOpen ||
-                            scaffoldKey.currentState!.isEndDrawerOpen) {
-                          Navigator.pop(context);
-                        }
-                      },
-                      child: Icon(
-                        Icons.menu_open,
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
-                        size: 32.0,
+              SafeArea(
+                child: Container(
+                  width: double.infinity,
+                  height: 56.0,
+                  decoration: BoxDecoration(
+                    color: FlutterFlowTheme.of(context).primary,
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
+                        onTap: () async {
+                          if (scaffoldKey.currentState!.isDrawerOpen ||
+                              scaffoldKey.currentState!.isEndDrawerOpen) {
+                            Navigator.pop(context);
+                          }
+                        },
+                        child: Icon(
+                          Icons.menu_open,
+                          color:
+                              FlutterFlowTheme.of(context).secondaryBackground,
+                          size: 32.0,
+                        ),
                       ),
-                    ),
-                    Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
-                      child: Text(
-                        'FlutterFlowBenchmark',
-                        style: FlutterFlowTheme.of(context).titleLarge.override(
-                              fontFamily: 'Geist',
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              letterSpacing: 0.0,
-                              useGoogleFonts: false,
-                            ),
+                      Align(
+                        alignment: AlignmentDirectional(0.0, 0.0),
+                        child: Text(
+                          'FlutterFlowBenchmark',
+                          style:
+                              FlutterFlowTheme.of(context).titleLarge.override(
+                                    fontFamily: 'Geist',
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: false,
+                                  ),
+                        ),
                       ),
-                    ),
-                  ]
-                      .divide(SizedBox(width: 10.0))
-                      .addToStart(SizedBox(width: 16.0)),
+                    ]
+                        .divide(SizedBox(width: 10.0))
+                        .addToStart(SizedBox(width: 16.0)),
+                  ),
                 ),
               ),
               Padding(
