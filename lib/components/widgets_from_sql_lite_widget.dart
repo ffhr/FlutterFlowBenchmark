@@ -67,7 +67,12 @@ class _WidgetsFromSqlLiteWidgetState extends State<WidgetsFromSqlLiteWidget> {
                   snapshot.data!;
 
               return ListView.builder(
-                padding: EdgeInsets.zero,
+                padding: EdgeInsets.fromLTRB(
+                  0,
+                  0,
+                  0,
+                  128.0,
+                ),
                 shrinkWrap: true,
                 scrollDirection: Axis.vertical,
                 itemCount: widgetCategoriesReadWidgetCategoriesRowList.length,
