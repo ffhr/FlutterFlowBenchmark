@@ -132,6 +132,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'SupabaseRealtime',
           path: '/supabase-realtime',
           builder: (context, params) => SupabaseRealtimeWidget(),
+        ),
+        FFRoute(
+          name: 'Shadcn',
+          path: '/shadcn',
+          builder: (context, params) => ShadcnWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

@@ -99,8 +99,9 @@ class _WidgetsFromSqlLiteWidgetState extends State<WidgetsFromSqlLiteWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .titleLarge
                                 .override(
-                                  fontFamily: 'Inter Tight',
+                                  fontFamily: 'Geist',
                                   letterSpacing: 0.0,
+                                  useGoogleFonts: false,
                                 ),
                           ),
                         ),
@@ -219,10 +220,11 @@ class _WidgetsFromSqlLiteWidgetState extends State<WidgetsFromSqlLiteWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium
                                                         .override(
-                                                          fontFamily: 'Inter',
+                                                          fontFamily: 'Geist',
                                                           color: Colors.white,
                                                           fontSize: 20.0,
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ),
@@ -248,8 +250,9 @@ class _WidgetsFromSqlLiteWidgetState extends State<WidgetsFromSqlLiteWidget> {
                                                           context)
                                                       .bodyLarge
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        fontFamily: 'Geist',
                                                         letterSpacing: 0.0,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ),
@@ -281,8 +284,9 @@ class _WidgetsFromSqlLiteWidgetState extends State<WidgetsFromSqlLiteWidget> {
           return Text(
             'SQLite is not supported on this platform!',
             style: FlutterFlowTheme.of(context).bodyMedium.override(
-                  fontFamily: 'Inter',
+                  fontFamily: 'Geist',
                   letterSpacing: 0.0,
+                  useGoogleFonts: false,
                 ),
           );
         }

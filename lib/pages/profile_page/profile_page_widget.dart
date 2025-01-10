@@ -51,10 +51,11 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
           title: Text(
             'Profile',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Inter Tight',
+                  fontFamily: 'Geist',
                   color: Colors.white,
                   fontSize: 22.0,
                   letterSpacing: 0.0,
+                  useGoogleFonts: false,
                 ),
           ),
           actions: [],
@@ -73,9 +74,10 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                   child: Text(
                     'TODO',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Inter',
+                          fontFamily: 'Geist',
                           fontSize: 24.0,
                           letterSpacing: 0.0,
+                          useGoogleFonts: false,
                         ),
                   ),
                 ),

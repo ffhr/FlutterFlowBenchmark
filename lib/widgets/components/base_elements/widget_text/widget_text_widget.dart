@@ -48,17 +48,19 @@ class _WidgetTextWidgetState extends State<WidgetTextWidget> {
           Text(
             'Hello World',
             style: FlutterFlowTheme.of(context).bodyMedium.override(
-                  fontFamily: 'Inter',
+                  fontFamily: 'Geist',
                   letterSpacing: 0.0,
+                  useGoogleFonts: false,
                 ),
           ),
           Text(
             'Hello World',
             style: FlutterFlowTheme.of(context).bodyMedium.override(
-                  fontFamily: 'Inter',
+                  fontFamily: 'Geist',
                   fontSize: 24.0,
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.w900,
+                  useGoogleFonts: false,
                 ),
           ),
         ],

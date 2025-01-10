@@ -87,10 +87,11 @@ class _WidgetPageWidgetState extends State<WidgetPageWidget> {
               'n/a',
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Inter Tight',
+                  fontFamily: 'Geist',
                   color: Colors.white,
                   fontSize: 22.0,
                   letterSpacing: 0.0,
+                  useGoogleFonts: false,
                 ),
           ),
           actions: [],
@@ -174,8 +175,9 @@ class _WidgetPageWidgetState extends State<WidgetPageWidget> {
                     return Text(
                       'Hello World',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Inter',
+                            fontFamily: 'Geist',
                             letterSpacing: 0.0,
+                            useGoogleFonts: false,
                           ),
                     );
                   }
