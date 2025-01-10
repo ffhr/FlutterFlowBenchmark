@@ -54,10 +54,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
             title: Text(
               'FlutterFlowBenchmark',
               style: FlutterFlowTheme.of(context).headlineMedium.override(
-                    fontFamily: 'Inter Tight',
+                    fontFamily: 'Geist',
                     color: Colors.white,
                     fontSize: 22.0,
                     letterSpacing: 0.0,
+                    useGoogleFonts: false,
                   ),
             ),
             actions: [],
@@ -86,9 +87,35 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                          fontFamily: 'Inter Tight',
+                          fontFamily: 'Geist',
                           color: Colors.white,
                           letterSpacing: 0.0,
+                          useGoogleFonts: false,
+                        ),
+                    elevation: 0.0,
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(16.0),
+                child: FFButtonWidget(
+                  onPressed: () async {
+                    context.pushNamed('Shadcn');
+                  },
+                  text: 'shadcn/ui',
+                  options: FFButtonOptions(
+                    height: 40.0,
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                    iconPadding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    color: FlutterFlowTheme.of(context).primary,
+                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                          fontFamily: 'Geist',
+                          color: Colors.white,
+                          letterSpacing: 0.0,
+                          useGoogleFonts: false,
                         ),
                     elevation: 0.0,
                     borderRadius: BorderRadius.circular(8.0),

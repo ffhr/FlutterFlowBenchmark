@@ -62,16 +62,18 @@ class _WidgetSpacerWidgetState extends State<WidgetSpacerWidget> {
           Text(
             'Hello World',
             style: FlutterFlowTheme.of(context).bodyMedium.override(
-                  fontFamily: 'Inter',
+                  fontFamily: 'Geist',
                   letterSpacing: 0.0,
+                  useGoogleFonts: false,
                 ),
           ),
           Spacer(),
           Text(
             'Hello World',
             style: FlutterFlowTheme.of(context).bodyMedium.override(
-                  fontFamily: 'Inter',
+                  fontFamily: 'Geist',
                   letterSpacing: 0.0,
+                  useGoogleFonts: false,
                 ),
           ),
         ],

@@ -59,10 +59,11 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
           title: Text(
             'Login @ FlutterFlowBenchmark',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Inter Tight',
+                  fontFamily: 'Geist',
                   color: Colors.white,
                   fontSize: 22.0,
                   letterSpacing: 0.0,
+                  useGoogleFonts: false,
                 ),
           ),
           actions: [],
@@ -109,9 +110,10 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                         textStyle: FlutterFlowTheme.of(context)
                             .titleSmall
                             .override(
-                              fontFamily: 'Inter Tight',
+                              fontFamily: 'Geist',
                               color: FlutterFlowTheme.of(context).primaryText,
                               letterSpacing: 0.0,
+                              useGoogleFonts: false,
                             ),
                         elevation: 0.0,
                         borderSide: BorderSide(
@@ -153,10 +155,11 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(
-                                    fontFamily: 'Inter Tight',
+                                    fontFamily: 'Geist',
                                     color: FlutterFlowTheme.of(context)
                                         .primaryText,
                                     letterSpacing: 0.0,
+                                    useGoogleFonts: false,
                                   ),
                               elevation: 0.0,
                               borderSide: BorderSide(
@@ -190,9 +193,10 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                         textStyle: FlutterFlowTheme.of(context)
                             .titleSmall
                             .override(
-                              fontFamily: 'Inter Tight',
+                              fontFamily: 'Geist',
                               color: FlutterFlowTheme.of(context).primaryText,
                               letterSpacing: 0.0,
+                              useGoogleFonts: false,
                             ),
                         elevation: 0.0,
                         borderSide: BorderSide(
@@ -218,15 +222,17 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                               labelStyle: FlutterFlowTheme.of(context)
                                   .labelMedium
                                   .override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Geist',
                                     letterSpacing: 0.0,
+                                    useGoogleFonts: false,
                                   ),
                               hintText: 'TextField',
                               hintStyle: FlutterFlowTheme.of(context)
                                   .labelMedium
                                   .override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Geist',
                                     letterSpacing: 0.0,
+                                    useGoogleFonts: false,
                                   ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
@@ -263,8 +269,9 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Inter',
+                                  fontFamily: 'Geist',
                                   letterSpacing: 0.0,
+                                  useGoogleFonts: false,
                                 ),
                             cursorColor:
                                 FlutterFlowTheme.of(context).primaryText,
@@ -286,15 +293,17 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                               labelStyle: FlutterFlowTheme.of(context)
                                   .labelMedium
                                   .override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Geist',
                                     letterSpacing: 0.0,
+                                    useGoogleFonts: false,
                                   ),
                               hintText: 'TextField',
                               hintStyle: FlutterFlowTheme.of(context)
                                   .labelMedium
                                   .override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Geist',
                                     letterSpacing: 0.0,
+                                    useGoogleFonts: false,
                                   ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
@@ -344,8 +353,9 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Inter',
+                                  fontFamily: 'Geist',
                                   letterSpacing: 0.0,
+                                  useGoogleFonts: false,
                                 ),
                             cursorColor:
                                 FlutterFlowTheme.of(context).primaryText,
@@ -381,9 +391,10 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                             textStyle: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
-                                  fontFamily: 'Inter Tight',
+                                  fontFamily: 'Geist',
                                   color: Colors.white,
                                   letterSpacing: 0.0,
+                                  useGoogleFonts: false,
                                 ),
                             elevation: 0.0,
                             borderRadius: BorderRadius.circular(8.0),

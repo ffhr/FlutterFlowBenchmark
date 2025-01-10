@@ -85,8 +85,9 @@ class _WidgetGridViewWidgetState extends State<WidgetGridViewWidget> {
                       child: Text(
                         'Hello World',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Inter',
+                              fontFamily: 'Geist',
                               letterSpacing: 0.0,
+                              useGoogleFonts: false,
                             ),
                       ),
                     ),
@@ -106,8 +107,9 @@ class _WidgetGridViewWidgetState extends State<WidgetGridViewWidget> {
                       child: Text(
                         'Hello World',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Inter',
+                              fontFamily: 'Geist',
                               letterSpacing: 0.0,
+                              useGoogleFonts: false,
                             ),
                       ),
                     ),
@@ -127,8 +129,9 @@ class _WidgetGridViewWidgetState extends State<WidgetGridViewWidget> {
                       child: Text(
                         'Hello World',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Inter',
+                              fontFamily: 'Geist',
                               letterSpacing: 0.0,
+                              useGoogleFonts: false,
                             ),
                       ),
                     ),
@@ -148,8 +151,9 @@ class _WidgetGridViewWidgetState extends State<WidgetGridViewWidget> {
                       child: Text(
                         'Hello World',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Inter',
+                              fontFamily: 'Geist',
                               letterSpacing: 0.0,
+                              useGoogleFonts: false,
                             ),
                       ),
                     ),

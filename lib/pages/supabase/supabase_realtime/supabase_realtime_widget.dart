@@ -75,10 +75,11 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
           title: Text(
             'Supabase Realtime',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Inter Tight',
+                  fontFamily: 'Geist',
                   color: Colors.white,
                   fontSize: 22.0,
                   letterSpacing: 0.0,
+                  useGoogleFonts: false,
                 ),
           ),
           actions: [],
@@ -94,8 +95,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                 Text(
                   'is_active=true',
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Inter',
+                        fontFamily: 'Geist',
                         letterSpacing: 0.0,
+                        useGoogleFonts: false,
                       ),
                 ),
                 Padding(
@@ -123,8 +125,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Inter',
+                                      fontFamily: 'Geist',
                                       letterSpacing: 0.0,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                               Text(
@@ -135,8 +138,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Inter',
+                                      fontFamily: 'Geist',
                                       letterSpacing: 0.0,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                               Text(
@@ -148,8 +152,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Inter',
+                                      fontFamily: 'Geist',
                                       letterSpacing: 0.0,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                               FFButtonWidget(
@@ -177,10 +182,11 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                                   textStyle: FlutterFlowTheme.of(context)
                                       .titleSmall
                                       .override(
-                                        fontFamily: 'Inter Tight',
+                                        fontFamily: 'Geist',
                                         color: Colors.white,
                                         fontSize: 12.0,
                                         letterSpacing: 0.0,
+                                        useGoogleFonts: false,
                                       ),
                                   elevation: 0.0,
                                   borderRadius: BorderRadius.circular(0.0),
@@ -196,8 +202,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                 Text(
                   'is_active=false',
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Inter',
+                        fontFamily: 'Geist',
                         letterSpacing: 0.0,
+                        useGoogleFonts: false,
                       ),
                 ),
                 Padding(
@@ -226,8 +233,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Inter',
+                                      fontFamily: 'Geist',
                                       letterSpacing: 0.0,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                               Text(
@@ -239,8 +247,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Inter',
+                                      fontFamily: 'Geist',
                                       letterSpacing: 0.0,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                               Text(
@@ -252,8 +261,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Inter',
+                                      fontFamily: 'Geist',
                                       letterSpacing: 0.0,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                               FFButtonWidget(
@@ -281,10 +291,11 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                                   textStyle: FlutterFlowTheme.of(context)
                                       .titleSmall
                                       .override(
-                                        fontFamily: 'Inter Tight',
+                                        fontFamily: 'Geist',
                                         color: Colors.white,
                                         fontSize: 12.0,
                                         letterSpacing: 0.0,
+                                        useGoogleFonts: false,
                                       ),
                                   elevation: 0.0,
                                   borderRadius: BorderRadius.circular(0.0),
@@ -300,8 +311,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                 Text(
                   'realtime_all',
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Inter',
+                        fontFamily: 'Geist',
                         letterSpacing: 0.0,
+                        useGoogleFonts: false,
                       ),
                 ),
                 Padding(
@@ -355,8 +367,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Inter',
+                                      fontFamily: 'Geist',
                                       letterSpacing: 0.0,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                               Text(
@@ -368,8 +381,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Inter',
+                                      fontFamily: 'Geist',
                                       letterSpacing: 0.0,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                               Text(
@@ -378,8 +392,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Inter',
+                                      fontFamily: 'Geist',
                                       letterSpacing: 0.0,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                               if (!rowIsActiveAllRealtimeStudentsRow.isActive!)
@@ -406,10 +421,11 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(
-                                          fontFamily: 'Inter Tight',
+                                          fontFamily: 'Geist',
                                           color: Colors.white,
                                           fontSize: 12.0,
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: false,
                                         ),
                                     elevation: 0.0,
                                     borderRadius: BorderRadius.circular(0.0),
@@ -441,10 +457,11 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(
-                                          fontFamily: 'Inter Tight',
+                                          fontFamily: 'Geist',
                                           color: Colors.white,
                                           fontSize: 12.0,
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: false,
                                         ),
                                     elevation: 0.0,
                                     borderRadius: BorderRadius.circular(0.0),
@@ -460,8 +477,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                 Text(
                   'single_time_query',
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Inter',
+                        fontFamily: 'Geist',
                         letterSpacing: 0.0,
+                        useGoogleFonts: false,
                       ),
                 ),
                 Padding(
@@ -515,8 +533,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Inter',
+                                      fontFamily: 'Geist',
                                       letterSpacing: 0.0,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                               Text(
@@ -528,8 +547,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Inter',
+                                      fontFamily: 'Geist',
                                       letterSpacing: 0.0,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                               Text(
@@ -538,8 +558,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Inter',
+                                      fontFamily: 'Geist',
                                       letterSpacing: 0.0,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                               if (!rowIsActiveAllRealtimeStudentsRow.isActive!)
@@ -569,10 +590,11 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(
-                                          fontFamily: 'Inter Tight',
+                                          fontFamily: 'Geist',
                                           color: Colors.white,
                                           fontSize: 12.0,
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: false,
                                         ),
                                     elevation: 0.0,
                                     borderRadius: BorderRadius.circular(0.0),
@@ -607,10 +629,11 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(
-                                          fontFamily: 'Inter Tight',
+                                          fontFamily: 'Geist',
                                           color: Colors.white,
                                           fontSize: 12.0,
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: false,
                                         ),
                                     elevation: 0.0,
                                     borderRadius: BorderRadius.circular(0.0),
