@@ -1,4 +1,5 @@
 import '/components/widgets_from_sql_lite_widget.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
@@ -46,25 +47,148 @@ class _HomePageWidgetState extends State<HomePageWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-        appBar: PreferredSize(
-          preferredSize: Size.fromHeight(55.0),
-          child: AppBar(
-            backgroundColor: FlutterFlowTheme.of(context).primary,
-            automaticallyImplyLeading: false,
-            title: Text(
-              'FlutterFlowBenchmark',
-              style: FlutterFlowTheme.of(context).headlineMedium.override(
-                    fontFamily: 'Geist',
-                    color: Colors.white,
-                    fontSize: 22.0,
-                    letterSpacing: 0.0,
-                    useGoogleFonts: false,
-                  ),
-            ),
-            actions: [],
-            centerTitle: false,
-            elevation: 2.0,
+        drawer: Drawer(
+          elevation: 16.0,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                width: double.infinity,
+                height: 56.0,
+                decoration: BoxDecoration(
+                  color: FlutterFlowTheme.of(context).primary,
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    InkWell(
+                      splashColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      onTap: () async {
+                        if (scaffoldKey.currentState!.isDrawerOpen ||
+                            scaffoldKey.currentState!.isEndDrawerOpen) {
+                          Navigator.pop(context);
+                        }
+                      },
+                      child: Icon(
+                        Icons.menu_open,
+                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        size: 32.0,
+                      ),
+                    ),
+                    Align(
+                      alignment: AlignmentDirectional(0.0, 0.0),
+                      child: Text(
+                        'FlutterFlowBenchmark',
+                        style: FlutterFlowTheme.of(context).titleLarge.override(
+                              fontFamily: 'Geist',
+                              color: FlutterFlowTheme.of(context)
+                                  .secondaryBackground,
+                              letterSpacing: 0.0,
+                              useGoogleFonts: false,
+                            ),
+                      ),
+                    ),
+                  ]
+                      .divide(SizedBox(width: 10.0))
+                      .addToStart(SizedBox(width: 16.0)),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    FFButtonWidget(
+                      onPressed: () async {
+                        context.pushNamed('SupabaseRealtime');
+                      },
+                      text: 'Supabase Realtime',
+                      options: FFButtonOptions(
+                        height: 40.0,
+                        padding: EdgeInsetsDirectional.fromSTEB(
+                            16.0, 0.0, 16.0, 0.0),
+                        iconPadding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: FlutterFlowTheme.of(context).primary,
+                        textStyle:
+                            FlutterFlowTheme.of(context).titleSmall.override(
+                                  fontFamily: 'Geist',
+                                  color: Colors.white,
+                                  letterSpacing: 0.0,
+                                  useGoogleFonts: false,
+                                ),
+                        elevation: 0.0,
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                    ),
+                    FFButtonWidget(
+                      onPressed: () async {
+                        context.pushNamed('Shadcn');
+                      },
+                      text: 'shadcn/ui',
+                      options: FFButtonOptions(
+                        height: 40.0,
+                        padding: EdgeInsetsDirectional.fromSTEB(
+                            16.0, 0.0, 16.0, 0.0),
+                        iconPadding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: FlutterFlowTheme.of(context).primary,
+                        textStyle:
+                            FlutterFlowTheme.of(context).titleSmall.override(
+                                  fontFamily: 'Geist',
+                                  color: Colors.white,
+                                  letterSpacing: 0.0,
+                                  useGoogleFonts: false,
+                                ),
+                        elevation: 0.0,
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                    ),
+                  ]
+                      .divide(SizedBox(height: 16.0))
+                      .addToStart(SizedBox(height: 16.0))
+                      .addToEnd(SizedBox(height: 128.0)),
+                ),
+              ),
+            ],
           ),
+        ),
+        appBar: AppBar(
+          backgroundColor: FlutterFlowTheme.of(context).primary,
+          automaticallyImplyLeading: false,
+          leading: FlutterFlowIconButton(
+            borderColor: Colors.transparent,
+            borderRadius: 30.0,
+            borderWidth: 1.0,
+            buttonSize: 60.0,
+            icon: Icon(
+              Icons.menu_open,
+              color: Colors.white,
+              size: 30.0,
+            ),
+            onPressed: () {
+              print('IconButton pressed ...');
+            },
+          ),
+          title: Text(
+            'FlutterFlowBenchmark',
+            style: FlutterFlowTheme.of(context).headlineMedium.override(
+                  fontFamily: 'Geist',
+                  color: Colors.white,
+                  fontSize: 22.0,
+                  letterSpacing: 0.0,
+                  useGoogleFonts: false,
+                ),
+          ),
+          actions: [],
+          centerTitle: false,
+          elevation: 2.0,
         ),
         body: SafeArea(
           top: true,
@@ -72,56 +196,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: EdgeInsets.all(16.0),
-                child: FFButtonWidget(
-                  onPressed: () async {
-                    context.pushNamed('SupabaseRealtime');
-                  },
-                  text: 'Supabase Realtime',
-                  options: FFButtonOptions(
-                    height: 40.0,
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                    iconPadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: FlutterFlowTheme.of(context).primary,
-                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                          fontFamily: 'Geist',
-                          color: Colors.white,
-                          letterSpacing: 0.0,
-                          useGoogleFonts: false,
-                        ),
-                    elevation: 0.0,
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.all(16.0),
-                child: FFButtonWidget(
-                  onPressed: () async {
-                    context.pushNamed('Shadcn');
-                  },
-                  text: 'shadcn/ui',
-                  options: FFButtonOptions(
-                    height: 40.0,
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                    iconPadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: FlutterFlowTheme.of(context).primary,
-                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                          fontFamily: 'Geist',
-                          color: Colors.white,
-                          letterSpacing: 0.0,
-                          useGoogleFonts: false,
-                        ),
-                    elevation: 0.0,
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                ),
-              ),
               wrapWithModel(
                 model: _model.widgetsFromSqlLiteModel,
                 updateCallback: () => safeSetState(() {}),
