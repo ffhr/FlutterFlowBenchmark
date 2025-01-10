@@ -5,17 +5,21 @@ import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
+import '/backend/schema/structs/index.dart';
+
 import '/backend/supabase/supabase.dart';
 import '/backend/sqlite/sqlite_manager.dart';
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
 import '/main.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/lat_lng.dart';
-import '/flutter_flow/place.dart';
+import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
+import 'package:ff_commons/flutter_flow/lat_lng.dart';
+import 'package:ff_commons/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'serialization_util.dart';
+import "package:shadcn_u_i_kit_v48jv9/backend/schema/structs/index.dart"
+    as shadcn_u_i_kit_v48jv9_data_schema;
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -246,6 +250,7 @@ class FFParameters {
     String paramName,
     ParamType type, {
     bool isList = false,
+    StructBuilder<T>? structBuilder,
   }) {
     if (futureParamValues.containsKey(paramName)) {
       return futureParamValues[paramName];
@@ -263,6 +268,7 @@ class FFParameters {
       param,
       type,
       isList,
+      structBuilder: structBuilder,
     );
   }
 }

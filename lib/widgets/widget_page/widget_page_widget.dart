@@ -1,5 +1,4 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/widgets/components/base_elements/widget_text/widget_text_widget.dart';
@@ -14,6 +13,7 @@ import '/widgets/components/layout_elements/widget_spacer/widget_spacer_widget.d
 import '/widgets/components/layout_elements/widget_stack/widget_stack_widget.dart';
 import '/widgets/components/layout_elements/widget_vertical_divider/widget_vertical_divider_widget.dart';
 import 'dart:ui';
+import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
