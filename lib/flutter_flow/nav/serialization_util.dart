@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:from_css_color/from_css_color.dart';
 
+import '/backend/supabase/supabase.dart';
 import '/backend/sqlite/queries/sqlite_row.dart';
 import '/backend/sqlite/queries/read.dart';
 import '../../flutter_flow/lat_lng.dart';
@@ -71,6 +72,9 @@ String? serializeParam(
         data = uploadedFileToString(param as FFUploadedFile);
       case ParamType.JSON:
         data = json.encode(param);
+
+      case ParamType.SupabaseRow:
+        return json.encode((param as SupabaseDataRow).data);
 
       case ParamType.SqliteRow:
         return json.encode((param as SqliteRow).data);
@@ -151,6 +155,7 @@ enum ParamType {
   FFUploadedFile,
   JSON,
 
+  SupabaseRow,
   SqliteRow,
 }
 
@@ -202,6 +207,17 @@ dynamic deserializeParam<T>(
         return uploadedFileFromString(param);
       case ParamType.JSON:
         return json.decode(param);
+
+      case ParamType.SupabaseRow:
+        final data = json.decode(param) as Map<String, dynamic>;
+        switch (T) {
+          case SupabaseProductionRow:
+            return SupabaseProductionRow(data);
+          case StudentsRow:
+            return StudentsRow(data);
+          default:
+            return null;
+        }
 
       case ParamType.SqliteRow:
         final data = json.decode(param) as Map<String, dynamic>;
