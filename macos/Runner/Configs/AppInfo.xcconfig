@@ -8,7 +8,7 @@
 PRODUCT_NAME = FlutterFlowBenchmark
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = hr.ff.ffbenchmark
+PRODUCT_BUNDLE_IDENTIFIER = hr.ff.ffbenchmark.development
 
 // The copyright displayed in application information
 PRODUCT_COPYRIGHT = Copyright © 2024 FlutterFlowBenchmark. All rights reserved.
