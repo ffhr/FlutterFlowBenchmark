@@ -172,8 +172,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               color: Colors.white,
               size: 30.0,
             ),
-            onPressed: () {
-              print('IconButton pressed ...');
+            onPressed: () async {
+              scaffoldKey.currentState!.openDrawer();
             },
           ),
           title: Text(
@@ -192,16 +192,18 @@ class _HomePageWidgetState extends State<HomePageWidget> {
         ),
         body: SafeArea(
           top: true,
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              wrapWithModel(
-                model: _model.widgetsFromSqlLiteModel,
-                updateCallback: () => safeSetState(() {}),
-                child: WidgetsFromSqlLiteWidget(),
-              ),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                wrapWithModel(
+                  model: _model.widgetsFromSqlLiteModel,
+                  updateCallback: () => safeSetState(() {}),
+                  child: WidgetsFromSqlLiteWidget(),
+                ),
+              ],
+            ),
           ),
         ),
       ),
