@@ -1,40 +1,48 @@
 {
   "project_info": {
-    "project_number": "776187583115",
-    "project_id": "ff-benchmark-staging",
-    "storage_bucket": "ff-benchmark-staging.firebasestorage.app"
+    "project_number": "328882098159",
+    "project_id": "ff-benchmark-production",
+    "storage_bucket": "ff-benchmark-production.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:776187583115:android:86744be33ace1366ce528e",
+        "mobilesdk_app_id": "1:328882098159:android:10bef0b36754805b3d701a",
         "android_client_info": {
           "package_name": "hr.ff.ffbenchmark"
         }
       },
       "oauth_client": [
         {
-          "client_id": "776187583115-9tjaq8gl647kcp640p6vhi1ei973k309.apps.googleusercontent.com",
+          "client_id": "328882098159-vh4up9s13g3ol69ctr6ocqbc7fm2mhll.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "hr.ff.ffbenchmark",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "328882098159-m85mibev00ceb9p5mbu6f4gqldnvpe67.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDfWKzeerlW2fpRsGGX0MFPelpR3229gZY"
+          "current_key": "AIzaSyBMURspgFcmaOIFP8zc_vUKJOt4P1B1Q44"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "776187583115-9tjaq8gl647kcp640p6vhi1ei973k309.apps.googleusercontent.com",
+              "client_id": "328882098159-m85mibev00ceb9p5mbu6f4gqldnvpe67.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "776187583115-dqo4fisuurn6b046jqni8tloht7gdhpb.apps.googleusercontent.com",
+              "client_id": "328882098159-v645fegofji1e0m7hqrf5l60h6i2sk6t.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "hr.ff.ffbenchmark.staging"
+                "bundle_id": "hr.ff.flutterflowbenchmark"
               }
             }
           ]
@@ -43,42 +51,50 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:776187583115:android:9261c77cee0b788cce528e",
+        "mobilesdk_app_id": "1:328882098159:android:1cca559199abce013d701a",
         "android_client_info": {
-          "package_name": "hr.ff.ffbenchmark.staging"
+          "package_name": "hr.ff.flutterflowbenchmark"
         }
       },
       "oauth_client": [
         {
-          "client_id": "776187583115-b7dbr5jdsta5a3icvr5sucfimul371qe.apps.googleusercontent.com",
+          "client_id": "328882098159-6669tk34o3clsf2gpa0b3r1u6phms1qb.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "hr.ff.ffbenchmark.staging",
+            "package_name": "hr.ff.flutterflowbenchmark",
             "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
           }
         },
         {
-          "client_id": "776187583115-9tjaq8gl647kcp640p6vhi1ei973k309.apps.googleusercontent.com",
+          "client_id": "328882098159-ua0rmbh73prinsubkd2re4pioe4inhs5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "hr.ff.flutterflowbenchmark",
+            "certificate_hash": "75aaa4496c2eb8dc49c31d3e0d9c1e83f2dace0b"
+          }
+        },
+        {
+          "client_id": "328882098159-m85mibev00ceb9p5mbu6f4gqldnvpe67.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDfWKzeerlW2fpRsGGX0MFPelpR3229gZY"
+          "current_key": "AIzaSyBMURspgFcmaOIFP8zc_vUKJOt4P1B1Q44"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "776187583115-9tjaq8gl647kcp640p6vhi1ei973k309.apps.googleusercontent.com",
+              "client_id": "328882098159-m85mibev00ceb9p5mbu6f4gqldnvpe67.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "776187583115-dqo4fisuurn6b046jqni8tloht7gdhpb.apps.googleusercontent.com",
+              "client_id": "328882098159-v645fegofji1e0m7hqrf5l60h6i2sk6t.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "hr.ff.ffbenchmark.staging"
+                "bundle_id": "hr.ff.flutterflowbenchmark"
               }
             }
           ]
