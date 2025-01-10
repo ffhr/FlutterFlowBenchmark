@@ -1,3 +1,4 @@
+import 'package:provider/provider.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -10,11 +11,14 @@ import 'auth/firebase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/backend/sqlite/sqlite_manager.dart';
 import 'backend/firebase/firebase_config.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
+import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'flutter_flow/nav/nav.dart';
 import 'index.dart';
+
+import 'package:shadcn_u_i_kit_v48jv9/app_state.dart'
+    as shadcn_u_i_kit_v48jv9_app_state;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,7 +35,18 @@ void main() async {
   await SQLiteManager.initialize();
   await FlutterFlowTheme.initialize();
 
-  runApp(MyApp());
+  final shadcn_u_i_kit_v48jv9AppState =
+      shadcn_u_i_kit_v48jv9_app_state.FFAppState();
+  await shadcn_u_i_kit_v48jv9AppState.initializePersistedState();
+
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(
+        create: (context) => shadcn_u_i_kit_v48jv9AppState,
+      ),
+    ],
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatefulWidget {

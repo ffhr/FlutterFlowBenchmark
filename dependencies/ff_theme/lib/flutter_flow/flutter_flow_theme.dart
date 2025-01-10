@@ -54,6 +54,32 @@ abstract class FlutterFlowTheme {
   late Color error;
   late Color info;
 
+  late Color background;
+  late Color foreground;
+  late Color card;
+  late Color cardforeground;
+  late Color popover;
+  late Color popoverforeground;
+  late Color primarycolor;
+  late Color primaryforeground;
+  late Color secondarycolor;
+  late Color secondaryforeground;
+  late Color muted;
+  late Color mutedforeground;
+  late Color accent;
+  late Color accentforeground;
+  late Color destructive;
+  late Color destructiveforeground;
+  late Color border;
+  late Color input;
+  late Color ring;
+  late Color borderdestructive;
+  late Color chart1;
+  late Color chart2;
+  late Color chart3;
+  late Color chart4;
+  late Color chart5;
+
   @Deprecated('Use displaySmallFamily instead')
   String get title1Family => displaySmallFamily;
   @Deprecated('Use displaySmall instead')
@@ -141,6 +167,32 @@ class LightModeTheme extends FlutterFlowTheme {
   late Color warning = const Color(0xFFF9CF58);
   late Color error = const Color(0xFFFF5963);
   late Color info = const Color(0xFFFFFFFF);
+
+  late Color background = Color(0xFFFFFFFF);
+  late Color foreground = Color(0xFF020611);
+  late Color card = Color(0xFFFFFFFF);
+  late Color cardforeground = Color(0xFF020611);
+  late Color popover = Color(0xFFFFFFFF);
+  late Color popoverforeground = Color(0xFF020611);
+  late Color primarycolor = Color(0xFF18181B);
+  late Color primaryforeground = Color(0xFFF8F9FA);
+  late Color secondarycolor = Color(0xFFF3F4F6);
+  late Color secondaryforeground = Color(0xFF111827);
+  late Color muted = Color(0xFFF3F4F6);
+  late Color mutedforeground = Color(0xFF6B7280);
+  late Color accent = Color(0xFFF3F4F6);
+  late Color accentforeground = Color(0xFF111827);
+  late Color destructive = Color(0xFFEE4444);
+  late Color destructiveforeground = Color(0xFFF8F9FA);
+  late Color border = Color(0xFFE5E7EB);
+  late Color input = Color(0xFFE5E7EB);
+  late Color ring = Color(0xFFA1A1AA);
+  late Color borderdestructive = Color(0x80EE4444);
+  late Color chart1 = Color(0xFF2A9E90);
+  late Color chart2 = Color(0xFFE76E51);
+  late Color chart3 = Color(0xFF274754);
+  late Color chart4 = Color(0xFFE8C468);
+  late Color chart5 = Color(0xFFF4A462);
 }
 
 abstract class Typography {
@@ -312,6 +364,32 @@ class DarkModeTheme extends FlutterFlowTheme {
   late Color warning = const Color(0xFFF9CF58);
   late Color error = const Color(0xFFFF5963);
   late Color info = const Color(0xFFFFFFFF);
+
+  late Color background = Color(0xFF020611);
+  late Color foreground = Color(0xFFF8F9FA);
+  late Color card = Color(0xFF020611);
+  late Color cardforeground = Color(0xFFF8F9FA);
+  late Color popover = Color(0xFF020611);
+  late Color popoverforeground = Color(0xFFF8F9FA);
+  late Color primarycolor = Color(0xFFFAFAFA);
+  late Color primaryforeground = Color(0xFF020611);
+  late Color secondarycolor = Color(0xFF1F2937);
+  late Color secondaryforeground = Color(0xFFF8F9FA);
+  late Color muted = Color(0xFF1F2937);
+  late Color mutedforeground = Color(0xFF9CA2AE);
+  late Color accent = Color(0xFF1F2937);
+  late Color accentforeground = Color(0xFFF8F9FA);
+  late Color destructive = Color(0xFF7F1D1D);
+  late Color destructiveforeground = Color(0xFFF8F9FA);
+  late Color border = Color(0xFF242F3E);
+  late Color input = Color(0xFF1F2937);
+  late Color ring = Color(0xFFA1A1AA);
+  late Color borderdestructive = Color(0x807F1D1D);
+  late Color chart1 = Color(0xFF2662D9);
+  late Color chart2 = Color(0xFF2EB88A);
+  late Color chart3 = Color(0xFFE88C30);
+  late Color chart4 = Color(0xFFAF57DB);
+  late Color chart5 = Color(0xFFE23670);
 }
 
 extension TextStyleHelper on TextStyle {
