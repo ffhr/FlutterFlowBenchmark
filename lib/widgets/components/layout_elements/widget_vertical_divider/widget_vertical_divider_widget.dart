@@ -54,32 +54,45 @@ class _WidgetVerticalDividerWidgetState
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 512.0,
       decoration: BoxDecoration(),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          SizedBox(
-            height: 100.0,
-            child: VerticalDivider(
-              thickness: 2.0,
-              color: FlutterFlowTheme.of(context).alternate,
+      child: Container(
+        decoration: BoxDecoration(
+          color: FlutterFlowTheme.of(context).secondaryText,
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            SizedBox(
+              height: 100.0,
+              child: VerticalDivider(
+                thickness: 2.0,
+                color: FlutterFlowTheme.of(context).alternate,
+              ),
             ),
-          ),
-          SizedBox(
-            height: 100.0,
-            child: VerticalDivider(
-              thickness: 2.0,
-              color: FlutterFlowTheme.of(context).alternate,
+            SizedBox(
+              height: 100.0,
+              child: VerticalDivider(
+                thickness: 2.0,
+                color: FlutterFlowTheme.of(context).alternate,
+              ),
             ),
-          ),
-          SizedBox(
-            height: 100.0,
-            child: VerticalDivider(
-              thickness: 2.0,
-              color: FlutterFlowTheme.of(context).alternate,
+            SizedBox(
+              height: 200.0,
+              child: VerticalDivider(
+                thickness: 2.0,
+                color: FlutterFlowTheme.of(context).alternate,
+              ),
             ),
-          ),
-        ],
+            SizedBox(
+              height: 100.0,
+              child: VerticalDivider(
+                thickness: 2.0,
+                color: FlutterFlowTheme.of(context).alternate,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

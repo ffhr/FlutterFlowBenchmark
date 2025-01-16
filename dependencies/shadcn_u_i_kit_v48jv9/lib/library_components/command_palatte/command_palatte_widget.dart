@@ -3,8 +3,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/library_components/dropdown_menu_item/dropdown_menu_item_widget.dart';
 import '/library_components/empty_list/empty_list_widget.dart';
 import 'dart:ui';
-import "package:shadcn_u_i_kit_v48jv9/backend/schema/structs/index.dart"
-    as shadcn_u_i_kit_v48jv9_data_schema;
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';

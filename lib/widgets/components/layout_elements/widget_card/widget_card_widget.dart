@@ -52,16 +52,87 @@ class _WidgetCardWidgetState extends State<WidgetCardWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      width: 256.0,
+      decoration: BoxDecoration(
+        color: FlutterFlowTheme.of(context).secondary,
+      ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Card(
             clipBehavior: Clip.antiAliasWithSaveLayer,
-            color: FlutterFlowTheme.of(context).secondaryBackground,
+            color: FlutterFlowTheme.of(context).primary,
             elevation: 0.0,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8.0),
+            ),
+            child: Container(
+              width: 100.0,
+              height: 100.0,
+              decoration: BoxDecoration(),
+              child: Align(
+                alignment: AlignmentDirectional(0.0, 0.0),
+                child: Text(
+                  'Hello World',
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        fontFamily: 'Geist',
+                        color: FlutterFlowTheme.of(context).primaryBackground,
+                        letterSpacing: 0.0,
+                        useGoogleFonts: false,
+                      ),
+                ),
+              ),
+            ),
+          ),
+          Card(
+            clipBehavior: Clip.antiAliasWithSaveLayer,
+            color: FlutterFlowTheme.of(context).tertiary,
+            elevation: 0.0,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8.0),
+            ),
+            child: Container(
+              width: 100.0,
+              height: 100.0,
+              decoration: BoxDecoration(),
+              child: Align(
+                alignment: AlignmentDirectional(0.0, 0.0),
+                child: Text(
+                  'Hello World',
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        fontFamily: 'Geist',
+                        color: FlutterFlowTheme.of(context).primaryBackground,
+                        letterSpacing: 0.0,
+                        useGoogleFonts: false,
+                      ),
+                ),
+              ),
+            ),
+          ),
+          Card(
+            clipBehavior: Clip.antiAliasWithSaveLayer,
+            color: FlutterFlowTheme.of(context).error,
+            elevation: 0.0,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8.0),
+            ),
+            child: Container(
+              width: 100.0,
+              height: 100.0,
+              decoration: BoxDecoration(),
+              child: Align(
+                alignment: AlignmentDirectional(0.0, 0.0),
+                child: Text(
+                  'Hello World',
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        fontFamily: 'Geist',
+                        color: FlutterFlowTheme.of(context).primaryBackground,
+                        letterSpacing: 0.0,
+                        useGoogleFonts: false,
+                      ),
+                ),
+              ),
             ),
           ),
         ],

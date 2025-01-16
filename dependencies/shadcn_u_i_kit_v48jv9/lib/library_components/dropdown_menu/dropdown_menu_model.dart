@@ -2,8 +2,6 @@ import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/library_components/dropdown_menu_item/dropdown_menu_item_widget.dart';
 import 'dart:ui';
-import "package:shadcn_u_i_kit_v48jv9/backend/schema/structs/index.dart"
-    as shadcn_u_i_kit_v48jv9_data_schema;
 import 'dropdown_menu_widget.dart' show DropdownMenuWidget;
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
