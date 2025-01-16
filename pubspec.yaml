@@ -169,25 +169,48 @@ flutter:
     - assets/environment_values/
     - assets/sqlite_db_files/
   fonts:
+    - family: 'Geist Mono'
+      fonts:
+        - asset: dependencies/shadcn_u_i_kit_v48jv9/assets/fonts/GeistMono-Thin.ttf
+          weight: 100
+        - asset: dependencies/shadcn_u_i_kit_v48jv9/assets/fonts/GeistMono-UltraLight.ttf
+          weight: 200
+        - asset: dependencies/shadcn_u_i_kit_v48jv9/assets/fonts/GeistMono-Light.ttf
+          weight: 300
+        - asset: dependencies/shadcn_u_i_kit_v48jv9/assets/fonts/GeistMono-Regular.ttf
+        - asset: dependencies/shadcn_u_i_kit_v48jv9/assets/fonts/GeistMono-Medium.ttf
+          weight: 500
+        - asset: dependencies/shadcn_u_i_kit_v48jv9/assets/fonts/GeistMono-SemiBold.ttf
+          weight: 600
+        - asset: dependencies/shadcn_u_i_kit_v48jv9/assets/fonts/GeistMono-Bold.ttf
+          weight: 700
+        - asset: dependencies/shadcn_u_i_kit_v48jv9/assets/fonts/GeistMono-Black.ttf
+          weight: 800
+        - asset: dependencies/shadcn_u_i_kit_v48jv9/assets/fonts/GeistMono-UltraBlack.ttf
+          weight: 900
     - family: 'Geist'
       fonts:
-        - asset: assets/fonts/Geist-Thin.ttf
+        - asset: dependencies/shadcn_u_i_kit_v48jv9/assets/fonts/Geist-Thin.ttf
           weight: 100
-        - asset: assets/fonts/Geist-UltraLight.ttf
+        - asset: dependencies/shadcn_u_i_kit_v48jv9/assets/fonts/Geist-UltraLight.ttf
           weight: 200
-        - asset: assets/fonts/Geist-Light.ttf
+        - asset: dependencies/shadcn_u_i_kit_v48jv9/assets/fonts/Geist-Light.ttf
           weight: 300
-        - asset: assets/fonts/Geist-Regular.ttf
-        - asset: assets/fonts/Geist-Medium.ttf
+        - asset: dependencies/shadcn_u_i_kit_v48jv9/assets/fonts/Geist-Regular.ttf
+        - asset: dependencies/shadcn_u_i_kit_v48jv9/assets/fonts/Geist-Medium.ttf
           weight: 500
-        - asset: assets/fonts/Geist-SemiBold.ttf
+        - asset: dependencies/shadcn_u_i_kit_v48jv9/assets/fonts/Geist-SemiBold.ttf
           weight: 600
-        - asset: assets/fonts/Geist-Bold.ttf
+        - asset: dependencies/shadcn_u_i_kit_v48jv9/assets/fonts/Geist-Bold.ttf
           weight: 700
-        - asset: assets/fonts/Geist-Black.ttf
+        - asset: dependencies/shadcn_u_i_kit_v48jv9/assets/fonts/Geist-Black.ttf
           weight: 800
-        - asset: assets/fonts/Geist-UltraBlack.ttf
+        - asset: dependencies/shadcn_u_i_kit_v48jv9/assets/fonts/Geist-UltraBlack.ttf
           weight: 900
+
+    - family: RadixUI
+      fonts:
+        - asset: dependencies/shadcn_u_i_kit_v48jv9/assets/fonts/RadixUI.ttf
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -151,21 +151,21 @@ class LightModeTheme extends FlutterFlowTheme {
   @Deprecated('Use tertiary instead')
   Color get tertiaryColor => tertiary;
 
-  late Color primary = const Color(0xFF261F58);
-  late Color secondary = const Color(0xFF39D2C0);
-  late Color tertiary = const Color(0xFFEE8B60);
-  late Color alternate = const Color(0xFFE0E3E7);
-  late Color primaryText = const Color(0xFF14181B);
-  late Color secondaryText = const Color(0xFF57636C);
-  late Color primaryBackground = const Color(0xFFF1F4F8);
-  late Color secondaryBackground = const Color(0xFFFFFFFF);
-  late Color accent1 = const Color(0x4C4B39EF);
-  late Color accent2 = const Color(0x4D39D2C0);
-  late Color accent3 = const Color(0x4DEE8B60);
-  late Color accent4 = const Color(0xCCFFFFFF);
-  late Color success = const Color(0xFF249689);
-  late Color warning = const Color(0xFFF9CF58);
-  late Color error = const Color(0xFFFF5963);
+  late Color primary = const Color(0xFF18181B);
+  late Color secondary = const Color(0xFF2563EB);
+  late Color tertiary = const Color(0xFFE11D48);
+  late Color alternate = const Color(0xFF18181B);
+  late Color primaryText = const Color(0xFF020611);
+  late Color secondaryText = const Color(0xFF6B7280);
+  late Color primaryBackground = const Color(0xFFFFFFFF);
+  late Color secondaryBackground = const Color(0xFFF3F4F6);
+  late Color accent1 = const Color(0x2618181B);
+  late Color accent2 = const Color(0x262563EB);
+  late Color accent3 = const Color(0x26E11D48);
+  late Color accent4 = const Color(0x2518181B);
+  late Color success = const Color(0xFF15A44A);
+  late Color warning = const Color(0xFFFACC17);
+  late Color error = const Color(0xFFEE4444);
   late Color info = const Color(0xFFFFFFFF);
 
   late Color background = Color(0xFFFFFFFF);
@@ -237,85 +237,85 @@ class ThemeTypography extends Typography {
   TextStyle get displayLarge => TextStyle(
         fontFamily: 'Geist',
         color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 64.0,
+        fontWeight: FontWeight.w500,
+        fontSize: 48.0,
       );
   String get displayMediumFamily => 'Geist';
   TextStyle get displayMedium => TextStyle(
         fontFamily: 'Geist',
         color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 44.0,
+        fontWeight: FontWeight.w500,
+        fontSize: 36.0,
       );
   String get displaySmallFamily => 'Geist';
   TextStyle get displaySmall => TextStyle(
         fontFamily: 'Geist',
         color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 36.0,
+        fontWeight: FontWeight.w500,
+        fontSize: 30.0,
       );
   String get headlineLargeFamily => 'Geist';
   TextStyle get headlineLarge => TextStyle(
         fontFamily: 'Geist',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
-        fontSize: 32.0,
+        fontSize: 24.0,
       );
   String get headlineMediumFamily => 'Geist';
   TextStyle get headlineMedium => TextStyle(
         fontFamily: 'Geist',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
-        fontSize: 28.0,
+        fontSize: 20.0,
       );
   String get headlineSmallFamily => 'Geist';
   TextStyle get headlineSmall => TextStyle(
         fontFamily: 'Geist',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
-        fontSize: 24.0,
+        fontSize: 16.0,
       );
   String get titleLargeFamily => 'Geist';
   TextStyle get titleLarge => TextStyle(
         fontFamily: 'Geist',
         color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 20.0,
+        fontWeight: FontWeight.w500,
+        fontSize: 22.0,
       );
   String get titleMediumFamily => 'Geist';
   TextStyle get titleMedium => TextStyle(
         fontFamily: 'Geist',
         color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 18.0,
+        fontWeight: FontWeight.w500,
+        fontSize: 20.0,
       );
   String get titleSmallFamily => 'Geist';
   TextStyle get titleSmall => TextStyle(
         fontFamily: 'Geist',
         color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 16.0,
+        fontWeight: FontWeight.w500,
+        fontSize: 18.0,
       );
   String get labelLargeFamily => 'Geist';
   TextStyle get labelLarge => TextStyle(
         fontFamily: 'Geist',
-        color: theme.secondaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 16.0,
+        color: theme.primaryText,
+        fontWeight: FontWeight.w300,
+        fontSize: 22.0,
       );
   String get labelMediumFamily => 'Geist';
   TextStyle get labelMedium => TextStyle(
         fontFamily: 'Geist',
-        color: theme.secondaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 14.0,
+        color: theme.primaryText,
+        fontWeight: FontWeight.w300,
+        fontSize: 20.0,
       );
   String get labelSmallFamily => 'Geist';
   TextStyle get labelSmall => TextStyle(
         fontFamily: 'Geist',
-        color: theme.secondaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 12.0,
+        color: theme.primaryText,
+        fontWeight: FontWeight.w300,
+        fontSize: 18.0,
       );
   String get bodyLargeFamily => 'Geist';
   TextStyle get bodyLarge => TextStyle(
@@ -335,8 +335,8 @@ class ThemeTypography extends Typography {
   TextStyle get bodySmall => TextStyle(
         fontFamily: 'Geist',
         color: theme.primaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 12.0,
+        fontWeight: FontWeight.w300,
+        fontSize: 14.0,
       );
 }
 
@@ -348,22 +348,22 @@ class DarkModeTheme extends FlutterFlowTheme {
   @Deprecated('Use tertiary instead')
   Color get tertiaryColor => tertiary;
 
-  late Color primary = const Color(0xFF261F58);
-  late Color secondary = const Color(0xFF39D2C0);
-  late Color tertiary = const Color(0xFFEE8B60);
-  late Color alternate = const Color(0xFF262D34);
-  late Color primaryText = const Color(0xFFFFFFFF);
-  late Color secondaryText = const Color(0xFF95A1AC);
-  late Color primaryBackground = const Color(0xFF1D2428);
-  late Color secondaryBackground = const Color(0xFF14181B);
-  late Color accent1 = const Color(0x4C4B39EF);
-  late Color accent2 = const Color(0x4D39D2C0);
-  late Color accent3 = const Color(0x4DEE8B60);
-  late Color accent4 = const Color(0xB2262D34);
-  late Color success = const Color(0xFF249689);
-  late Color warning = const Color(0xFFF9CF58);
-  late Color error = const Color(0xFFFF5963);
-  late Color info = const Color(0xFFFFFFFF);
+  late Color primary = const Color(0xFFFAFAFA);
+  late Color secondary = const Color(0xFF3C82F7);
+  late Color tertiary = const Color(0xFFE11D48);
+  late Color alternate = const Color(0xFFFAFAFA);
+  late Color primaryText = const Color(0xFFF8F9FA);
+  late Color secondaryText = const Color(0xFF9CA2AE);
+  late Color primaryBackground = const Color(0xFF020611);
+  late Color secondaryBackground = const Color(0xFF1F2937);
+  late Color accent1 = const Color(0x26FAFAFA);
+  late Color accent2 = const Color(0x253C82F7);
+  late Color accent3 = const Color(0x24E11D48);
+  late Color accent4 = const Color(0x26FAFAFA);
+  late Color success = const Color(0xFF22C55F);
+  late Color warning = const Color(0xFFFACC17);
+  late Color error = const Color(0xFF7F1D1D);
+  late Color info = const Color(0xFF000000);
 
   late Color background = Color(0xFF020611);
   late Color foreground = Color(0xFFF8F9FA);
