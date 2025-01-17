@@ -35,12 +35,18 @@ void main() async {
   await SQLiteManager.initialize();
   await FlutterFlowTheme.initialize();
 
+  final appState = FFAppState(); // Initialize FFAppState
+  await appState.initializePersistedState();
+
   final shadcn_u_i_kit_v48jv9AppState =
       shadcn_u_i_kit_v48jv9_app_state.FFAppState();
   await shadcn_u_i_kit_v48jv9AppState.initializePersistedState();
 
   runApp(MultiProvider(
     providers: [
+      ChangeNotifierProvider(
+        create: (context) => appState,
+      ),
       ChangeNotifierProvider(
         create: (context) => shadcn_u_i_kit_v48jv9AppState,
       ),

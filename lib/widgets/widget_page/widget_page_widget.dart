@@ -3,17 +3,26 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/widgets/components/base_elements/widget_text/widget_text_widget.dart';
 import '/widgets/components/layout_elements/widget_card/widget_card_widget.dart';
+import '/widgets/components/layout_elements/widget_carousel/widget_carousel_widget.dart';
 import '/widgets/components/layout_elements/widget_column/widget_column_widget.dart';
 import '/widgets/components/layout_elements/widget_container/widget_container_widget.dart';
+import '/widgets/components/layout_elements/widget_data_table/widget_data_table_widget.dart';
 import '/widgets/components/layout_elements/widget_divider/widget_divider_widget.dart';
+import '/widgets/components/layout_elements/widget_expandable/widget_expandable_widget.dart';
+import '/widgets/components/layout_elements/widget_flex/widget_flex_widget.dart';
+import '/widgets/components/layout_elements/widget_flippable_card/widget_flippable_card_widget.dart';
+import '/widgets/components/layout_elements/widget_form_validation/widget_form_validation_widget.dart';
 import '/widgets/components/layout_elements/widget_grid_view/widget_grid_view_widget.dart';
 import '/widgets/components/layout_elements/widget_list_view/widget_list_view_widget.dart';
 import '/widgets/components/layout_elements/widget_page_view/widget_page_view_widget.dart';
 import '/widgets/components/layout_elements/widget_row/widget_row_widget.dart';
 import '/widgets/components/layout_elements/widget_spacer/widget_spacer_widget.dart';
 import '/widgets/components/layout_elements/widget_stack/widget_stack_widget.dart';
+import '/widgets/components/layout_elements/widget_staggered_view/widget_staggered_view_widget.dart';
+import '/widgets/components/layout_elements/widget_swipeable_stack/widget_swipeable_stack_widget.dart';
 import '/widgets/components/layout_elements/widget_tab_bar/widget_tab_bar_widget.dart';
 import '/widgets/components/layout_elements/widget_vertical_divider/widget_vertical_divider_widget.dart';
+import '/widgets/components/layout_elements/widget_wrap/widget_wrap_widget.dart';
 import 'dart:ui';
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
@@ -185,11 +194,83 @@ class _WidgetPageWidgetState extends State<WidgetPageWidget> {
                       updateCallback: () => safeSetState(() {}),
                       child: WidgetPageViewWidget(),
                     );
+                  } else if (widget!.widgetTitle == 'WidgetCarousel') {
+                    return wrapWithModel(
+                      model: _model.widgetCarouselModel,
+                      updateCallback: () => safeSetState(() {}),
+                      child: WidgetCarouselWidget(),
+                    );
+                  } else if (widget!.widgetTitle == 'WidgetExpandable') {
+                    return wrapWithModel(
+                      model: _model.widgetExpandableModel,
+                      updateCallback: () => safeSetState(() {}),
+                      child: WidgetExpandableWidget(),
+                    );
+                  } else if (widget!.widgetTitle == 'WidgetWrap') {
+                    return Align(
+                      alignment: AlignmentDirectional(0.0, 0.0),
+                      child: wrapWithModel(
+                        model: _model.widgetWrapModel,
+                        updateCallback: () => safeSetState(() {}),
+                        child: WidgetWrapWidget(),
+                      ),
+                    );
+                  } else if (widget!.widgetTitle == 'WidgetFormValidation') {
+                    return Align(
+                      alignment: AlignmentDirectional(0.0, 0.0),
+                      child: wrapWithModel(
+                        model: _model.widgetFormValidationModel,
+                        updateCallback: () => safeSetState(() {}),
+                        child: WidgetFormValidationWidget(),
+                      ),
+                    );
+                  } else if (widget!.widgetTitle == 'WidgetStaggeredView') {
+                    return wrapWithModel(
+                      model: _model.widgetStaggeredViewModel,
+                      updateCallback: () => safeSetState(() {}),
+                      child: WidgetStaggeredViewWidget(),
+                    );
+                  } else if (widget!.widgetTitle == 'FlippableCard') {
+                    return Align(
+                      alignment: AlignmentDirectional(0.0, 0.0),
+                      child: wrapWithModel(
+                        model: _model.widgetFlippableCardModel,
+                        updateCallback: () => safeSetState(() {}),
+                        child: WidgetFlippableCardWidget(),
+                      ),
+                    );
+                  } else if (widget!.widgetTitle == 'WidgetSwipeableStack') {
+                    return wrapWithModel(
+                      model: _model.widgetSwipeableStackModel,
+                      updateCallback: () => safeSetState(() {}),
+                      child: WidgetSwipeableStackWidget(),
+                    );
+                  } else if (widget!.widgetTitle == 'DataTable') {
+                    return wrapWithModel(
+                      model: _model.widgetDataTableModel,
+                      updateCallback: () => safeSetState(() {}),
+                      child: WidgetDataTableWidget(),
+                    );
+                  } else if (widget!.widgetTitle == 'WidgetFlex') {
+                    return Align(
+                      alignment: AlignmentDirectional(0.0, 1.0),
+                      child: Padding(
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+                        child: wrapWithModel(
+                          model: _model.widgetFlexModel,
+                          updateCallback: () => safeSetState(() {}),
+                          child: WidgetFlexWidget(),
+                        ),
+                      ),
+                    );
                   } else {
                     return Text(
                       'Hello World',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Geist',
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
                             letterSpacing: 0.0,
                             useGoogleFonts: false,
                           ),
