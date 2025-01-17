@@ -140,6 +140,7 @@ class _WidgetDataTableWidgetState extends State<WidgetDataTableWidget> {
                   selectable: true,
                   hidePaginator: false,
                   showFirstLastButtons: false,
+                  height: 512.0,
                   headingRowHeight: 56.0,
                   dataRowHeight: 48.0,
                   columnSpacing: 20.0,
