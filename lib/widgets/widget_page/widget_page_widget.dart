@@ -245,7 +245,7 @@ class _WidgetPageWidgetState extends State<WidgetPageWidget> {
                       updateCallback: () => safeSetState(() {}),
                       child: WidgetSwipeableStackWidget(),
                     );
-                  } else if (widget!.widgetTitle == 'WidgetDataTable') {
+                  } else if (widget!.widgetTitle == 'DataTable') {
                     return wrapWithModel(
                       model: _model.widgetDataTableModel,
                       updateCallback: () => safeSetState(() {}),
