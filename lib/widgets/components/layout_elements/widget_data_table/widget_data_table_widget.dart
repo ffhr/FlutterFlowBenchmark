@@ -58,6 +58,9 @@ class _WidgetDataTableWidgetState extends State<WidgetDataTableWidget> {
     context.watch<shadcn_u_i_kit_v48jv9_app_state.FFAppState>();
 
     return Container(
+      constraints: BoxConstraints(
+        maxHeight: 1024.0,
+      ),
       decoration: BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.min,
