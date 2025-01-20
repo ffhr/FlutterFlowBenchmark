@@ -74,7 +74,9 @@ class _WidgetCardWidgetState extends State<WidgetCardWidget> {
               child: Align(
                 alignment: AlignmentDirectional(0.0, 0.0),
                 child: Text(
-                  'Hello World',
+                  FFLocalizations.of(context).getText(
+                    'iyzloja9' /* Hello World */,
+                  ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Geist',
                         color: FlutterFlowTheme.of(context).primaryBackground,
@@ -99,7 +101,9 @@ class _WidgetCardWidgetState extends State<WidgetCardWidget> {
               child: Align(
                 alignment: AlignmentDirectional(0.0, 0.0),
                 child: Text(
-                  'Hello World',
+                  FFLocalizations.of(context).getText(
+                    'zmxllr58' /* Hello World */,
+                  ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Geist',
                         color: FlutterFlowTheme.of(context).primaryBackground,
@@ -124,7 +128,9 @@ class _WidgetCardWidgetState extends State<WidgetCardWidget> {
               child: Align(
                 alignment: AlignmentDirectional(0.0, 0.0),
                 child: Text(
-                  'Hello World',
+                  FFLocalizations.of(context).getText(
+                    '09o6k2ns' /* Hello World */,
+                  ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Geist',
                         color: FlutterFlowTheme.of(context).primaryBackground,

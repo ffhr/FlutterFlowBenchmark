@@ -73,7 +73,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
             },
           ),
           title: Text(
-            'Supabase Realtime',
+            FFLocalizations.of(context).getText(
+              'jrukaf6r' /* Supabase Realtime */,
+            ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Geist',
                   color: Colors.white,
@@ -93,7 +95,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Text(
-                  'is_active=true',
+                  FFLocalizations.of(context).getText(
+                    'c0gcwh81' /* is_active=true */,
+                  ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Geist',
                         letterSpacing: 0.0,
@@ -172,7 +176,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                                   await _model.refreshSupabaseResults(context);
                                   safeSetState(() {});
                                 },
-                                text: 'SET is_active=false',
+                                text: FFLocalizations.of(context).getText(
+                                  'p82j9ia6' /* SET is_active=false */,
+                                ),
                                 options: FFButtonOptions(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       4.0, 0.0, 4.0, 0.0),
@@ -200,7 +206,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                   ),
                 ),
                 Text(
-                  'is_active=false',
+                  FFLocalizations.of(context).getText(
+                    'ynlvkiqc' /* is_active=false */,
+                  ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Geist',
                         letterSpacing: 0.0,
@@ -281,7 +289,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                                   await _model.refreshSupabaseResults(context);
                                   safeSetState(() {});
                                 },
-                                text: 'SET is_active=true',
+                                text: FFLocalizations.of(context).getText(
+                                  '3r78oax7' /* SET is_active=true */,
+                                ),
                                 options: FFButtonOptions(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       4.0, 0.0, 4.0, 0.0),
@@ -309,7 +319,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                   ),
                 ),
                 Text(
-                  'realtime_all',
+                  FFLocalizations.of(context).getText(
+                    'byh6eb93' /* realtime_all */,
+                  ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Geist',
                         letterSpacing: 0.0,
@@ -411,7 +423,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                                       ),
                                     );
                                   },
-                                  text: 'SET is_active=true',
+                                  text: FFLocalizations.of(context).getText(
+                                    'ctvf1ycd' /* SET is_active=true */,
+                                  ),
                                   options: FFButtonOptions(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         4.0, 0.0, 4.0, 0.0),
@@ -446,7 +460,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                                       ),
                                     );
                                   },
-                                  text: 'SET is_active=false',
+                                  text: FFLocalizations.of(context).getText(
+                                    'wknwlp37' /* SET is_active=false */,
+                                  ),
                                   options: FFButtonOptions(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         4.0, 0.0, 4.0, 0.0),
@@ -475,7 +491,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                   ),
                 ),
                 Text(
-                  'single_time_query',
+                  FFLocalizations.of(context).getText(
+                    'xbelpkyd' /* single_time_query */,
+                  ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Geist',
                         letterSpacing: 0.0,
@@ -580,7 +598,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                                         () => _model.requestCompleter = null);
                                     await _model.waitForRequestCompleted();
                                   },
-                                  text: 'SET is_active=true',
+                                  text: FFLocalizations.of(context).getText(
+                                    'y90eh24q' /* SET is_active=true */,
+                                  ),
                                   options: FFButtonOptions(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         4.0, 0.0, 4.0, 0.0),
@@ -618,7 +638,9 @@ class _SupabaseRealtimeWidgetState extends State<SupabaseRealtimeWidget> {
                                         () => _model.requestCompleter = null);
                                     await _model.waitForRequestCompleted();
                                   },
-                                  text: 'SET is_active=false',
+                                  text: FFLocalizations.of(context).getText(
+                                    '7hw88ix4' /* SET is_active=false */,
+                                  ),
                                   options: FFButtonOptions(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         4.0, 0.0, 4.0, 0.0),

@@ -282,7 +282,9 @@ class _WidgetsFromSqlLiteWidgetState extends State<WidgetsFromSqlLiteWidget> {
           );
         } else {
           return Text(
-            'SQLite is not supported on this platform!',
+            FFLocalizations.of(context).getText(
+              'j3786dv9' /* SQLite is not supported on thi... */,
+            ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
                   fontFamily: 'Geist',
                   letterSpacing: 0.0,

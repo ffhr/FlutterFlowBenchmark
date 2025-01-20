@@ -60,7 +60,9 @@ class _WidgetSpacerWidgetState extends State<WidgetSpacerWidget> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            'Hello World',
+            FFLocalizations.of(context).getText(
+              'jwpvn23o' /* Hello World */,
+            ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
                   fontFamily: 'Geist',
                   letterSpacing: 0.0,
@@ -69,14 +71,16 @@ class _WidgetSpacerWidgetState extends State<WidgetSpacerWidget> {
           ),
           Spacer(),
           Text(
-            'Hello World',
+            FFLocalizations.of(context).getText(
+              'crfcdf0r' /* Hello World */,
+            ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
                   fontFamily: 'Geist',
                   letterSpacing: 0.0,
                   useGoogleFonts: false,
                 ),
           ),
-        ],
+        ].divide(SizedBox(height: 16.0)).around(SizedBox(height: 16.0)),
       ),
     );
   }

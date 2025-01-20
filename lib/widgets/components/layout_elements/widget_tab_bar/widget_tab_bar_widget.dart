@@ -65,7 +65,9 @@ class _WidgetTabBarWidgetState extends State<WidgetTabBarWidget>
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Expanded(
+          Container(
+            height: 500.0,
+            decoration: BoxDecoration(),
             child: Column(
               children: [
                 Align(
@@ -89,13 +91,19 @@ class _WidgetTabBarWidgetState extends State<WidgetTabBarWidget>
                     indicatorColor: FlutterFlowTheme.of(context).primary,
                     tabs: [
                       Tab(
-                        text: 'Tab 1',
+                        text: FFLocalizations.of(context).getText(
+                          'mhcwfmgc' /* Tab 1 */,
+                        ),
                       ),
                       Tab(
-                        text: 'Tab 2',
+                        text: FFLocalizations.of(context).getText(
+                          '4jzh3hg2' /* Tab 2 */,
+                        ),
                       ),
                       Tab(
-                        text: 'Tab 3',
+                        text: FFLocalizations.of(context).getText(
+                          'pyscasr9' /* Tab 3 */,
+                        ),
                       ),
                     ],
                     controller: _model.tabBarController,
@@ -117,17 +125,22 @@ class _WidgetTabBarWidgetState extends State<WidgetTabBarWidget>
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context).primary,
                             ),
-                            child: Text(
-                              'Content of Tab 1',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Geist',
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryBackground,
-                                    letterSpacing: 0.0,
-                                    useGoogleFonts: false,
-                                  ),
+                            child: Align(
+                              alignment: AlignmentDirectional(0.0, 0.0),
+                              child: Text(
+                                FFLocalizations.of(context).getText(
+                                  'kd0k8a4w' /* Content of Tab 1 */,
+                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Geist',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBackground,
+                                      letterSpacing: 0.0,
+                                      useGoogleFonts: false,
+                                    ),
+                              ),
                             ),
                           ),
                         ],
@@ -141,15 +154,22 @@ class _WidgetTabBarWidgetState extends State<WidgetTabBarWidget>
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context).secondary,
                             ),
-                            child: Text(
-                              'Content of Tab 2',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Geist',
-                                    letterSpacing: 0.0,
-                                    useGoogleFonts: false,
-                                  ),
+                            child: Align(
+                              alignment: AlignmentDirectional(0.0, 0.0),
+                              child: Text(
+                                FFLocalizations.of(context).getText(
+                                  'o48nzznx' /* Content of Tab 2 */,
+                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Geist',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBackground,
+                                      letterSpacing: 0.0,
+                                      useGoogleFonts: false,
+                                    ),
+                              ),
                             ),
                           ),
                         ],
@@ -163,15 +183,22 @@ class _WidgetTabBarWidgetState extends State<WidgetTabBarWidget>
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context).tertiary,
                             ),
-                            child: Text(
-                              'Content of Tab 3',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Geist',
-                                    letterSpacing: 0.0,
-                                    useGoogleFonts: false,
-                                  ),
+                            child: Align(
+                              alignment: AlignmentDirectional(0.0, 0.0),
+                              child: Text(
+                                FFLocalizations.of(context).getText(
+                                  'el5e200p' /* Content of Tab 3 */,
+                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Geist',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBackground,
+                                      letterSpacing: 0.0,
+                                      useGoogleFonts: false,
+                                    ),
+                              ),
                             ),
                           ),
                         ],

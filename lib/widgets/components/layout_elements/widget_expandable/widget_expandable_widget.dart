@@ -40,10 +40,8 @@ class _WidgetExpandableWidgetState extends State<WidgetExpandableWidget> {
     super.initState();
     _model = createModel(context, () => WidgetExpandableModel());
 
-    _model.expandableExpandableController1 =
-        ExpandableController(initialExpanded: false);
-    _model.expandableExpandableController2 =
-        ExpandableController(initialExpanded: false);
+    _model.expandableExpandableController =
+        ExpandableController(initialExpanded: true);
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
@@ -62,7 +60,7 @@ class _WidgetExpandableWidgetState extends State<WidgetExpandableWidget> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Container(
-            height: 200.0,
+            height: 600.0,
             decoration: BoxDecoration(
               color: FlutterFlowTheme.of(context).primaryBackground,
             ),
@@ -73,12 +71,15 @@ class _WidgetExpandableWidgetState extends State<WidgetExpandableWidget> {
                   padding: EdgeInsets.all(16.0),
                   child: Container(
                     width: double.infinity,
+                    height: 100.0,
                     color: Color(0x00000000),
                     child: ExpandableNotifier(
-                      controller: _model.expandableExpandableController1,
+                      controller: _model.expandableExpandableController,
                       child: ExpandablePanel(
                         header: Text(
-                          'Title 1',
+                          FFLocalizations.of(context).getText(
+                            '9efdit2w' /* A weathered map */,
+                          ),
                           style:
                               FlutterFlowTheme.of(context).titleLarge.override(
                                     fontFamily: 'Geist',
@@ -91,7 +92,10 @@ class _WidgetExpandableWidgetState extends State<WidgetExpandableWidget> {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Text(
-                              'Collapsed body text 1',
+                              FFLocalizations.of(context).getText(
+                                'fzez8drv' /* A weathered map, edges frayed.... */,
+                              ),
+                              maxLines: 1,
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -107,7 +111,9 @@ class _WidgetExpandableWidgetState extends State<WidgetExpandableWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Text(
-                              'Expanded body text 1',
+                              FFLocalizations.of(context).getText(
+                                'zg0zgj9t' /* A weathered map, edges frayed,... */,
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -121,70 +127,8 @@ class _WidgetExpandableWidgetState extends State<WidgetExpandableWidget> {
                         ),
                         theme: ExpandableThemeData(
                           tapHeaderToExpand: true,
-                          tapBodyToExpand: false,
-                          tapBodyToCollapse: false,
-                          headerAlignment:
-                              ExpandablePanelHeaderAlignment.center,
-                          hasIcon: true,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: Container(
-                    width: double.infinity,
-                    color: Color(0x00000000),
-                    child: ExpandableNotifier(
-                      controller: _model.expandableExpandableController2,
-                      child: ExpandablePanel(
-                        header: Text(
-                          'Title 2',
-                          style:
-                              FlutterFlowTheme.of(context).titleLarge.override(
-                                    fontFamily: 'Geist',
-                                    color: Colors.black,
-                                    letterSpacing: 0.0,
-                                    useGoogleFonts: false,
-                                  ),
-                        ),
-                        collapsed: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Text(
-                              'Collapsed body text 2',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Geist',
-                                    color: Color(0x8A000000),
-                                    letterSpacing: 0.0,
-                                    useGoogleFonts: false,
-                                  ),
-                            ),
-                          ],
-                        ),
-                        expanded: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Text(
-                              'Expanded body text 2',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Geist',
-                                    color: Color(0x8A000000),
-                                    letterSpacing: 0.0,
-                                    useGoogleFonts: false,
-                                  ),
-                            ),
-                          ],
-                        ),
-                        theme: ExpandableThemeData(
-                          tapHeaderToExpand: true,
-                          tapBodyToExpand: false,
-                          tapBodyToCollapse: false,
+                          tapBodyToExpand: true,
+                          tapBodyToCollapse: true,
                           headerAlignment:
                               ExpandablePanelHeaderAlignment.center,
                           hasIcon: true,

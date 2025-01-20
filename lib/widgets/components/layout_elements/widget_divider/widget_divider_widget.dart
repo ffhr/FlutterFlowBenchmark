@@ -60,6 +60,24 @@ class _WidgetDividerWidgetState extends State<WidgetDividerWidget> {
             thickness: 2.0,
             color: FlutterFlowTheme.of(context).alternate,
           ),
+          Text(
+            FFLocalizations.of(context).getText(
+              'zjz4x2ze' /* Hello World */,
+            ),
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  fontFamily: 'Geist',
+                  letterSpacing: 0.0,
+                  useGoogleFonts: false,
+                ),
+          ),
+          Divider(
+            thickness: 2.0,
+            color: FlutterFlowTheme.of(context).alternate,
+          ),
+          Divider(
+            thickness: 2.0,
+            color: FlutterFlowTheme.of(context).alternate,
+          ),
         ],
       ),
     );

@@ -57,7 +57,9 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
           title: Text(
-            'Login @ FlutterFlowBenchmark',
+            FFLocalizations.of(context).getText(
+              '6t8qzyow' /* Login @ FlutterFlowBenchmark */,
+            ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Geist',
                   color: Colors.white,
@@ -93,7 +95,9 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
 
                         context.goNamedAuth('HomePage', context.mounted);
                       },
-                      text: 'Login with Google',
+                      text: FFLocalizations.of(context).getText(
+                        'fncjvmvi' /* Login with Google */,
+                      ),
                       icon: FaIcon(
                         FontAwesomeIcons.google,
                         color: FlutterFlowTheme.of(context).primaryText,
@@ -137,7 +141,9 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
 
                               context.goNamedAuth('HomePage', context.mounted);
                             },
-                            text: 'Login with Apple',
+                            text: FFLocalizations.of(context).getText(
+                              'd459vnwi' /* Login with Apple */,
+                            ),
                             icon: Icon(
                               Icons.apple,
                               color: FlutterFlowTheme.of(context).primaryText,
@@ -181,7 +187,9 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
 
                         context.goNamedAuth('HomePage', context.mounted);
                       },
-                      text: 'Login Anonymously',
+                      text: FFLocalizations.of(context).getText(
+                        '4iq4rj30' /* Login Anonymously */,
+                      ),
                       options: FFButtonOptions(
                         width: double.infinity,
                         height: 50.0,
@@ -218,7 +226,9 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                             obscureText: false,
                             decoration: InputDecoration(
                               isDense: true,
-                              labelText: 'Email',
+                              labelText: FFLocalizations.of(context).getText(
+                                'docz679v' /* Email */,
+                              ),
                               labelStyle: FlutterFlowTheme.of(context)
                                   .labelMedium
                                   .override(
@@ -226,7 +236,9 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     letterSpacing: 0.0,
                                     useGoogleFonts: false,
                                   ),
-                              hintText: 'TextField',
+                              hintText: FFLocalizations.of(context).getText(
+                                'wbnb8kq2' /* TextField */,
+                              ),
                               hintStyle: FlutterFlowTheme.of(context)
                                   .labelMedium
                                   .override(
@@ -289,7 +301,9 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                             obscureText: !_model.passwordTextFieldVisibility,
                             decoration: InputDecoration(
                               isDense: true,
-                              labelText: 'Password',
+                              labelText: FFLocalizations.of(context).getText(
+                                'g8y69ejr' /* Password */,
+                              ),
                               labelStyle: FlutterFlowTheme.of(context)
                                   .labelMedium
                                   .override(
@@ -297,7 +311,9 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     letterSpacing: 0.0,
                                     useGoogleFonts: false,
                                   ),
-                              hintText: 'TextField',
+                              hintText: FFLocalizations.of(context).getText(
+                                'irywohd8' /* TextField */,
+                              ),
                               hintStyle: FlutterFlowTheme.of(context)
                                   .labelMedium
                                   .override(
@@ -380,7 +396,9 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
 
                             context.goNamedAuth('HomePage', context.mounted);
                           },
-                          text: 'Login email/password',
+                          text: FFLocalizations.of(context).getText(
+                            'ii97znke' /* Login email/password */,
+                          ),
                           options: FFButtonOptions(
                             height: 40.0,
                             padding: EdgeInsetsDirectional.fromSTEB(
