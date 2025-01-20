@@ -296,8 +296,11 @@ class _WidgetFormValidationWidgetState
                         ),
                       ),
                       FFButtonWidget(
-                        onPressed: () {
-                          print('Button pressed ...');
+                        onPressed: () async {
+                          if (_model.formKey.currentState == null ||
+                              !_model.formKey.currentState!.validate()) {
+                            return;
+                          }
                         },
                         text: FFLocalizations.of(context).getText(
                           'ouzplb5p' /* Sign Up */,

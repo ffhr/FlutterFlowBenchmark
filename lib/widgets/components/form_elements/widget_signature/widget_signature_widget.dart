@@ -67,7 +67,7 @@ class _WidgetSignatureWidgetState extends State<WidgetSignatureWidget> {
                 padding: EdgeInsets.all(8.0),
                 child: ClipRect(
                   child: Signature(
-                    controller: _model.signatureController ??=
+                    controller: _model.signatureController1 ??=
                         SignatureController(
                       penStrokeWidth: 2.0,
                       penColor: FlutterFlowTheme.of(context).primaryText,
@@ -77,6 +77,31 @@ class _WidgetSignatureWidgetState extends State<WidgetSignatureWidget> {
                         FlutterFlowTheme.of(context).secondaryBackground,
                     width: 250.0,
                     height: 120.0,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Container(
+            width: 512.0,
+            height: 256.0,
+            decoration: BoxDecoration(),
+            child: Align(
+              alignment: AlignmentDirectional(0.0, 0.0),
+              child: Padding(
+                padding: EdgeInsets.all(8.0),
+                child: ClipRect(
+                  child: Signature(
+                    controller: _model.signatureController2 ??=
+                        SignatureController(
+                      penStrokeWidth: 2.0,
+                      penColor: FlutterFlowTheme.of(context).primaryText,
+                      exportBackgroundColor: Colors.white,
+                    ),
+                    backgroundColor:
+                        FlutterFlowTheme.of(context).secondaryBackground,
+                    width: double.infinity,
+                    height: double.infinity,
                   ),
                 ),
               ),

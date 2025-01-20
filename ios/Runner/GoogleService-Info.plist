@@ -3,23 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1015621602831-v1vj7fkdnbqvcpocvftaefcb1e6ra6be.apps.googleusercontent.com</string>
+	<string>776187583115-dqo4fisuurn6b046jqni8tloht7gdhpb.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1015621602831-v1vj7fkdnbqvcpocvftaefcb1e6ra6be</string>
+	<string>com.googleusercontent.apps.776187583115-dqo4fisuurn6b046jqni8tloht7gdhpb</string>
 	<key>ANDROID_CLIENT_ID</key>
-	<string>1015621602831-epr7c5df4thcr9n9j7g1ekd95p6rbjqa.apps.googleusercontent.com</string>
+	<string>776187583115-b7dbr5jdsta5a3icvr5sucfimul371qe.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBL225PJmOX6AiYkkdpokwe8HUImz1Iqv4</string>
+	<string>AIzaSyBvMXvnbE0BANO6bBRiULEGLyKVRMnSeuE</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1015621602831</string>
+	<string>776187583115</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>hr.ff.ffbenchmark.development</string>
+	<string>hr.ff.ffbenchmark.staging</string>
 	<key>PROJECT_ID</key>
-	<string>ff-benchmark-development</string>
+	<string>ff-benchmark-staging</string>
 	<key>STORAGE_BUCKET</key>
-	<string>ff-benchmark-development.firebasestorage.app</string>
+	<string>ff-benchmark-staging.firebasestorage.app</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,6 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1015621602831:ios:31555540a946efed99dd7a</string>
+	<string>1:776187583115:ios:76719a5e51b2c0f8ce528e</string>
 </dict>
 </plist>

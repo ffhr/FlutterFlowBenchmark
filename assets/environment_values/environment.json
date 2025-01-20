@@ -1,4 +1,4 @@
 {
-  "SupabaseApiUrl": "http://m.ff.hr:8000",
-"SupabaseAnonKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyAgCiAgICAicm9sZSI6ICJhbm9uIiwKICAgICJpc3MiOiAic3VwYWJhc2UtZGVtbyIsCiAgICAiaWF0IjogMTY0MTc2OTIwMCwKICAgICJleHAiOiAxNzk5NTM1NjAwCn0.dc_X5iR_VP_qT0zsiyj_I_OZ2T9FtRU2BBNWN8Bu4GE"
+  "SupabaseApiUrl": "https://jhowdhomdtnnsenhgflx.supabase.co",
+"SupabaseAnonKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impob3dkaG9tZHRubnNlbmhnZmx4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzY1MjM0MzMsImV4cCI6MjA1MjA5OTQzM30._ybV_C_A9Ev85h-vmPzM8pVYuoi5M0kWl1nT0-fAsCE"
 }

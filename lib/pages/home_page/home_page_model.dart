@@ -1,3 +1,4 @@
+import '/components/widgets_from_app_state_constants_widget.dart';
 import '/components/widgets_from_sql_lite_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -15,15 +16,20 @@ class HomePageModel extends FlutterFlowModel<HomePageWidget> {
 
   // Model for WidgetsFromSqlLite component.
   late WidgetsFromSqlLiteModel widgetsFromSqlLiteModel;
+  // Model for WidgetsFromAppStateConstants component.
+  late WidgetsFromAppStateConstantsModel widgetsFromAppStateConstantsModel;
 
   @override
   void initState(BuildContext context) {
     widgetsFromSqlLiteModel =
         createModel(context, () => WidgetsFromSqlLiteModel());
+    widgetsFromAppStateConstantsModel =
+        createModel(context, () => WidgetsFromAppStateConstantsModel());
   }
 
   @override
   void dispose() {
     widgetsFromSqlLiteModel.dispose();
+    widgetsFromAppStateConstantsModel.dispose();
   }
 }

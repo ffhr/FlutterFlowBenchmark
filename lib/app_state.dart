@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '/backend/schema/structs/index.dart';
 import "package:shadcn_u_i_kit_v48jv9/backend/schema/structs/index.dart"
     as shadcn_u_i_kit_v48jv9_data_schema;
 import "package:shadcn_u_i_kit_v48jv9/backend/schema/enums/enums.dart"
@@ -191,5 +192,91 @@ class FFAppState extends ChangeNotifier {
   bool get liked => _liked;
   set liked(bool value) {
     _liked = value;
+  }
+
+  List<WidgetCategoryStruct> _cWidgetCategories = [
+    WidgetCategoryStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Commonly Used Elements\",\"order\":\"1000\",\"id\":\"wc_0001\"}')),
+    WidgetCategoryStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Layout Elements\",\"order\":\"2000\",\"id\":\"wc_0002\"}')),
+    WidgetCategoryStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Base Elements\",\"order\":\"3000\",\"id\":\"wc_0003\"}')),
+    WidgetCategoryStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Page Elements\",\"order\":\"4000\",\"id\":\"wc_0004\"}')),
+    WidgetCategoryStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Form Elements\",\"order\":\"5000\",\"id\":\"wc_0005\"}'))
+  ];
+  List<WidgetCategoryStruct> get cWidgetCategories => _cWidgetCategories;
+  set cWidgetCategories(List<WidgetCategoryStruct> value) {
+    _cWidgetCategories = value;
+  }
+
+  void addToCWidgetCategories(WidgetCategoryStruct value) {
+    cWidgetCategories.add(value);
+  }
+
+  void removeFromCWidgetCategories(WidgetCategoryStruct value) {
+    cWidgetCategories.remove(value);
+  }
+
+  void removeAtIndexFromCWidgetCategories(int index) {
+    cWidgetCategories.removeAt(index);
+  }
+
+  void updateCWidgetCategoriesAtIndex(
+    int index,
+    WidgetCategoryStruct Function(WidgetCategoryStruct) updateFn,
+  ) {
+    cWidgetCategories[index] = updateFn(_cWidgetCategories[index]);
+  }
+
+  void insertAtIndexInCWidgetCategories(int index, WidgetCategoryStruct value) {
+    cWidgetCategories.insert(index, value);
+  }
+
+  List<WidgetStruct> _cWidgets = [
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Text\",\"order\":\"10010\",\"widgetCategoryId\":\"wc_0001\",\"id\":\"wi_1001\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Column\",\"order\":\"10020\",\"widgetCategoryId\":\"wc_0001\",\"id\":\"wi_1002\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Row\",\"order\":\"10030\",\"widgetCategoryId\":\"wc_0001\",\"id\":\"wi_1003\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Container\",\"order\":\"10060\",\"widgetCategoryId\":\"wc_0002\",\"id\":\"wi_2001\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Row\",\"order\":\"20020\",\"widgetCategoryId\":\"wc_0002\",\"id\":\"wi_2002\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"RadioButton\",\"order\":\"50070\",\"widgetCategoryId\":\"wc_0005\",\"id\":\"wi_5007\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"PinCode\",\"order\":\"50080\",\"widgetCategoryId\":\"wc_0005\",\"id\":\"wi_5008\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"CheckboxListTile\",\"order\":\"50040\",\"widgetCategoryId\":\"wc_0005\",\"id\":\"wi_5004\"}'))
+  ];
+  List<WidgetStruct> get cWidgets => _cWidgets;
+  set cWidgets(List<WidgetStruct> value) {
+    _cWidgets = value;
+  }
+
+  void addToCWidgets(WidgetStruct value) {
+    cWidgets.add(value);
+  }
+
+  void removeFromCWidgets(WidgetStruct value) {
+    cWidgets.remove(value);
+  }
+
+  void removeAtIndexFromCWidgets(int index) {
+    cWidgets.removeAt(index);
+  }
+
+  void updateCWidgetsAtIndex(
+    int index,
+    WidgetStruct Function(WidgetStruct) updateFn,
+  ) {
+    cWidgets[index] = updateFn(_cWidgets[index]);
+  }
+
+  void insertAtIndexInCWidgets(int index, WidgetStruct value) {
+    cWidgets.insert(index, value);
   }
 }
