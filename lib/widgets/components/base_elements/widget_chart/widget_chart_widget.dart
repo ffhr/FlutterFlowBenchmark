@@ -113,7 +113,7 @@ class _WidgetChartWidgetState extends State<WidgetChartWidget> {
                                   FlutterFlowLineChart(
                                     data: [
                                       FFLineChartData(
-                                        xData: FFAppState().capacityList,
+                                        xData: _model.capacityList,
                                         yData: List.generate(
                                             random_data.randomInteger(7, 7),
                                             (index) => random_data
@@ -126,7 +126,7 @@ class _WidgetChartWidgetState extends State<WidgetChartWidget> {
                                         ),
                                       ),
                                       FFLineChartData(
-                                        xData: FFAppState().capacityList,
+                                        xData: _model.capacityList,
                                         yData: List.generate(
                                             random_data.randomInteger(7, 7),
                                             (index) => random_data
@@ -139,7 +139,7 @@ class _WidgetChartWidgetState extends State<WidgetChartWidget> {
                                         ),
                                       ),
                                       FFLineChartData(
-                                        xData: FFAppState().capacityList,
+                                        xData: _model.capacityList,
                                         yData: List.generate(
                                             random_data.randomInteger(7, 7),
                                             (index) => random_data
@@ -152,7 +152,7 @@ class _WidgetChartWidgetState extends State<WidgetChartWidget> {
                                         ),
                                       ),
                                       FFLineChartData(
-                                        xData: FFAppState().capacityList,
+                                        xData: _model.capacityList,
                                         yData: List.generate(
                                             random_data.randomInteger(7, 7),
                                             (index) => random_data
@@ -301,7 +301,7 @@ class _WidgetChartWidgetState extends State<WidgetChartWidget> {
                                       .secondaryBackground,
                                 )
                               ],
-                              xLabels: FFAppState().BarLabels,
+                              xLabels: _model.barLabels,
                               barWidth: 10.0,
                               barBorderRadius: BorderRadius.circular(8.0),
                               groupSpace: 0.0,

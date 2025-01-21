@@ -1,7 +1,5 @@
 import '/flutter_flow/flutter_flow_util.dart';
 import 'dart:ui';
-import 'package:shadcn_u_i_kit_v48jv9/app_state.dart'
-    as shadcn_u_i_kit_v48jv9_app_state;
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
@@ -56,9 +54,6 @@ class _WidgeSlideableListTileWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-    context.watch<shadcn_u_i_kit_v48jv9_app_state.FFAppState>();
-
     return Container(
       decoration: BoxDecoration(),
       child: Column(
@@ -69,7 +64,7 @@ class _WidgeSlideableListTileWidgetState
             decoration: BoxDecoration(),
             child: Builder(
               builder: (context) {
-                final strings = FFAppState().DataTableStrings.toList();
+                final strings = _model.listTiles.toList();
 
                 return ListView.builder(
                   padding: EdgeInsets.zero,

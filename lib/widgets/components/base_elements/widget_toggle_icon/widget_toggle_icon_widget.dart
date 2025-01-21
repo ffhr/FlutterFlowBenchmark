@@ -1,8 +1,6 @@
 import '/flutter_flow/flutter_flow_toggle_icon.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'dart:ui';
-import 'package:shadcn_u_i_kit_v48jv9/app_state.dart'
-    as shadcn_u_i_kit_v48jv9_app_state;
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -45,7 +43,7 @@ class _WidgetToggleIconWidgetState extends State<WidgetToggleIconWidget> {
 
     // On component load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
-      FFAppState().liked = true;
+      _model.liked = !_model.liked;
       safeSetState(() {});
     });
 
@@ -61,9 +59,6 @@ class _WidgetToggleIconWidgetState extends State<WidgetToggleIconWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-    context.watch<shadcn_u_i_kit_v48jv9_app_state.FFAppState>();
-
     return Container(
       decoration: BoxDecoration(),
       child: Column(
@@ -77,11 +72,11 @@ class _WidgetToggleIconWidgetState extends State<WidgetToggleIconWidget> {
               decoration: BoxDecoration(),
               child: ToggleIcon(
                 onPressed: () async {
-                  safeSetState(() => FFAppState().liked = !FFAppState().liked);
-                  FFAppState().liked = !(FFAppState().liked ?? true);
+                  safeSetState(() => _model.liked = !_model.liked);
+                  _model.liked = !_model.liked;
                   safeSetState(() {});
                 },
-                value: FFAppState().liked,
+                value: _model.liked,
                 onIcon: Icon(
                   Icons.favorite_outlined,
                   color: FlutterFlowTheme.of(context).tertiary,

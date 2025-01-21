@@ -29,41 +29,6 @@ class FFAppState extends ChangeNotifier {
     notifyListeners();
   }
 
-  List<String> _DataTableStrings = [
-    'Hello World1',
-    'Hello World2',
-    'Hello World3',
-    'Hello World4',
-    'Hello World5'
-  ];
-  List<String> get DataTableStrings => _DataTableStrings;
-  set DataTableStrings(List<String> value) {
-    _DataTableStrings = value;
-  }
-
-  void addToDataTableStrings(String value) {
-    DataTableStrings.add(value);
-  }
-
-  void removeFromDataTableStrings(String value) {
-    DataTableStrings.remove(value);
-  }
-
-  void removeAtIndexFromDataTableStrings(int index) {
-    DataTableStrings.removeAt(index);
-  }
-
-  void updateDataTableStringsAtIndex(
-    int index,
-    String Function(String) updateFn,
-  ) {
-    DataTableStrings[index] = updateFn(_DataTableStrings[index]);
-  }
-
-  void insertAtIndexInDataTableStrings(int index, String value) {
-    DataTableStrings.insert(index, value);
-  }
-
   List<LatLng> _latlng = [
     LatLng(34.0522, -118.2437),
     LatLng(48.8566, 2.3522),
@@ -95,103 +60,6 @@ class FFAppState extends ChangeNotifier {
 
   void insertAtIndexInLatlng(int index, LatLng value) {
     latlng.insert(index, value);
-  }
-
-  List<String> _Images = [
-    'https://picsum.photos/seed/628/600',
-    'https://picsum.photos/seed/314/600',
-    'https://picsum.photos/seed/821/600'
-  ];
-  List<String> get Images => _Images;
-  set Images(List<String> value) {
-    _Images = value;
-  }
-
-  void addToImages(String value) {
-    Images.add(value);
-  }
-
-  void removeFromImages(String value) {
-    Images.remove(value);
-  }
-
-  void removeAtIndexFromImages(int index) {
-    Images.removeAt(index);
-  }
-
-  void updateImagesAtIndex(
-    int index,
-    String Function(String) updateFn,
-  ) {
-    Images[index] = updateFn(_Images[index]);
-  }
-
-  void insertAtIndexInImages(int index, String value) {
-    Images.insert(index, value);
-  }
-
-  List<int> _capacityList = [1, 2, 3, 4, 5, 6, 7];
-  List<int> get capacityList => _capacityList;
-  set capacityList(List<int> value) {
-    _capacityList = value;
-  }
-
-  void addToCapacityList(int value) {
-    capacityList.add(value);
-  }
-
-  void removeFromCapacityList(int value) {
-    capacityList.remove(value);
-  }
-
-  void removeAtIndexFromCapacityList(int index) {
-    capacityList.removeAt(index);
-  }
-
-  void updateCapacityListAtIndex(
-    int index,
-    int Function(int) updateFn,
-  ) {
-    capacityList[index] = updateFn(_capacityList[index]);
-  }
-
-  void insertAtIndexInCapacityList(int index, int value) {
-    capacityList.insert(index, value);
-  }
-
-  List<String> _BarLabels = ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul'];
-  List<String> get BarLabels => _BarLabels;
-  set BarLabels(List<String> value) {
-    _BarLabels = value;
-  }
-
-  void addToBarLabels(String value) {
-    BarLabels.add(value);
-  }
-
-  void removeFromBarLabels(String value) {
-    BarLabels.remove(value);
-  }
-
-  void removeAtIndexFromBarLabels(int index) {
-    BarLabels.removeAt(index);
-  }
-
-  void updateBarLabelsAtIndex(
-    int index,
-    String Function(String) updateFn,
-  ) {
-    BarLabels[index] = updateFn(_BarLabels[index]);
-  }
-
-  void insertAtIndexInBarLabels(int index, String value) {
-    BarLabels.insert(index, value);
-  }
-
-  bool _liked = false;
-  bool get liked => _liked;
-  set liked(bool value) {
-    _liked = value;
   }
 
   List<WidgetCategoryStruct> _cWidgetCategories = [
@@ -242,7 +110,7 @@ class FFAppState extends ChangeNotifier {
     WidgetStruct.fromSerializableMap(jsonDecode(
         '{\"title\":\"Row\",\"order\":\"10030\",\"widgetCategoryId\":\"wc_0001\",\"id\":\"wi_1003\"}')),
     WidgetStruct.fromSerializableMap(jsonDecode(
-        '{\"title\":\"Container\",\"order\":\"10060\",\"widgetCategoryId\":\"wc_0002\",\"id\":\"wi_2001\"}')),
+        '{\"title\":\"Container\",\"order\":\"10040\",\"widgetCategoryId\":\"wc_0001\",\"id\":\"wi_1004\"}')),
     WidgetStruct.fromSerializableMap(jsonDecode(
         '{\"title\":\"Row\",\"order\":\"20020\",\"widgetCategoryId\":\"wc_0002\",\"id\":\"wi_2002\"}')),
     WidgetStruct.fromSerializableMap(jsonDecode(
@@ -250,7 +118,157 @@ class FFAppState extends ChangeNotifier {
     WidgetStruct.fromSerializableMap(jsonDecode(
         '{\"title\":\"PinCode\",\"order\":\"50080\",\"widgetCategoryId\":\"wc_0005\",\"id\":\"wi_5008\"}')),
     WidgetStruct.fromSerializableMap(jsonDecode(
-        '{\"title\":\"CheckboxListTile\",\"order\":\"50040\",\"widgetCategoryId\":\"wc_0005\",\"id\":\"wi_5004\"}'))
+        '{\"title\":\"CheckboxListTile\",\"order\":\"50040\",\"widgetCategoryId\":\"wc_0005\",\"id\":\"wi_5004\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Image\",\"order\":\"10050\",\"widgetCategoryId\":\"wc_0001\",\"id\":\"wi_1005\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Button\",\"order\":\"10060\",\"widgetCategoryId\":\"wc_0001\",\"id\":\"wi_1006\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Container\",\"order\":\"20010\",\"widgetCategoryId\":\"wc_0002\",\"id\":\"wi_2001\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Column\",\"order\":\"20030\",\"widgetCategoryId\":\"wc_0002\",\"id\":\"wi_2003\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Stack\",\"order\":\"20040\",\"widgetCategoryId\":\"wc_0002\",\"id\":\"wi_2004\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Card\",\"order\":\"20050\",\"widgetCategoryId\":\"wc_0002\",\"id\":\"wi_2005\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"ListView\",\"order\":\"20060\",\"widgetCategoryId\":\"wc_0002\",\"id\":\"wi_2006\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"GridView\",\"order\":\"20070\",\"widgetCategoryId\":\"wc_0002\",\"id\":\"wi_2007\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Spacer\",\"order\":\"20080\",\"widgetCategoryId\":\"wc_0002\",\"id\":\"wi_2008\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Divider\",\"order\":\"20090\",\"widgetCategoryId\":\"wc_0002\",\"id\":\"wi_2009\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"VerticalDivider\",\"order\":\"20100\",\"widgetCategoryId\":\"wc_0002\",\"id\":\"wi_2010\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"TabBar\",\"order\":\"20110\",\"widgetCategoryId\":\"wc_0002\",\"id\":\"wi_2011\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"PageView\",\"order\":\"20120\",\"widgetCategoryId\":\"wc_0002\",\"id\":\"wi_2012\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Carousel\",\"order\":\"20130\",\"widgetCategoryId\":\"wc_0002\",\"id\":\"wi_2013\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Expandable\",\"order\":\"20140\",\"widgetCategoryId\":\"wc_0002\",\"id\":\"wi_2014\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Wrap\",\"order\":\"20150\",\"widgetCategoryId\":\"wc_0002\",\"id\":\"wi_2015\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Form Validation\",\"order\":\"20160\",\"widgetCategoryId\":\"wc_0002\",\"id\":\"wi_2016\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"StaggeredView\",\"order\":\"20170\",\"widgetCategoryId\":\"wc_0002\",\"id\":\"wi_2017\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"FlippableCard\",\"order\":\"20180\",\"widgetCategoryId\":\"wc_0002\",\"id\":\"wi_2018\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"SwipeableStack\",\"order\":\"20190\",\"widgetCategoryId\":\"wc_0002\",\"id\":\"wi_2019\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"DataTable\",\"order\":\"20200\",\"widgetCategoryId\":\"wc_0002\",\"id\":\"wi_2020\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Flex\",\"order\":\"20210\",\"widgetCategoryId\":\"wc_0002\",\"id\":\"wi_2021\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Text\",\"order\":\"30010\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3001\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"RichText\",\"order\":\"30020\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3002\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Image\",\"order\":\"30030\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3003\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"CircleImage\",\"order\":\"30040\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3004\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Icon\",\"order\":\"30050\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3005\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Button\",\"order\":\"30060\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3006\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"IconButton\",\"order\":\"30070\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3007\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"ListTile\",\"order\":\"30080\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3008\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"SlidableListTile\",\"order\":\"30090\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3009\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"VideoPlayer\",\"order\":\"30100\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3010\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"YoutubePlayer\",\"order\":\"30110\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3011\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Calendar\",\"order\":\"30120\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3012\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"ToggleIcon\",\"order\":\"30130\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3013\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"AudioPlayer\",\"order\":\"30140\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3014\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"WebView\",\"order\":\"30150\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3015\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"AppBar\",\"order\":\"40010\",\"widgetCategoryId\":\"wc_0004\",\"id\":\"wi_4001\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"FAB\",\"order\":\"40020\",\"widgetCategoryId\":\"wc_0004\",\"id\":\"wi_4002\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Drawer\",\"order\":\"40030\",\"widgetCategoryId\":\"wc_0004\",\"id\":\"wi_4003\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"EndDrawer\",\"order\":\"40040\",\"widgetCategoryId\":\"wc_0004\",\"id\":\"wi_4004\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"TextField\",\"order\":\"50010\",\"widgetCategoryId\":\"wc_0005\",\"id\":\"wi_5001\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"DropDown\",\"order\":\"50020\",\"widgetCategoryId\":\"wc_0005\",\"id\":\"wi_5002\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Checkbox\",\"order\":\"50030\",\"widgetCategoryId\":\"wc_0005\",\"id\":\"wi_5003\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Switch\",\"order\":\"50050\",\"widgetCategoryId\":\"wc_0005\",\"id\":\"wi_5005\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"SwitchListTile\",\"order\":\"50060\",\"widgetCategoryId\":\"wc_0005\",\"id\":\"wi_5006\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Slider\",\"order\":\"50090\",\"widgetCategoryId\":\"wc_0005\",\"id\":\"wi_5009\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"RatingBar\",\"order\":\"50100\",\"widgetCategoryId\":\"wc_0005\",\"id\":\"wi_5010\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"CreditCardForm\",\"order\":\"50110\",\"widgetCategoryId\":\"wc_0005\",\"id\":\"wi_5011\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Counter Button\",\"order\":\"50120\",\"widgetCategoryId\":\"wc_0005\",\"id\":\"wi_5012\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"ChoiceChips\",\"order\":\"50130\",\"widgetCategoryId\":\"wc_0005\",\"id\":\"wi_5013\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"PlacePicker\",\"order\":\"50140\",\"widgetCategoryId\":\"wc_0005\",\"id\":\"wi_5014\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"StaticMap\",\"order\":\"30160\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3016\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"GoogleMap\",\"order\":\"30170\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3017\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"AdBanner\",\"order\":\"30180\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3018\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"LottieAnimation\",\"order\":\"30190\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3019\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Blur\",\"order\":\"30200\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3020\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Transform\",\"order\":\"30210\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3021\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"MediaDisplay\",\"order\":\"30220\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3022\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"RiveAnimation\",\"order\":\"30230\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3023\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"PdfViewer\",\"order\":\"30240\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3024\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"ProgressBar\",\"order\":\"30250\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3025\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"LanguageSelector\",\"order\":\"30260\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3026\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Badge\",\"order\":\"30270\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3027\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Chart\",\"order\":\"30280\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3028\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"MuxBroadcast\",\"order\":\"30290\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3029\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Timer\",\"order\":\"30300\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3030\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"MouseRegion\",\"order\":\"30310\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3031\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Barcode\",\"order\":\"30320\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3032\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"DataTable\",\"order\":\"30330\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3033\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Tooltip\",\"order\":\"30340\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3034\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"ConditionalBuilder\",\"order\":\"30350\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3035\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"StickyHeader\",\"order\":\"30360\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3036\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Markdown\",\"order\":\"30370\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3037\"}')),
+    WidgetStruct.fromSerializableMap(jsonDecode(
+        '{\"title\":\"Draggable\",\"order\":\"30380\",\"widgetCategoryId\":\"wc_0003\",\"id\":\"wi_3038\"}'))
   ];
   List<WidgetStruct> get cWidgets => _cWidgets;
   set cWidgets(List<WidgetStruct> value) {

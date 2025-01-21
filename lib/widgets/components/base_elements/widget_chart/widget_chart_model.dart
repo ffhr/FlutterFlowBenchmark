@@ -11,6 +11,26 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class WidgetChartModel extends FlutterFlowModel<WidgetChartWidget> {
+  ///  Local state fields for this component.
+
+  List<int> capacityList = [1, 2, 3, 4, 5, 6, 7];
+  void addToCapacityList(int item) => capacityList.add(item);
+  void removeFromCapacityList(int item) => capacityList.remove(item);
+  void removeAtIndexFromCapacityList(int index) => capacityList.removeAt(index);
+  void insertAtIndexInCapacityList(int index, int item) =>
+      capacityList.insert(index, item);
+  void updateCapacityListAtIndex(int index, Function(int) updateFn) =>
+      capacityList[index] = updateFn(capacityList[index]);
+
+  List<String> barLabels = ['Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep'];
+  void addToBarLabels(String item) => barLabels.add(item);
+  void removeFromBarLabels(String item) => barLabels.remove(item);
+  void removeAtIndexFromBarLabels(int index) => barLabels.removeAt(index);
+  void insertAtIndexInBarLabels(int index, String item) =>
+      barLabels.insert(index, item);
+  void updateBarLabelsAtIndex(int index, Function(String) updateFn) =>
+      barLabels[index] = updateFn(barLabels[index]);
+
   @override
   void initState(BuildContext context) {}
 

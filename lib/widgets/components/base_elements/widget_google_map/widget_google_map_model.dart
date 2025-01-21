@@ -10,6 +10,17 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class WidgetGoogleMapModel extends FlutterFlowModel<WidgetGoogleMapWidget> {
+  ///  Local state fields for this component.
+
+  List<LatLng> latLng = [];
+  void addToLatLng(LatLng item) => latLng.add(item);
+  void removeFromLatLng(LatLng item) => latLng.remove(item);
+  void removeAtIndexFromLatLng(int index) => latLng.removeAt(index);
+  void insertAtIndexInLatLng(int index, LatLng item) =>
+      latLng.insert(index, item);
+  void updateLatLngAtIndex(int index, Function(LatLng) updateFn) =>
+      latLng[index] = updateFn(latLng[index]);
+
   ///  State fields for stateful widgets in this component.
 
   // State field(s) for GoogleMap widget.
