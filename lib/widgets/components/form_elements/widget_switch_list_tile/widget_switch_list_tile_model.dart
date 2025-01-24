@@ -11,7 +11,9 @@ class WidgetSwitchListTileModel
   ///  State fields for stateful widgets in this component.
 
   // State field(s) for SwitchListTile widget.
-  bool? switchListTileValue;
+  bool? switchListTileValue1;
+  // State field(s) for SwitchListTile widget.
+  bool? switchListTileValue2;
 
   @override
   void initState(BuildContext context) {}

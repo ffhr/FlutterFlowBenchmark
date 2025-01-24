@@ -13,6 +13,8 @@ class WidgetToggleIconModel extends FlutterFlowModel<WidgetToggleIconWidget> {
 
   bool liked = false;
 
+  bool toggle = false;
+
   @override
   void initState(BuildContext context) {}
 

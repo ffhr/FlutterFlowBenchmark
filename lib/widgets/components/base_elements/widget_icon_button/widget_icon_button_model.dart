@@ -8,6 +8,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class WidgetIconButtonModel extends FlutterFlowModel<WidgetIconButtonWidget> {
+  ///  Local state fields for this component.
+
+  bool buttonDisabled = false;
+
   @override
   void initState(BuildContext context) {}
 

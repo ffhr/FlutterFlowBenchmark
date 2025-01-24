@@ -1,16 +1,20 @@
 import '/flutter_flow/flutter_flow_timer.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/instant_timer.dart';
 import 'dart:ui';
 import 'package:stop_watch_timer/stop_watch_timer.dart';
 import 'widget_timer_widget.dart' show WidgetTimerWidget;
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class WidgetTimerModel extends FlutterFlowModel<WidgetTimerWidget> {
   ///  State fields for stateful widgets in this component.
 
+  InstantTimer? instantTimer;
+  InstantTimer? instantTimer2;
   // State field(s) for Timer widget.
   final timerInitialTimeMs1 = 5850000;
   int timerMilliseconds1 = 5850000;
@@ -70,6 +74,8 @@ class WidgetTimerModel extends FlutterFlowModel<WidgetTimerWidget> {
 
   @override
   void dispose() {
+    instantTimer?.cancel();
+    instantTimer2?.cancel();
     timerController1.dispose();
     timerController2.dispose();
     timerController3.dispose();

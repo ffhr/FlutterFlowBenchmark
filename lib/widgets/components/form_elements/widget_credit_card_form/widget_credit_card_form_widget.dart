@@ -60,41 +60,106 @@ class _WidgetCreditCardFormWidgetState
         mainAxisSize: MainAxisSize.min,
         children: [
           Container(
-            width: 300.0,
-            height: 200.0,
+            width: 500.0,
+            height: 600.0,
             decoration: BoxDecoration(),
-            child: Padding(
-              padding: EdgeInsets.all(8.0),
-              child: FlutterFlowCreditCardForm(
-                formKey: _model.creditCardFormKey,
-                creditCardModel: _model.creditCardInfo,
-                obscureNumber: true,
-                obscureCvv: false,
-                spacing: 12.0,
-                textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: 'Geist',
-                      letterSpacing: 0.0,
-                      useGoogleFonts: false,
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: FlutterFlowCreditCardForm(
+                    formKey: _model.creditCardFormKey,
+                    creditCardModel: _model.creditCardInfo,
+                    obscureNumber: true,
+                    obscureCvv: true,
+                    spacing: 12.0,
+                    textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'Geist',
+                          letterSpacing: 0.0,
+                          useGoogleFonts: false,
+                        ),
+                    inputDecoration: InputDecoration(
+                      filled: true,
+                      fillColor:
+                          FlutterFlowTheme.of(context).secondaryBackground,
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: FlutterFlowTheme.of(context).secondary,
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: FlutterFlowTheme.of(context).secondary,
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
                     ),
-                inputDecoration: InputDecoration(
-                  filled: true,
-                  fillColor: FlutterFlowTheme.of(context).secondaryBackground,
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: FlutterFlowTheme.of(context).secondary,
-                      width: 2.0,
-                    ),
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: FlutterFlowTheme.of(context).secondary,
-                      width: 2.0,
-                    ),
-                    borderRadius: BorderRadius.circular(8.0),
                   ),
                 ),
-              ),
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: FlutterFlowCreditCardForm(
+                    formKey: _model.creditCardFormKey,
+                    creditCardModel: _model.creditCardInfo,
+                    obscureNumber: false,
+                    obscureCvv: false,
+                    spacing: 12.0,
+                    textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'Geist',
+                          color: FlutterFlowTheme.of(context).primaryBackground,
+                          letterSpacing: 0.0,
+                          useGoogleFonts: false,
+                        ),
+                    inputDecoration: InputDecoration(
+                      isDense: true,
+                      filled: true,
+                      fillColor: FlutterFlowTheme.of(context).primary,
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: FlutterFlowTheme.of(context).tertiary,
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: FlutterFlowTheme.of(context).tertiary,
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: FlutterFlowCreditCardForm(
+                    formKey: _model.creditCardFormKey,
+                    creditCardModel: _model.creditCardInfo,
+                    obscureNumber: true,
+                    obscureCvv: false,
+                    spacing: 12.0,
+                    textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'Geist',
+                          color: FlutterFlowTheme.of(context).primaryBackground,
+                          letterSpacing: 0.0,
+                          fontWeight: FontWeight.w500,
+                          useGoogleFonts: false,
+                        ),
+                    inputDecoration: InputDecoration(
+                      contentPadding: EdgeInsets.all(16.0),
+                      filled: true,
+                      fillColor: FlutterFlowTheme.of(context).secondary,
+                      enabledBorder: InputBorder.none,
+                      focusedBorder: InputBorder.none,
+                    ),
+                  ),
+                ),
+              ].divide(SizedBox(height: 8.0)).around(SizedBox(height: 8.0)),
             ),
           ),
         ].divide(SizedBox(height: 16.0)),

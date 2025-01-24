@@ -106,14 +106,14 @@ class _WidgetProgressBarWidgetState extends State<WidgetProgressBarWidget> {
                         FFLocalizations.of(context).getText(
                           '47hke2a8' /* 70% */,
                         ),
-                        style: FlutterFlowTheme.of(context)
-                            .headlineSmall
-                            .override(
-                              fontFamily: 'Geist',
-                              color: FlutterFlowTheme.of(context).primaryText,
-                              letterSpacing: 0.0,
-                              useGoogleFonts: false,
-                            ),
+                        style:
+                            FlutterFlowTheme.of(context).headlineSmall.override(
+                                  fontFamily: 'Geist',
+                                  color: FlutterFlowTheme.of(context)
+                                      .primaryBackground,
+                                  letterSpacing: 0.0,
+                                  useGoogleFonts: false,
+                                ),
                       ),
                       barRadius: Radius.circular(8.0),
                       padding: EdgeInsets.zero,

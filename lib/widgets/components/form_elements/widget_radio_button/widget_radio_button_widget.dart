@@ -60,45 +60,91 @@ class _WidgetRadioButtonWidgetState extends State<WidgetRadioButtonWidget> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Container(
-            width: 300.0,
-            height: 200.0,
+            width: 500.0,
+            height: 600.0,
             decoration: BoxDecoration(),
-            child: FlutterFlowRadioButton(
-              options: [
-                FFLocalizations.of(context).getText(
-                  'kqqkyafw' /* Option 1 */,
-                ),
-                FFLocalizations.of(context).getText(
-                  'c68r1upz' /* Option 2 */,
-                ),
-                FFLocalizations.of(context).getText(
-                  '4phdycf0' /* Option 3 */,
-                )
-              ].toList(),
-              onChanged: (val) => safeSetState(() {}),
-              controller: _model.radioButtonValueController ??=
-                  FormFieldController<String>(null),
-              optionHeight: 32.0,
-              textStyle: FlutterFlowTheme.of(context).labelMedium.override(
-                    fontFamily: 'Geist',
-                    letterSpacing: 0.0,
-                    useGoogleFonts: false,
-                  ),
-              selectedTextStyle:
-                  FlutterFlowTheme.of(context).bodyMedium.override(
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                FlutterFlowRadioButton(
+                  options: [
+                    FFLocalizations.of(context).getText(
+                      's5xl1twv' /* Option 1 */,
+                    ),
+                    FFLocalizations.of(context).getText(
+                      'f9ivfubh' /* Option 2 */,
+                    ),
+                    FFLocalizations.of(context).getText(
+                      '435y8wt5' /* Option 3 */,
+                    )
+                  ].toList(),
+                  onChanged: (val) => safeSetState(() {}),
+                  controller: _model.radioButtonValueController1 ??=
+                      FormFieldController<String>(null),
+                  optionHeight: 32.0,
+                  textStyle: FlutterFlowTheme.of(context).labelMedium.override(
                         fontFamily: 'Geist',
-                        color: FlutterFlowTheme.of(context).primaryText,
+                        fontSize: 16.0,
                         letterSpacing: 0.0,
                         useGoogleFonts: false,
                       ),
-              buttonPosition: RadioButtonPosition.left,
-              direction: Axis.vertical,
-              radioButtonColor: FlutterFlowTheme.of(context).primaryText,
-              inactiveRadioButtonColor:
-                  FlutterFlowTheme.of(context).primaryText,
-              toggleable: false,
-              horizontalAlignment: WrapAlignment.start,
-              verticalAlignment: WrapCrossAlignment.start,
+                  selectedTextStyle:
+                      FlutterFlowTheme.of(context).bodyMedium.override(
+                            fontFamily: 'Geist',
+                            color: FlutterFlowTheme.of(context).primaryText,
+                            fontSize: 18.0,
+                            letterSpacing: 0.0,
+                            useGoogleFonts: false,
+                          ),
+                  buttonPosition: RadioButtonPosition.left,
+                  direction: Axis.vertical,
+                  radioButtonColor: FlutterFlowTheme.of(context).primaryText,
+                  inactiveRadioButtonColor:
+                      FlutterFlowTheme.of(context).primaryText,
+                  toggleable: false,
+                  horizontalAlignment: WrapAlignment.start,
+                  verticalAlignment: WrapCrossAlignment.start,
+                ),
+                FlutterFlowRadioButton(
+                  options: [
+                    FFLocalizations.of(context).getText(
+                      '26t1ib1m' /* Option 1 */,
+                    ),
+                    FFLocalizations.of(context).getText(
+                      'x2lft2p0' /* Option 2 */,
+                    ),
+                    FFLocalizations.of(context).getText(
+                      '9lhhhbes' /* Option 3 */,
+                    )
+                  ].toList(),
+                  onChanged: (val) => safeSetState(() {}),
+                  controller: _model.radioButtonValueController2 ??=
+                      FormFieldController<String>(null),
+                  optionHeight: 32.0,
+                  textStyle: FlutterFlowTheme.of(context).labelMedium.override(
+                        fontFamily: 'Geist',
+                        letterSpacing: 0.0,
+                        useGoogleFonts: false,
+                      ),
+                  selectedTextStyle:
+                      FlutterFlowTheme.of(context).bodyMedium.override(
+                            fontFamily: 'Geist',
+                            color: FlutterFlowTheme.of(context).secondary,
+                            fontSize: 20.0,
+                            letterSpacing: 0.0,
+                            useGoogleFonts: false,
+                          ),
+                  textPadding: EdgeInsets.all(4.0),
+                  buttonPosition: RadioButtonPosition.right,
+                  direction: Axis.horizontal,
+                  radioButtonColor: FlutterFlowTheme.of(context).secondary,
+                  inactiveRadioButtonColor:
+                      FlutterFlowTheme.of(context).secondary,
+                  toggleable: false,
+                  horizontalAlignment: WrapAlignment.center,
+                  verticalAlignment: WrapCrossAlignment.start,
+                ),
+              ].divide(SizedBox(height: 16.0)).around(SizedBox(height: 16.0)),
             ),
           ),
         ].divide(SizedBox(height: 16.0)),

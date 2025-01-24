@@ -14,8 +14,13 @@ class WidgetRiveAnimationModel
 
   // State field(s) for RiveAnimation widget.
   final riveAnimationAnimationsList = [
-    'Main Loop',
     'Lightning 0',
+    'Intro',
+    'Lightning 2',
+    'Intro Long',
+    'Lightning 3',
+    'Main Loop',
+    'Lightning 1',
   ];
   List<FlutterFlowRiveController> riveAnimationControllers = [];
 
@@ -24,6 +29,7 @@ class WidgetRiveAnimationModel
     riveAnimationAnimationsList.forEach((name) {
       riveAnimationControllers.add(FlutterFlowRiveController(
         name,
+        shouldLoop: true,
       ));
     });
   }

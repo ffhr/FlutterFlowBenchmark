@@ -14,6 +14,12 @@ class WidgetCreditCardFormModel
   // State field(s) for CreditCardForm widget.
   final creditCardFormKey = GlobalKey<FormState>();
   CreditCardModel creditCardInfo = emptyCreditCard();
+  // State field(s) for CreditCardForm widget.
+  final creditCardFormKey = GlobalKey<FormState>();
+  CreditCardModel creditCardInfo = emptyCreditCard();
+  // State field(s) for CreditCardForm widget.
+  final creditCardFormKey = GlobalKey<FormState>();
+  CreditCardModel creditCardInfo = emptyCreditCard();
 
   @override
   void initState(BuildContext context) {}

@@ -57,13 +57,34 @@ class _WidgetIconWidgetState extends State<WidgetIconWidget> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Container(
-            width: 100.0,
+            width: 500.0,
             height: 100.0,
             decoration: BoxDecoration(),
-            child: Icon(
-              Icons.assist_walker,
-              color: FlutterFlowTheme.of(context).tertiary,
-              size: 48.0,
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Icon(
+                  Icons.assist_walker,
+                  color: FlutterFlowTheme.of(context).tertiary,
+                  size: 48.0,
+                ),
+                Icon(
+                  Icons.house_siding,
+                  color: FlutterFlowTheme.of(context).secondary,
+                  size: 24.0,
+                ),
+                Icon(
+                  Icons.update_sharp,
+                  color: FlutterFlowTheme.of(context).primary,
+                  size: 56.0,
+                ),
+                Icon(
+                  Icons.check_box,
+                  color: FlutterFlowTheme.of(context).success,
+                  size: 72.0,
+                ),
+              ].divide(SizedBox(width: 16.0)),
             ),
           ),
         ].divide(SizedBox(height: 16.0)),

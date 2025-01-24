@@ -62,24 +62,68 @@ class _WidgetStaticMapWidgetState extends State<WidgetStaticMapWidget> {
         children: [
           Container(
             width: 500.0,
-            height: 200.0,
+            height: 600.0,
             decoration: BoxDecoration(),
-            child: Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
-              child: FlutterFlowStaticMap(
-                location: LatLng(9.341465, -79.891704),
-                apiKey:
-                    'pk.eyJ1IjoiaGllbmVyNzciLCJhIjoiY20wcHNrb2JmMDRubzJucHdyNjlrczJwayJ9.rNu5shTCNBFmxsCRUUIKlA',
-                style: mapbox.MapBoxStyle.Light,
-                width: 300.0,
-                height: 200.0,
-                fit: BoxFit.contain,
-                borderRadius: BorderRadius.circular(0.0),
-                markerColor: FlutterFlowTheme.of(context).secondary,
-                cached: true,
-                zoom: 12,
-                tilt: 5,
-                rotation: 2,
+            child: Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Align(
+                    alignment: AlignmentDirectional(0.0, 0.0),
+                    child: FlutterFlowStaticMap(
+                      location: LatLng(9.341465, -79.891704),
+                      apiKey:
+                          'pk.eyJ1IjoiaGllbmVyNzciLCJhIjoiY20wcHNrb2JmMDRubzJucHdyNjlrczJwayJ9.rNu5shTCNBFmxsCRUUIKlA',
+                      style: mapbox.MapBoxStyle.Light,
+                      width: 300.0,
+                      height: 200.0,
+                      fit: BoxFit.contain,
+                      borderRadius: BorderRadius.circular(0.0),
+                      markerColor: FlutterFlowTheme.of(context).secondary,
+                      cached: true,
+                      zoom: 12,
+                      tilt: 5,
+                      rotation: 2,
+                    ),
+                  ),
+                  Align(
+                    alignment: AlignmentDirectional(0.0, 0.0),
+                    child: FlutterFlowStaticMap(
+                      location: LatLng(9.341465, -79.891704),
+                      apiKey:
+                          'pk.eyJ1IjoiaGllbmVyNzciLCJhIjoiY20wcHNrb2JmMDRubzJucHdyNjlrczJwayJ9.rNu5shTCNBFmxsCRUUIKlA',
+                      style: mapbox.MapBoxStyle.Light,
+                      width: 200.0,
+                      height: 200.0,
+                      fit: BoxFit.contain,
+                      borderRadius: BorderRadius.circular(14.0),
+                      markerColor: FlutterFlowTheme.of(context).tertiary,
+                      cached: true,
+                      zoom: 8,
+                      tilt: 3,
+                      rotation: 90,
+                    ),
+                  ),
+                  Align(
+                    alignment: AlignmentDirectional(0.0, 0.0),
+                    child: FlutterFlowStaticMap(
+                      location: LatLng(9.341465, -79.891704),
+                      apiKey:
+                          'pk.eyJ1IjoiaGllbmVyNzciLCJhIjoiY20wcHNrb2JmMDRubzJucHdyNjlrczJwayJ9.rNu5shTCNBFmxsCRUUIKlA',
+                      style: mapbox.MapBoxStyle.Light,
+                      width: 400.0,
+                      height: 100.0,
+                      fit: BoxFit.contain,
+                      borderRadius: BorderRadius.circular(14.0),
+                      markerColor: FlutterFlowTheme.of(context).primary,
+                      cached: true,
+                      zoom: 12,
+                      tilt: 9,
+                      rotation: 10,
+                    ),
+                  ),
+                ].divide(SizedBox(height: 16.0)).around(SizedBox(height: 16.0)),
               ),
             ),
           ),

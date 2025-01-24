@@ -85,7 +85,51 @@ class _WidgetRichTextWidgetState extends State<WidgetRichTextWidget> {
                   ),
             ),
           ),
-        ],
+          RichText(
+            textScaler: MediaQuery.of(context).textScaler,
+            text: TextSpan(
+              children: [
+                TextSpan(
+                  text: FFLocalizations.of(context).getText(
+                    'n0v02cj2' /* Introducing the  */,
+                  ),
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        fontFamily: 'Geist',
+                        color: FlutterFlowTheme.of(context).borderdestructive,
+                        fontSize: 18.0,
+                        letterSpacing: 0.0,
+                        useGoogleFonts: false,
+                      ),
+                ),
+                TextSpan(
+                  text: FFLocalizations.of(context).getText(
+                    '3ddnvt2z' /* "Aura"  */,
+                  ),
+                  style: TextStyle(
+                    color: FlutterFlowTheme.of(context).warning,
+                    fontSize: 24.0,
+                  ),
+                ),
+                TextSpan(
+                  text: FFLocalizations.of(context).getText(
+                    'hzw1x48z' /* Smartwatch */,
+                  ),
+                  style: TextStyle(
+                    color: FlutterFlowTheme.of(context).tertiary,
+                    fontSize: 28.0,
+                  ),
+                )
+              ],
+              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    fontFamily: 'Geist',
+                    fontSize: 20.0,
+                    letterSpacing: 0.0,
+                    useGoogleFonts: false,
+                  ),
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ].divide(SizedBox(height: 8.0)),
       ),
     );
   }

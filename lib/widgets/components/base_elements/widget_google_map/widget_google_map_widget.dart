@@ -59,44 +59,130 @@ class _WidgetGoogleMapWidgetState extends State<WidgetGoogleMapWidget> {
 
     return Container(
       decoration: BoxDecoration(),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Container(
-            width: 500.0,
-            height: 300.0,
-            decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).primary,
-            ),
-            child: FlutterFlowGoogleMap(
-              controller: _model.googleMapsController,
-              onCameraIdle: (latLng) => _model.googleMapsCenter = latLng,
-              initialLocation: _model.googleMapsCenter ??=
-                  FFAppState().latlng.elementAtOrNull(3)!,
-              markers: FFAppState()
-                  .latlng
-                  .map(
-                    (marker) => FlutterFlowMarker(
-                      marker.serialize(),
-                      marker,
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Container(
+              decoration: BoxDecoration(),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
+                    width: 500.0,
+                    height: 200.0,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).primary,
                     ),
-                  )
-                  .toList(),
-              markerColor: GoogleMarkerColor.rose,
-              mapType: MapType.normal,
-              style: GoogleMapStyle.standard,
-              initialZoom: 14.0,
-              allowInteraction: true,
-              allowZoom: true,
-              showZoomControls: true,
-              showLocation: true,
-              showCompass: false,
-              showMapToolbar: false,
-              showTraffic: false,
-              centerMapOnMarkerTap: true,
+                    child: FlutterFlowGoogleMap(
+                      controller: _model.googleMapsController1,
+                      onCameraIdle: (latLng) =>
+                          safeSetState(() => _model.googleMapsCenter1 = latLng),
+                      initialLocation: _model.googleMapsCenter1 ??=
+                          FFAppState().latlng.firstOrNull!,
+                      markers: FFAppState()
+                          .latlng
+                          .map(
+                            (marker) => FlutterFlowMarker(
+                              marker.serialize(),
+                              marker,
+                            ),
+                          )
+                          .toList(),
+                      markerColor: GoogleMarkerColor.violet,
+                      mapType: MapType.normal,
+                      style: GoogleMapStyle.standard,
+                      initialZoom: 8.0,
+                      allowInteraction: true,
+                      allowZoom: true,
+                      showZoomControls: true,
+                      showLocation: true,
+                      showCompass: true,
+                      showMapToolbar: true,
+                      showTraffic: false,
+                      centerMapOnMarkerTap: true,
+                    ),
+                  ),
+                  Container(
+                    width: 500.0,
+                    height: 179.0,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).primary,
+                    ),
+                    child: FlutterFlowGoogleMap(
+                      controller: _model.googleMapsController2,
+                      onCameraIdle: (latLng) =>
+                          safeSetState(() => _model.googleMapsCenter2 = latLng),
+                      initialLocation: _model.googleMapsCenter2 ??=
+                          FFAppState().latlng.lastOrNull!,
+                      markers: FFAppState()
+                          .latlng
+                          .map(
+                            (marker) => FlutterFlowMarker(
+                              marker.serialize(),
+                              marker,
+                            ),
+                          )
+                          .toList(),
+                      markerColor: GoogleMarkerColor.red,
+                      mapType: MapType.hybrid,
+                      style: GoogleMapStyle.standard,
+                      initialZoom: 10.0,
+                      allowInteraction: true,
+                      allowZoom: true,
+                      showZoomControls: true,
+                      showLocation: false,
+                      showCompass: true,
+                      showMapToolbar: true,
+                      showTraffic: false,
+                      centerMapOnMarkerTap: true,
+                    ),
+                  ),
+                  Container(
+                    width: 500.0,
+                    height: 179.0,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).primary,
+                    ),
+                    child: FlutterFlowGoogleMap(
+                      controller: _model.googleMapsController3,
+                      onCameraIdle: (latLng) =>
+                          safeSetState(() => _model.googleMapsCenter3 = latLng),
+                      initialLocation: _model.googleMapsCenter3 ??=
+                          FFAppState().latlng.elementAtOrNull(1)!,
+                      markers: FFAppState()
+                          .latlng
+                          .map(
+                            (marker) => FlutterFlowMarker(
+                              marker.serialize(),
+                              marker,
+                            ),
+                          )
+                          .toList(),
+                      markerColor: GoogleMarkerColor.violet,
+                      markerImage: MarkerImage(
+                        imagePath: 'assets/images/icons8-map-100.png',
+                        isAssetImage: true,
+                        size: 40.0 ?? 20,
+                      ),
+                      mapType: MapType.terrain,
+                      style: GoogleMapStyle.standard,
+                      initialZoom: 18.0,
+                      allowInteraction: true,
+                      allowZoom: true,
+                      showZoomControls: true,
+                      showLocation: false,
+                      showCompass: true,
+                      showMapToolbar: true,
+                      showTraffic: false,
+                      centerMapOnMarkerTap: true,
+                    ),
+                  ),
+                ].divide(SizedBox(height: 16.0)).around(SizedBox(height: 16.0)),
+              ),
             ),
-          ),
-        ].divide(SizedBox(height: 16.0)),
+          ],
+        ),
       ),
     );
   }

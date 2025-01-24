@@ -2,6 +2,8 @@
     package="hr.ff.ffbenchmark.staging"
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
 
     <application
@@ -55,8 +57,10 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
-        <meta-data android:name="com.google.android.geo.API_KEY" android:value="api"/>
-
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyDfWKzeerlW2fpRsGGX0MFPelpR3229gZY"/>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-8112480788036252~5686793173"/>
 
     </application>
 </manifest>

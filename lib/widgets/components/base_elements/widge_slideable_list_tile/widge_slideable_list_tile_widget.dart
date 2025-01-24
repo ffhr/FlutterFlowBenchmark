@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:webviewx_plus/webviewx_plus.dart';
 import 'widge_slideable_list_tile_model.dart';
 export 'widge_slideable_list_tile_model.dart';
 
@@ -76,16 +77,54 @@ class _WidgeSlideableListTileWidgetState
                     return Slidable(
                       endActionPane: ActionPane(
                         motion: const ScrollMotion(),
-                        extentRatio: 0.25,
+                        extentRatio: 0.75,
                         children: [
                           SlidableAction(
                             label: FFLocalizations.of(context).getText(
-                              '3plw2gka' /* Delete */,
+                              'lasvuja4' /* Share */,
+                            ),
+                            backgroundColor: FlutterFlowTheme.of(context).info,
+                            icon: Icons.share,
+                            onPressed: (_) async {
+                              await showDialog(
+                                context: context,
+                                builder: (alertDialogContext) {
+                                  return WebViewAware(
+                                    child: AlertDialog(
+                                      title: Text('Share'),
+                                      content: Text(stringsItem),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () =>
+                                              Navigator.pop(alertDialogContext),
+                                          child: Text('Ok'),
+                                        ),
+                                      ],
+                                    ),
+                                  );
+                                },
+                              );
+                            },
+                          ),
+                          SlidableAction(
+                            label: FFLocalizations.of(context).getText(
+                              '9j0nsklj' /* Rename */,
+                            ),
+                            backgroundColor: Color(0xFF88C2FF),
+                            icon: Icons.drive_file_rename_outline,
+                            onPressed: (_) {
+                              print('RenameAction pressed ...');
+                            },
+                          ),
+                          SlidableAction(
+                            label: FFLocalizations.of(context).getText(
+                              'jbgt670d' /* Delete */,
                             ),
                             backgroundColor: FlutterFlowTheme.of(context).error,
-                            icon: Icons.delete_outline_rounded,
-                            onPressed: (_) {
-                              print('SlidableActionWidget pressed ...');
+                            icon: Icons.delete_sweep_sharp,
+                            onPressed: (_) async {
+                              _model.removeFromListTiles(stringsItem);
+                              safeSetState(() {});
                             },
                           ),
                         ],
@@ -99,18 +138,18 @@ class _WidgeSlideableListTileWidgetState
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Geist',
-                                  fontSize: 20.0,
                                   letterSpacing: 0.0,
                                   useGoogleFonts: false,
                                 ),
                           ),
                           subtitle: Text(
-                            stringsItem,
+                            FFLocalizations.of(context).getText(
+                              'pzaf969q' /* Subtitle goes here... */,
+                            ),
                             style: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
                                   fontFamily: 'Geist',
-                                  fontSize: 16.0,
                                   letterSpacing: 0.0,
                                   useGoogleFonts: false,
                                 ),
@@ -118,11 +157,6 @@ class _WidgeSlideableListTileWidgetState
                           tileColor:
                               FlutterFlowTheme.of(context).secondaryBackground,
                           dense: false,
-                          contentPadding: EdgeInsetsDirectional.fromSTEB(
-                              12.0, 0.0, 12.0, 0.0),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
                         ),
                       ),
                     );

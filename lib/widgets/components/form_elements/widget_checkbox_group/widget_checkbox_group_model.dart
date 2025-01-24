@@ -13,10 +13,18 @@ class WidgetCheckboxGroupModel
   ///  State fields for stateful widgets in this component.
 
   // State field(s) for CheckboxGroup widget.
-  FormFieldController<List<String>>? checkboxGroupValueController;
-  List<String>? get checkboxGroupValues => checkboxGroupValueController?.value;
-  set checkboxGroupValues(List<String>? v) =>
-      checkboxGroupValueController?.value = v;
+  FormFieldController<List<String>>? checkboxGroupValueController1;
+  List<String>? get checkboxGroupValues1 =>
+      checkboxGroupValueController1?.value;
+  set checkboxGroupValues1(List<String>? v) =>
+      checkboxGroupValueController1?.value = v;
+
+  // State field(s) for CheckboxGroup widget.
+  FormFieldController<List<String>>? checkboxGroupValueController2;
+  List<String>? get checkboxGroupValues2 =>
+      checkboxGroupValueController2?.value;
+  set checkboxGroupValues2(List<String>? v) =>
+      checkboxGroupValueController2?.value = v;
 
   @override
   void initState(BuildContext context) {}

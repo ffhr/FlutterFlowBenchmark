@@ -24,8 +24,14 @@ class WidgetGoogleMapModel extends FlutterFlowModel<WidgetGoogleMapWidget> {
   ///  State fields for stateful widgets in this component.
 
   // State field(s) for GoogleMap widget.
-  LatLng? googleMapsCenter;
-  final googleMapsController = Completer<GoogleMapController>();
+  LatLng? googleMapsCenter1;
+  final googleMapsController1 = Completer<GoogleMapController>();
+  // State field(s) for GoogleMap widget.
+  LatLng? googleMapsCenter2;
+  final googleMapsController2 = Completer<GoogleMapController>();
+  // State field(s) for GoogleMap widget.
+  LatLng? googleMapsCenter3;
+  final googleMapsController3 = Completer<GoogleMapController>();
 
   @override
   void initState(BuildContext context) {}

@@ -10,7 +10,9 @@ class WidgetSwitchModel extends FlutterFlowModel<WidgetSwitchWidget> {
   ///  State fields for stateful widgets in this component.
 
   // State field(s) for Switch widget.
-  bool? switchValue;
+  bool? switchValue1;
+  // State field(s) for Switch widget.
+  bool? switchValue2;
 
   @override
   void initState(BuildContext context) {}

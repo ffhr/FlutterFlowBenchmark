@@ -60,43 +60,93 @@ class _WidgetSwitchListTileWidgetState
         children: [
           Container(
             width: 500.0,
-            height: 100.0,
             decoration: BoxDecoration(
               color: FlutterFlowTheme.of(context).primary,
             ),
-            child: Material(
-              color: Colors.transparent,
-              child: SwitchListTile.adaptive(
-                value: _model.switchListTileValue ??= true,
-                onChanged: (newValue) async {
-                  safeSetState(() => _model.switchListTileValue = newValue!);
-                },
-                title: Text(
-                  FFLocalizations.of(context).getText(
-                    '7i7hvlo1' /* Title */,
-                  ),
-                  style: FlutterFlowTheme.of(context).titleLarge.override(
-                        fontFamily: 'Geist',
-                        letterSpacing: 0.0,
-                        useGoogleFonts: false,
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Material(
+                  color: Colors.transparent,
+                  child: SwitchListTile.adaptive(
+                    value: _model.switchListTileValue1 ??= true,
+                    onChanged: (newValue) async {
+                      safeSetState(
+                          () => _model.switchListTileValue1 = newValue!);
+                    },
+                    title: Text(
+                      FFLocalizations.of(context).getText(
+                        'gv9ekzfq' /* Title */,
                       ),
-                ),
-                subtitle: Text(
-                  FFLocalizations.of(context).getText(
-                    'f17d4r4x' /* Subtitle */,
-                  ),
-                  style: FlutterFlowTheme.of(context).labelMedium.override(
-                        fontFamily: 'Geist',
-                        letterSpacing: 0.0,
-                        useGoogleFonts: false,
+                      style: FlutterFlowTheme.of(context).titleLarge.override(
+                            fontFamily: 'Geist',
+                            letterSpacing: 0.0,
+                            useGoogleFonts: false,
+                          ),
+                    ),
+                    subtitle: Text(
+                      FFLocalizations.of(context).getText(
+                        'p8cvt71m' /* Subtitle */,
                       ),
+                      style: FlutterFlowTheme.of(context).labelMedium.override(
+                            fontFamily: 'Geist',
+                            letterSpacing: 0.0,
+                            useGoogleFonts: false,
+                          ),
+                    ),
+                    tileColor: FlutterFlowTheme.of(context).secondaryBackground,
+                    activeColor: FlutterFlowTheme.of(context).secondary,
+                    activeTrackColor: FlutterFlowTheme.of(context).primary,
+                    dense: false,
+                    controlAffinity: ListTileControlAffinity.trailing,
+                  ),
                 ),
-                tileColor: FlutterFlowTheme.of(context).secondaryBackground,
-                activeColor: FlutterFlowTheme.of(context).secondary,
-                activeTrackColor: FlutterFlowTheme.of(context).primary,
-                dense: false,
-                controlAffinity: ListTileControlAffinity.trailing,
-              ),
+                Material(
+                  color: Colors.transparent,
+                  child: SwitchListTile(
+                    value: _model.switchListTileValue2 ??= true,
+                    onChanged: (newValue) async {
+                      safeSetState(
+                          () => _model.switchListTileValue2 = newValue!);
+                    },
+                    title: Text(
+                      FFLocalizations.of(context).getText(
+                        'tui8jcv4' /* Title */,
+                      ),
+                      style: FlutterFlowTheme.of(context).titleLarge.override(
+                            fontFamily: 'Geist',
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            fontSize: 28.0,
+                            letterSpacing: 0.0,
+                            useGoogleFonts: false,
+                          ),
+                    ),
+                    subtitle: Text(
+                      FFLocalizations.of(context).getText(
+                        'fbpiyr16' /* Subtitle */,
+                      ),
+                      style: FlutterFlowTheme.of(context).labelMedium.override(
+                            fontFamily: 'Geist',
+                            color: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
+                            fontSize: 24.0,
+                            letterSpacing: 0.0,
+                            useGoogleFonts: false,
+                          ),
+                    ),
+                    tileColor: FlutterFlowTheme.of(context).secondary,
+                    activeColor: FlutterFlowTheme.of(context).tertiary,
+                    activeTrackColor:
+                        FlutterFlowTheme.of(context).primaryBackground,
+                    dense: true,
+                    controlAffinity: ListTileControlAffinity.leading,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                  ),
+                ),
+              ].divide(SizedBox(height: 8.0)).around(SizedBox(height: 8.0)),
             ),
           ),
         ].divide(SizedBox(height: 16.0)),

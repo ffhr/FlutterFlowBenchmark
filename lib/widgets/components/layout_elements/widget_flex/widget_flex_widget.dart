@@ -59,7 +59,7 @@ class _WidgetFlexWidgetState extends State<WidgetFlexWidget> {
           Align(
             alignment: AlignmentDirectional(0.0, -1.0),
             child: Container(
-              height: 700.0,
+              height: 600.0,
               decoration: BoxDecoration(),
               child: Flex(
                 direction:

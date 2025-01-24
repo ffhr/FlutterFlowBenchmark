@@ -61,22 +61,57 @@ class _WidgetCircleImageWidgetState extends State<WidgetCircleImageWidget> {
             alignment: AlignmentDirectional(0.0, 0.0),
             child: Container(
               width: 300.0,
-              height: 300.0,
+              height: 500.0,
               decoration: BoxDecoration(),
-              child: Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
-                child: Container(
-                  width: 200.0,
-                  height: 200.0,
-                  clipBehavior: Clip.antiAlias,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Align(
+                    alignment: AlignmentDirectional(0.0, 0.0),
+                    child: Container(
+                      width: 200.0,
+                      height: 200.0,
+                      clipBehavior: Clip.antiAlias,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                      ),
+                      child: Image.asset(
+                        'assets/images/ff_benchmark_1024.png',
+                        fit: BoxFit.contain,
+                      ),
+                    ),
                   ),
-                  child: Image.asset(
-                    'assets/images/ff_benchmark_1024.png',
-                    fit: BoxFit.contain,
+                  Align(
+                    alignment: AlignmentDirectional(0.0, 0.0),
+                    child: Container(
+                      width: 100.0,
+                      height: 100.0,
+                      clipBehavior: Clip.antiAlias,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                      ),
+                      child: Image.asset(
+                        'assets/images/ff_benchmark_1024.png',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   ),
-                ),
+                  Align(
+                    alignment: AlignmentDirectional(0.0, 0.0),
+                    child: Container(
+                      width: 150.0,
+                      height: 150.0,
+                      clipBehavior: Clip.antiAlias,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                      ),
+                      child: Image.asset(
+                        'assets/images/ff_benchmark_1024.png',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ].divide(SizedBox(height: 16.0)),
               ),
             ),
           ),

@@ -1,9 +1,11 @@
 import '/flutter_flow/flutter_flow_timer.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/instant_timer.dart';
 import 'dart:ui';
 import 'package:stop_watch_timer/stop_watch_timer.dart';
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'widget_timer_model.dart';
@@ -40,6 +42,25 @@ class _WidgetTimerWidgetState extends State<WidgetTimerWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => WidgetTimerModel());
+
+    // On component load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      _model.timerController1.onStartTimer();
+      _model.instantTimer = InstantTimer.periodic(
+        duration: Duration(milliseconds: 300),
+        callback: (timer) async {
+          _model.timerController2.onStartTimer();
+          _model.instantTimer2 = InstantTimer.periodic(
+            duration: Duration(milliseconds: 600),
+            callback: (timer) async {
+              _model.timerController3.onStartTimer();
+            },
+            startImmediately: true,
+          );
+        },
+        startImmediately: true,
+      );
+    });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -109,6 +130,7 @@ class _WidgetTimerWidgetState extends State<WidgetTimerWidget> {
                     style: FlutterFlowTheme.of(context).headlineSmall.override(
                           fontFamily: 'Geist',
                           color: FlutterFlowTheme.of(context).primaryText,
+                          fontSize: 20.0,
                           letterSpacing: 0.0,
                           useGoogleFonts: false,
                         ),
@@ -135,6 +157,7 @@ class _WidgetTimerWidgetState extends State<WidgetTimerWidget> {
                     style: FlutterFlowTheme.of(context).headlineSmall.override(
                           fontFamily: 'Geist',
                           color: FlutterFlowTheme.of(context).primaryText,
+                          fontSize: 24.0,
                           letterSpacing: 0.0,
                           useGoogleFonts: false,
                         ),
@@ -161,6 +184,7 @@ class _WidgetTimerWidgetState extends State<WidgetTimerWidget> {
                     style: FlutterFlowTheme.of(context).headlineSmall.override(
                           fontFamily: 'Geist',
                           color: FlutterFlowTheme.of(context).primaryText,
+                          fontSize: 18.0,
                           letterSpacing: 0.0,
                           useGoogleFonts: false,
                         ),
@@ -186,6 +210,7 @@ class _WidgetTimerWidgetState extends State<WidgetTimerWidget> {
                     style: FlutterFlowTheme.of(context).headlineSmall.override(
                           fontFamily: 'Geist',
                           color: FlutterFlowTheme.of(context).primaryText,
+                          fontSize: 28.0,
                           letterSpacing: 0.0,
                           useGoogleFonts: false,
                         ),

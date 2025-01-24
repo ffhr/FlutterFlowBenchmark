@@ -58,48 +58,93 @@ class _WidgetCheckboxWidgetState extends State<WidgetCheckboxWidget> {
         children: [
           Container(
             width: 300.0,
-            height: 100.0,
             decoration: BoxDecoration(),
-            child: Row(
+            child: Column(
               mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Theme(
-                  data: ThemeData(
-                    checkboxTheme: CheckboxThemeData(
-                      visualDensity: VisualDensity.compact,
-                      materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(4.0),
+                Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Theme(
+                      data: ThemeData(
+                        checkboxTheme: CheckboxThemeData(
+                          visualDensity: VisualDensity.compact,
+                          materialTapTargetSize:
+                              MaterialTapTargetSize.shrinkWrap,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(4.0),
+                          ),
+                        ),
+                        unselectedWidgetColor:
+                            FlutterFlowTheme.of(context).alternate,
+                      ),
+                      child: Checkbox(
+                        value: _model.checkboxValue1 ??= true,
+                        onChanged: (newValue) async {
+                          safeSetState(() => _model.checkboxValue1 = newValue!);
+                        },
+                        side: BorderSide(
+                          width: 2,
+                          color: FlutterFlowTheme.of(context).alternate,
+                        ),
+                        activeColor: FlutterFlowTheme.of(context).primary,
+                        checkColor: FlutterFlowTheme.of(context).info,
                       ),
                     ),
-                    unselectedWidgetColor:
-                        FlutterFlowTheme.of(context).alternate,
-                  ),
-                  child: Checkbox(
-                    value: _model.checkboxValue ??= true,
-                    onChanged: (newValue) async {
-                      safeSetState(() => _model.checkboxValue = newValue!);
-                    },
-                    side: BorderSide(
-                      width: 2,
-                      color: FlutterFlowTheme.of(context).alternate,
-                    ),
-                    activeColor: FlutterFlowTheme.of(context).primary,
-                    checkColor: FlutterFlowTheme.of(context).info,
-                  ),
-                ),
-                Text(
-                  FFLocalizations.of(context).getText(
-                    'tu8gzu3r' /* Hello World */,
-                  ),
-                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Geist',
-                        letterSpacing: 0.0,
-                        useGoogleFonts: false,
+                    Text(
+                      FFLocalizations.of(context).getText(
+                        'k0ecfw1g' /* Hello World */,
                       ),
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                            fontFamily: 'Geist',
+                            letterSpacing: 0.0,
+                            useGoogleFonts: false,
+                          ),
+                    ),
+                  ].divide(SizedBox(width: 4.0)),
                 ),
-              ].divide(SizedBox(width: 4.0)),
+                Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Theme(
+                      data: ThemeData(
+                        checkboxTheme: CheckboxThemeData(
+                          visualDensity: VisualDensity.standard,
+                          materialTapTargetSize: MaterialTapTargetSize.padded,
+                          shape: CircleBorder(),
+                        ),
+                        unselectedWidgetColor:
+                            FlutterFlowTheme.of(context).secondary,
+                      ),
+                      child: Checkbox(
+                        value: _model.checkboxValue2 ??= false,
+                        onChanged: (newValue) async {
+                          safeSetState(() => _model.checkboxValue2 = newValue!);
+                        },
+                        side: BorderSide(
+                          width: 2,
+                          color: FlutterFlowTheme.of(context).secondary,
+                        ),
+                        activeColor: FlutterFlowTheme.of(context).secondary,
+                        checkColor:
+                            FlutterFlowTheme.of(context).primaryBackground,
+                      ),
+                    ),
+                    Text(
+                      FFLocalizations.of(context).getText(
+                        '68sxkwif' /* Hello World */,
+                      ),
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                            fontFamily: 'Geist',
+                            letterSpacing: 0.0,
+                            useGoogleFonts: false,
+                          ),
+                    ),
+                  ].divide(SizedBox(width: 4.0)),
+                ),
+              ].divide(SizedBox(height: 8.0)).around(SizedBox(height: 8.0)),
             ),
           ),
         ].divide(SizedBox(height: 16.0)),

@@ -55,7 +55,8 @@ class _WidgetTextWidgetState extends State<WidgetTextWidget> {
                   useGoogleFonts: false,
                 ),
           ),
-          Text(
+          SelectionArea(
+              child: Text(
             FFLocalizations.of(context).getText(
               '94on63aj' /* Hello World */,
             ),
@@ -66,7 +67,7 @@ class _WidgetTextWidgetState extends State<WidgetTextWidget> {
                   fontWeight: FontWeight.w900,
                   useGoogleFonts: false,
                 ),
-          ),
+          )),
         ],
       ),
     );

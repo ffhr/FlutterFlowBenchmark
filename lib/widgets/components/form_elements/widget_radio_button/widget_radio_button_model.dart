@@ -12,7 +12,9 @@ class WidgetRadioButtonModel extends FlutterFlowModel<WidgetRadioButtonWidget> {
   ///  State fields for stateful widgets in this component.
 
   // State field(s) for RadioButton widget.
-  FormFieldController<String>? radioButtonValueController;
+  FormFieldController<String>? radioButtonValueController1;
+  // State field(s) for RadioButton widget.
+  FormFieldController<String>? radioButtonValueController2;
 
   @override
   void initState(BuildContext context) {}
@@ -21,5 +23,6 @@ class WidgetRadioButtonModel extends FlutterFlowModel<WidgetRadioButtonWidget> {
   void dispose() {}
 
   /// Additional helper methods.
-  String? get radioButtonValue => radioButtonValueController?.value;
+  String? get radioButtonValue1 => radioButtonValueController1?.value;
+  String? get radioButtonValue2 => radioButtonValueController2?.value;
 }

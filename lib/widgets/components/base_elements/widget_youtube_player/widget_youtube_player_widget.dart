@@ -61,14 +61,14 @@ class _WidgetYoutubePlayerWidgetState extends State<WidgetYoutubePlayerWidget> {
           Align(
             alignment: AlignmentDirectional(0.0, 0.0),
             child: Container(
-              width: 500.0,
+              width: 350.0,
               height: 300.0,
               decoration: BoxDecoration(),
               child: Align(
                 alignment: AlignmentDirectional(0.0, 0.0),
                 child: FlutterFlowYoutubePlayer(
-                  url: 'https://www.youtube.com/watch?v=GpXjU-ieAKU',
-                  width: double.infinity,
+                  url: 'https://youtu.be/npKMEdMShzo?si=BUNjiXbdTra1pQxY',
+                  width: 350.0,
                   height: 250.0,
                   autoPlay: false,
                   looping: true,

@@ -95,11 +95,12 @@ class _WidgetSignatureWidgetState extends State<WidgetSignatureWidget> {
                     controller: _model.signatureController2 ??=
                         SignatureController(
                       penStrokeWidth: 2.0,
-                      penColor: FlutterFlowTheme.of(context).primaryText,
-                      exportBackgroundColor: Colors.white,
+                      penColor: FlutterFlowTheme.of(context).secondary,
+                      exportBackgroundColor:
+                          FlutterFlowTheme.of(context).primaryBackground,
                     ),
                     backgroundColor:
-                        FlutterFlowTheme.of(context).secondaryBackground,
+                        FlutterFlowTheme.of(context).primaryBackground,
                     width: double.infinity,
                     height: double.infinity,
                   ),

@@ -60,7 +60,6 @@ class _WidgetsFromAppStateConstantsWidgetState
             0,
             128.0,
           ),
-          shrinkWrap: true,
           scrollDirection: Axis.vertical,
           itemCount: widgetCategories.length,
           itemBuilder: (context, widgetCategoriesIndex) {
