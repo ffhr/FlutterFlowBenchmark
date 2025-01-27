@@ -70,6 +70,7 @@ class _WidgetFormValidationWidgetState
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
+            width: 500.0,
             height: 400.0,
             decoration: BoxDecoration(
               color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -100,7 +101,9 @@ class _WidgetFormValidationWidgetState
                                   letterSpacing: 0.0,
                                   useGoogleFonts: false,
                                 ),
-                            hintText: 'Email',
+                            hintText: FFLocalizations.of(context).getText(
+                              'bsuydbqz' /* Email */,
+                            ),
                             hintStyle: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
@@ -168,7 +171,9 @@ class _WidgetFormValidationWidgetState
                                   letterSpacing: 0.0,
                                   useGoogleFonts: false,
                                 ),
-                            hintText: 'Password',
+                            hintText: FFLocalizations.of(context).getText(
+                              'z1c1pxic' /* Password */,
+                            ),
                             hintStyle: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
@@ -236,7 +241,9 @@ class _WidgetFormValidationWidgetState
                                   letterSpacing: 0.0,
                                   useGoogleFonts: false,
                                 ),
-                            hintText: 'Confirm Password',
+                            hintText: FFLocalizations.of(context).getText(
+                              'gmzrpq9l' /* Confirm Password */,
+                            ),
                             hintStyle: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
@@ -292,7 +299,9 @@ class _WidgetFormValidationWidgetState
                         onPressed: () {
                           print('Button pressed ...');
                         },
-                        text: 'Sign Up',
+                        text: FFLocalizations.of(context).getText(
+                          'ouzplb5p' /* Sign Up */,
+                        ),
                         options: FFButtonOptions(
                           height: 40.0,
                           padding: EdgeInsetsDirectional.fromSTEB(

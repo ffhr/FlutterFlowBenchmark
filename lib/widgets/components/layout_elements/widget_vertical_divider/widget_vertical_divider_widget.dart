@@ -58,40 +58,70 @@ class _WidgetVerticalDividerWidgetState
       decoration: BoxDecoration(),
       child: Container(
         decoration: BoxDecoration(
-          color: FlutterFlowTheme.of(context).secondaryText,
+          color: FlutterFlowTheme.of(context).primaryBackground,
         ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            SizedBox(
-              height: 100.0,
-              child: VerticalDivider(
-                thickness: 2.0,
-                color: FlutterFlowTheme.of(context).alternate,
+        child: Align(
+          alignment: AlignmentDirectional(0.0, 0.0),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              SizedBox(
+                height: 100.0,
+                child: VerticalDivider(
+                  thickness: 2.0,
+                  color: FlutterFlowTheme.of(context).alternate,
+                ),
               ),
-            ),
-            SizedBox(
-              height: 100.0,
-              child: VerticalDivider(
-                thickness: 2.0,
-                color: FlutterFlowTheme.of(context).alternate,
+              Text(
+                FFLocalizations.of(context).getText(
+                  'pwp5qvyj' /* Hello World */,
+                ),
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      fontFamily: 'Geist',
+                      letterSpacing: 0.0,
+                      useGoogleFonts: false,
+                    ),
               ),
-            ),
-            SizedBox(
-              height: 200.0,
-              child: VerticalDivider(
-                thickness: 2.0,
-                color: FlutterFlowTheme.of(context).alternate,
+              SizedBox(
+                height: 100.0,
+                child: VerticalDivider(
+                  thickness: 2.0,
+                  color: FlutterFlowTheme.of(context).alternate,
+                ),
               ),
-            ),
-            SizedBox(
-              height: 100.0,
-              child: VerticalDivider(
-                thickness: 2.0,
-                color: FlutterFlowTheme.of(context).alternate,
+              ClipRRect(
+                borderRadius: BorderRadius.circular(8.0),
+                child: Image.network(
+                  'https://picsum.photos/seed/395/600',
+                  width: 39.0,
+                  height: 30.0,
+                  fit: BoxFit.cover,
+                ),
               ),
-            ),
-          ],
+              SizedBox(
+                height: 200.0,
+                child: VerticalDivider(
+                  thickness: 2.0,
+                  color: FlutterFlowTheme.of(context).alternate,
+                ),
+              ),
+              SizedBox(
+                height: 100.0,
+                child: VerticalDivider(
+                  thickness: 2.0,
+                  color: FlutterFlowTheme.of(context).alternate,
+                ),
+              ),
+              Container(
+                width: 30.0,
+                height: 30.0,
+                decoration: BoxDecoration(
+                  color: FlutterFlowTheme.of(context).secondary,
+                  shape: BoxShape.circle,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

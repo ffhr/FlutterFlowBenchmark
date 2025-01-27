@@ -71,7 +71,9 @@ class _ShadcnWidgetState extends State<ShadcnWidget> {
             },
           ),
           title: Text(
-            'shadcn/ui',
+            FFLocalizations.of(context).getText(
+              'ir1nlko1' /* shadcn/ui */,
+            ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Geist',
                   color: Colors.white,

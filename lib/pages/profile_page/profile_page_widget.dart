@@ -49,7 +49,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
           title: Text(
-            'Profile',
+            FFLocalizations.of(context).getText(
+              'amvsvlw6' /* Profile */,
+            ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Geist',
                   color: Colors.white,
@@ -72,7 +74,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                   child: Text(
-                    'TODO',
+                    FFLocalizations.of(context).getText(
+                      'ino7cfmk' /* TODO */,
+                    ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Geist',
                           fontSize: 24.0,

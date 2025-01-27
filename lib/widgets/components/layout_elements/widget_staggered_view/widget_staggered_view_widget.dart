@@ -66,7 +66,7 @@ class _WidgetStaggeredViewWidgetState extends State<WidgetStaggeredViewWidget> {
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
-                Expanded(
+                Flexible(
                   child: Padding(
                     padding: EdgeInsets.all(16.0),
                     child: MasonryGridView.builder(
@@ -101,7 +101,9 @@ class _WidgetStaggeredViewWidgetState extends State<WidgetStaggeredViewWidget> {
                                       ),
                                     ),
                                     Text(
-                                      'title 1 ',
+                                      FFLocalizations.of(context).getText(
+                                        'ek5p4lz5' /* title 1  */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -111,7 +113,9 @@ class _WidgetStaggeredViewWidgetState extends State<WidgetStaggeredViewWidget> {
                                           ),
                                     ),
                                     Text(
-                                      'description 1',
+                                      FFLocalizations.of(context).getText(
+                                        'tz12pcci' /* description 1 */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -147,7 +151,9 @@ class _WidgetStaggeredViewWidgetState extends State<WidgetStaggeredViewWidget> {
                                       ),
                                     ),
                                     Text(
-                                      'title 2',
+                                      FFLocalizations.of(context).getText(
+                                        'onpyfryt' /* title 2 */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -157,7 +163,9 @@ class _WidgetStaggeredViewWidgetState extends State<WidgetStaggeredViewWidget> {
                                           ),
                                     ),
                                     Text(
-                                      'description 2',
+                                      FFLocalizations.of(context).getText(
+                                        'mytv6e26' /* description 2 */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -193,7 +201,9 @@ class _WidgetStaggeredViewWidgetState extends State<WidgetStaggeredViewWidget> {
                                       ),
                                     ),
                                     Text(
-                                      'title 3',
+                                      FFLocalizations.of(context).getText(
+                                        'o8ehqh6i' /* title 3 */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -203,7 +213,9 @@ class _WidgetStaggeredViewWidgetState extends State<WidgetStaggeredViewWidget> {
                                           ),
                                     ),
                                     Text(
-                                      'description 3',
+                                      FFLocalizations.of(context).getText(
+                                        'hixqgnrp' /* description 3 */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -239,7 +251,9 @@ class _WidgetStaggeredViewWidgetState extends State<WidgetStaggeredViewWidget> {
                                       ),
                                     ),
                                     Text(
-                                      'title 4',
+                                      FFLocalizations.of(context).getText(
+                                        'y2ms3i6z' /* title 4 */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -249,7 +263,9 @@ class _WidgetStaggeredViewWidgetState extends State<WidgetStaggeredViewWidget> {
                                           ),
                                     ),
                                     Text(
-                                      'description 4',
+                                      FFLocalizations.of(context).getText(
+                                        '17642uxy' /* description 4 */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(

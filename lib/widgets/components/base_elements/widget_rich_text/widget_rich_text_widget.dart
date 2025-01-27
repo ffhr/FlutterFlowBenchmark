@@ -1,5 +1,7 @@
 import '/flutter_flow/flutter_flow_util.dart';
+import 'dart:ui';
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -39,6 +41,52 @@ class _WidgetRichTextWidgetState extends State<WidgetRichTextWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      decoration: BoxDecoration(),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          RichText(
+            textScaler: MediaQuery.of(context).textScaler,
+            text: TextSpan(
+              children: [
+                TextSpan(
+                  text: FFLocalizations.of(context).getText(
+                    'g8dr1kzf' /* Introducing the  */,
+                  ),
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        fontFamily: 'Geist',
+                        letterSpacing: 0.0,
+                        useGoogleFonts: false,
+                      ),
+                ),
+                TextSpan(
+                  text: FFLocalizations.of(context).getText(
+                    'l5clf4ft' /* "Aura"  */,
+                  ),
+                  style: TextStyle(
+                    color: FlutterFlowTheme.of(context).tertiary,
+                  ),
+                ),
+                TextSpan(
+                  text: FFLocalizations.of(context).getText(
+                    'nnrt2l1q' /* Smartwatch */,
+                  ),
+                  style: TextStyle(
+                    color: FlutterFlowTheme.of(context).secondary,
+                  ),
+                )
+              ],
+              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    fontFamily: 'Geist',
+                    fontSize: 20.0,
+                    letterSpacing: 0.0,
+                    useGoogleFonts: false,
+                  ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

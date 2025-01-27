@@ -13,6 +13,7 @@ import '/backend/sqlite/sqlite_manager.dart';
 import 'backend/firebase/firebase_config.dart';
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
+import 'flutter_flow/internationalization.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'flutter_flow/nav/nav.dart';
 import 'index.dart';
@@ -65,6 +66,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  Locale? _locale;
+
   ThemeMode _themeMode = FlutterFlowTheme.themeMode;
 
   late AppStateNotifier _appStateNotifier;
@@ -89,6 +92,10 @@ class _MyAppState extends State<MyApp> {
     );
   }
 
+  void setLocale(String language) {
+    safeSetState(() => _locale = createLocale(language));
+  }
+
   void setThemeMode(ThemeMode mode) => safeSetState(() {
         _themeMode = mode;
         FlutterFlowTheme.saveThemeMode(mode);
@@ -99,11 +106,18 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp.router(
       title: 'FlutterFlowBenchmark',
       localizationsDelegates: [
+        FFLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
+        FallbackMaterialLocalizationDelegate(),
+        FallbackCupertinoLocalizationDelegate(),
       ],
-      supportedLocales: const [Locale('en', '')],
+      locale: _locale,
+      supportedLocales: const [
+        Locale('en'),
+        Locale('hr'),
+      ],
       theme: ThemeData(
         brightness: Brightness.light,
         scrollbarTheme: ScrollbarThemeData(
@@ -176,7 +190,9 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.home_outlined,
               size: 24.0,
             ),
-            label: 'Home',
+            label: FFLocalizations.of(context).getText(
+              '365aej3q' /* Home */,
+            ),
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -184,7 +200,9 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.person,
               size: 24.0,
             ),
-            label: 'Home',
+            label: FFLocalizations.of(context).getText(
+              'm7t3k7fu' /* Home */,
+            ),
             tooltip: '',
           )
         ],

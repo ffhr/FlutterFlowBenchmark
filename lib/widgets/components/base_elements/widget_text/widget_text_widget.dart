@@ -46,7 +46,9 @@ class _WidgetTextWidgetState extends State<WidgetTextWidget> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            'Hello World',
+            FFLocalizations.of(context).getText(
+              'zplhao5t' /* Hello World */,
+            ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
                   fontFamily: 'Geist',
                   letterSpacing: 0.0,
@@ -54,7 +56,9 @@ class _WidgetTextWidgetState extends State<WidgetTextWidget> {
                 ),
           ),
           Text(
-            'Hello World',
+            FFLocalizations.of(context).getText(
+              '94on63aj' /* Hello World */,
+            ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
                   fontFamily: 'Geist',
                   fontSize: 24.0,

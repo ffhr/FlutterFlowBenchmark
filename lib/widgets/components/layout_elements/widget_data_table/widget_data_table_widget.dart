@@ -82,7 +82,9 @@ class _WidgetDataTableWidgetState extends State<WidgetDataTableWidget> {
                       label: DefaultTextStyle.merge(
                         softWrap: true,
                         child: Text(
-                          'name',
+                          FFLocalizations.of(context).getText(
+                            '0vvjspov' /* name */,
+                          ),
                           style:
                               FlutterFlowTheme.of(context).labelLarge.override(
                                     fontFamily: 'Geist',
@@ -96,7 +98,9 @@ class _WidgetDataTableWidgetState extends State<WidgetDataTableWidget> {
                       label: DefaultTextStyle.merge(
                         softWrap: true,
                         child: Text(
-                          'email',
+                          FFLocalizations.of(context).getText(
+                            'wcybq7f8' /* email */,
+                          ),
                           style:
                               FlutterFlowTheme.of(context).labelLarge.override(
                                     fontFamily: 'Geist',

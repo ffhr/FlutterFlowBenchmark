@@ -18,7 +18,9 @@ class WidgetFormValidationModel
   String? Function(BuildContext, String?)? textController1Validator;
   String? _textController1Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return 'Email is required';
+      return FFLocalizations.of(context).getText(
+        'hjmbcoku' /* Email is required */,
+      );
     }
 
     if (val.length < 5) {
@@ -28,7 +30,9 @@ class WidgetFormValidationModel
       return 'Maximum 50 characters allowed, currently ${val.length}.';
     }
     if (!RegExp(kTextValidatorEmailRegex).hasMatch(val)) {
-      return 'Wrong Email!';
+      return FFLocalizations.of(context).getText(
+        'inrztb6r' /* Wrong Email! */,
+      );
     }
     return null;
   }
@@ -39,7 +43,9 @@ class WidgetFormValidationModel
   String? Function(BuildContext, String?)? textController2Validator;
   String? _textController2Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return 'Password is required';
+      return FFLocalizations.of(context).getText(
+        '5pnh4add' /* Password is required */,
+      );
     }
 
     if (val.length < 8) {
@@ -55,7 +61,9 @@ class WidgetFormValidationModel
   String? Function(BuildContext, String?)? textController3Validator;
   String? _textController3Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return 'Confirm Password is required';
+      return FFLocalizations.of(context).getText(
+        'ie4mh9wp' /* Confirm Password is required */,
+      );
     }
 
     if (val.length < 8) {

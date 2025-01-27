@@ -59,8 +59,8 @@ class _WidgetPageViewWidgetState extends State<WidgetPageViewWidget> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Container(
-            width: 200.0,
-            height: 200.0,
+            width: 400.0,
+            height: 500.0,
             decoration: BoxDecoration(
               color: FlutterFlowTheme.of(context).secondaryBackground,
             ),
@@ -87,6 +87,27 @@ class _WidgetPageViewWidgetState extends State<WidgetPageViewWidget> {
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context).primary,
                               ),
+                              child: Align(
+                                alignment: AlignmentDirectional(0.0, 0.0),
+                                child: Padding(
+                                  padding: EdgeInsets.all(8.0),
+                                  child: Text(
+                                    FFLocalizations.of(context).getText(
+                                      'm6rbn5fb' /* Content of PageView 1 */,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Geist',
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryBackground,
+                                          letterSpacing: 0.0,
+                                          useGoogleFonts: false,
+                                        ),
+                                  ),
+                                ),
+                              ),
                             ),
                           ],
                         ),
@@ -100,6 +121,27 @@ class _WidgetPageViewWidgetState extends State<WidgetPageViewWidget> {
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context).secondary,
                               ),
+                              child: Align(
+                                alignment: AlignmentDirectional(0.0, 0.0),
+                                child: Padding(
+                                  padding: EdgeInsets.all(8.0),
+                                  child: Text(
+                                    FFLocalizations.of(context).getText(
+                                      '531wk8fx' /* Content of PageView 2 */,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Geist',
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryBackground,
+                                          letterSpacing: 0.0,
+                                          useGoogleFonts: false,
+                                        ),
+                                  ),
+                                ),
+                              ),
                             ),
                           ],
                         ),
@@ -112,6 +154,27 @@ class _WidgetPageViewWidgetState extends State<WidgetPageViewWidget> {
                               height: 100.0,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context).tertiary,
+                              ),
+                              child: Align(
+                                alignment: AlignmentDirectional(0.0, 0.0),
+                                child: Padding(
+                                  padding: EdgeInsets.all(8.0),
+                                  child: Text(
+                                    FFLocalizations.of(context).getText(
+                                      'zqwwfgd0' /* Content of PageView 3 */,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Geist',
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryBackground,
+                                          letterSpacing: 0.0,
+                                          useGoogleFonts: false,
+                                        ),
+                                  ),
+                                ),
                               ),
                             ),
                           ],

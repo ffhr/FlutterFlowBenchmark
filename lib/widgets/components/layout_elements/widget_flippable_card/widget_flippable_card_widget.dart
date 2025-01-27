@@ -1,6 +1,5 @@
 import '/flutter_flow/flutter_flow_util.dart';
 import 'dart:ui';
-import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:flip_card/flip_card.dart';
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
@@ -60,7 +59,8 @@ class _WidgetFlippableCardWidgetState extends State<WidgetFlippableCardWidget> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Container(
-            width: double.infinity,
+            width: 500.0,
+            height: 500.0,
             decoration: BoxDecoration(
               color: FlutterFlowTheme.of(context).primary,
             ),
@@ -70,100 +70,105 @@ class _WidgetFlippableCardWidgetState extends State<WidgetFlippableCardWidget> {
                 fill: Fill.fillBack,
                 direction: FlipDirection.HORIZONTAL,
                 speed: 300,
-                front: Container(
-                  width: 250.0,
-                  height: 300.0,
-                  decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).primaryBackground,
-                    borderRadius: BorderRadius.circular(12.0),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(8.0),
-                          child: Image.network(
-                            'https://picsum.photos/seed/926/600',
-                            width: 200.0,
-                            height: 200.0,
-                            fit: BoxFit.cover,
+                front: Align(
+                  alignment: AlignmentDirectional(0.0, 0.0),
+                  child: Container(
+                    width: 250.0,
+                    height: 300.0,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).primaryBackground,
+                      borderRadius: BorderRadius.circular(12.0),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(8.0),
+                            child: Image.network(
+                              'https://picsum.photos/seed/926/600',
+                              width: 200.0,
+                              height: 200.0,
+                              fit: BoxFit.cover,
+                            ),
                           ),
-                        ),
-                        Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
-                          child: Text(
-                            'Name',
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Geist',
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryText,
-                                  fontSize: 18.0,
-                                  letterSpacing: 0.0,
-                                  useGoogleFonts: false,
-                                ),
+                          Align(
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                '8uz1ax4v' /* Name */,
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Geist',
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
+                                    fontSize: 18.0,
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: false,
+                                  ),
+                            ),
                           ),
-                        ),
-                        Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
-                          child: Text(
-                            'Description',
-                            maxLines: 2,
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Geist',
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryText,
-                                  fontSize: 14.0,
-                                  letterSpacing: 0.0,
-                                  useGoogleFonts: false,
-                                ),
+                          Align(
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                'c6cjcvt4' /* Description */,
+                              ),
+                              maxLines: 2,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Geist',
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
+                                    fontSize: 14.0,
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: false,
+                                  ),
+                            ),
                           ),
-                        ),
-                      ].divide(SizedBox(height: 16.0)),
+                        ].divide(SizedBox(height: 16.0)),
+                      ),
                     ),
                   ),
                 ),
-                back: Container(
-                  width: 250.0,
-                  height: 300.0,
-                  decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).primaryBackground,
-                    borderRadius: BorderRadius.circular(12.0),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
-                          child: Text(
-                            random_data.randomString(
-                              100,
-                              0,
-                              true,
-                              false,
-                              false,
+                back: Align(
+                  alignment: AlignmentDirectional(0.0, 0.0),
+                  child: Container(
+                    width: 250.0,
+                    height: 300.0,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).primaryBackground,
+                      borderRadius: BorderRadius.circular(12.0),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Align(
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                '4ehd3bci' /* Bright turquoise walls surroun... */,
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Geist',
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
+                                    fontSize: 14.0,
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: false,
+                                  ),
                             ),
-                            maxLines: 2,
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Geist',
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryText,
-                                  fontSize: 14.0,
-                                  letterSpacing: 0.0,
-                                  useGoogleFonts: false,
-                                ),
                           ),
-                        ),
-                      ].divide(SizedBox(height: 16.0)),
+                        ].divide(SizedBox(height: 16.0)),
+                      ),
                     ),
                   ),
                 ),
