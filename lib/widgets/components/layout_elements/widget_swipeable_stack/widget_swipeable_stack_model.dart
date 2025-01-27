@@ -13,11 +13,14 @@ class WidgetSwipeableStackModel
   ///  State fields for stateful widgets in this component.
 
   // State field(s) for SwipeableStack widget.
-  late CardSwiperController swipeableStackController;
+  late CardSwiperController swipeableStackController1;
+  // State field(s) for SwipeableStack widget.
+  late CardSwiperController swipeableStackController2;
 
   @override
   void initState(BuildContext context) {
-    swipeableStackController = CardSwiperController();
+    swipeableStackController1 = CardSwiperController();
+    swipeableStackController2 = CardSwiperController();
   }
 
   @override

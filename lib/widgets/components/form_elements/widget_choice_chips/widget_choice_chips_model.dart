@@ -12,11 +12,16 @@ class WidgetChoiceChipsModel extends FlutterFlowModel<WidgetChoiceChipsWidget> {
   ///  State fields for stateful widgets in this component.
 
   // State field(s) for ChoiceChips widget.
-  FormFieldController<List<String>>? choiceChipsValueController;
-  String? get choiceChipsValue =>
-      choiceChipsValueController?.value?.firstOrNull;
-  set choiceChipsValue(String? val) =>
-      choiceChipsValueController?.value = val != null ? [val] : [];
+  FormFieldController<List<String>>? choiceChipsValueController1;
+  List<String>? get choiceChipsValues1 => choiceChipsValueController1?.value;
+  set choiceChipsValues1(List<String>? val) =>
+      choiceChipsValueController1?.value = val;
+  // State field(s) for ChoiceChips widget.
+  FormFieldController<List<String>>? choiceChipsValueController2;
+  String? get choiceChipsValue2 =>
+      choiceChipsValueController2?.value?.firstOrNull;
+  set choiceChipsValue2(String? val) =>
+      choiceChipsValueController2?.value = val != null ? [val] : [];
 
   @override
   void initState(BuildContext context) {}

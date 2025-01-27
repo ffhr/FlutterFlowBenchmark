@@ -59,48 +59,103 @@ class _WidgeListTileWidgetState extends State<WidgeListTileWidget> {
           Container(
             width: 500.0,
             decoration: BoxDecoration(),
-            child: Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Material(
-                color: Colors.transparent,
-                child: ListTile(
-                  title: Text(
-                    FFLocalizations.of(context).getText(
-                      'o8hfxjxo' /* 5 Ways to Boost Your Productiv... */,
-                    ),
-                    style: FlutterFlowTheme.of(context).titleLarge.override(
-                          fontFamily: 'Geist',
-                          fontSize: 20.0,
-                          letterSpacing: 0.0,
-                          useGoogleFonts: false,
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Material(
+                    color: Colors.transparent,
+                    child: ListTile(
+                      title: Text(
+                        FFLocalizations.of(context).getText(
+                          'awo3ywed' /* 5 Ways to Boost Your Productiv... */,
                         ),
-                  ),
-                  subtitle: Text(
-                    FFLocalizations.of(context).getText(
-                      '8vycte8y' /* Simple Strategies for a More F... */,
-                    ),
-                    style: FlutterFlowTheme.of(context).labelMedium.override(
-                          fontFamily: 'Geist',
-                          color: FlutterFlowTheme.of(context).secondaryText,
-                          fontSize: 16.0,
-                          letterSpacing: 0.0,
-                          useGoogleFonts: false,
+                        style: FlutterFlowTheme.of(context).titleLarge.override(
+                              fontFamily: 'Geist',
+                              fontSize: 20.0,
+                              letterSpacing: 0.0,
+                              useGoogleFonts: false,
+                            ),
+                      ),
+                      subtitle: Text(
+                        FFLocalizations.of(context).getText(
+                          'cnp9f4h6' /* Simple Strategies for a More F... */,
                         ),
-                  ),
-                  trailing: Icon(
-                    Icons.arrow_forward_ios_rounded,
-                    color: FlutterFlowTheme.of(context).secondaryText,
-                    size: 24.0,
-                  ),
-                  tileColor: FlutterFlowTheme.of(context).secondaryBackground,
-                  dense: false,
-                  contentPadding:
-                      EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8.0),
+                        style: FlutterFlowTheme.of(context)
+                            .labelMedium
+                            .override(
+                              fontFamily: 'Geist',
+                              color: FlutterFlowTheme.of(context).secondaryText,
+                              fontSize: 16.0,
+                              letterSpacing: 0.0,
+                              useGoogleFonts: false,
+                            ),
+                      ),
+                      trailing: Icon(
+                        Icons.arrow_forward_ios_rounded,
+                        color: FlutterFlowTheme.of(context).secondaryText,
+                        size: 24.0,
+                      ),
+                      tileColor:
+                          FlutterFlowTheme.of(context).secondaryBackground,
+                      dense: false,
+                      contentPadding:
+                          EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                    ),
                   ),
                 ),
-              ),
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Material(
+                    color: Colors.transparent,
+                    child: ListTile(
+                      title: Text(
+                        FFLocalizations.of(context).getText(
+                          'meht6k5e' /* 5 Ways to Boost Your Productiv... */,
+                        ),
+                        style: FlutterFlowTheme.of(context).titleLarge.override(
+                              fontFamily: 'Geist',
+                              color: FlutterFlowTheme.of(context)
+                                  .primaryBackground,
+                              fontSize: 24.0,
+                              letterSpacing: 0.0,
+                              useGoogleFonts: false,
+                            ),
+                      ),
+                      subtitle: Text(
+                        FFLocalizations.of(context).getText(
+                          'qexqyhhu' /* Simple Strategies for a More F... */,
+                        ),
+                        style:
+                            FlutterFlowTheme.of(context).labelMedium.override(
+                                  fontFamily: 'Geist',
+                                  color: FlutterFlowTheme.of(context)
+                                      .secondaryBackground,
+                                  fontSize: 20.0,
+                                  letterSpacing: 0.0,
+                                  useGoogleFonts: false,
+                                ),
+                      ),
+                      trailing: Icon(
+                        Icons.arrow_forward_ios_rounded,
+                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        size: 24.0,
+                      ),
+                      tileColor: FlutterFlowTheme.of(context).primary,
+                      dense: false,
+                      contentPadding:
+                          EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ].divide(SizedBox(height: 16.0)),

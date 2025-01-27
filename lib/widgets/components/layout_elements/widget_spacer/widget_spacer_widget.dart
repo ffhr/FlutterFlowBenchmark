@@ -70,15 +70,18 @@ class _WidgetSpacerWidgetState extends State<WidgetSpacerWidget> {
                 ),
           ),
           Spacer(),
-          Text(
-            FFLocalizations.of(context).getText(
-              'crfcdf0r' /* Hello World */,
+          Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Text(
+              FFLocalizations.of(context).getText(
+                'crfcdf0r' /* Hello World */,
+              ),
+              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    fontFamily: 'Geist',
+                    letterSpacing: 0.0,
+                    useGoogleFonts: false,
+                  ),
             ),
-            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                  fontFamily: 'Geist',
-                  letterSpacing: 0.0,
-                  useGoogleFonts: false,
-                ),
           ),
         ].divide(SizedBox(height: 16.0)).around(SizedBox(height: 16.0)),
       ),

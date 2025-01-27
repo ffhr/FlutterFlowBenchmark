@@ -231,6 +231,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Hello World',
       'hr': '',
     },
+    'm2ae2c6a': {
+      'en': 'Gemini',
+      'hr': '',
+    },
     'z8m415ny': {
       'en': 'Home',
       'hr': '',
@@ -304,6 +308,18 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Hello World',
       'hr': '',
     },
+    '80xeil39': {
+      'en': 'Hello World',
+      'hr': '',
+    },
+    'fybv3l40': {
+      'en': 'Hello World',
+      'hr': '',
+    },
+    'kajniits': {
+      'en': 'Hello World',
+      'hr': '',
+    },
     '94on63aj': {
       'en': 'Hello World',
       'hr': '',
@@ -327,6 +343,38 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Hello World',
       'hr': '',
     },
+    'pwmhs84a': {
+      'en': 'Introducing the ',
+      'hr': '',
+    },
+    'ombg7dfz': {
+      'en': '\"Aura\" ',
+      'hr': '',
+    },
+    'flfqnpwh': {
+      'en': 'Smartwatch',
+      'hr': '',
+    },
+    'cmxmmqgq': {
+      'en': 'Hello World',
+      'hr': '',
+    },
+    'n0v02cj2': {
+      'en': 'Introducing the ',
+      'hr': '',
+    },
+    '3ddnvt2z': {
+      'en': '\"Aura\" ',
+      'hr': '',
+    },
+    'hzw1x48z': {
+      'en': 'Smartwatch',
+      'hr': '',
+    },
+    'h2gohp8q': {
+      'en': 'Hello World',
+      'hr': '',
+    },
   },
   // WidgetCard
   {
@@ -342,36 +390,112 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Hello World',
       'hr': '',
     },
+    'abg4q7xc': {
+      'en': 'Learn to breath',
+      'hr': '',
+    },
+    '9jbe6bz5': {
+      'en': '4 Min',
+      'hr': '',
+    },
+    '22bke8j5': {
+      'en': 'George Switzer',
+      'hr': '',
+    },
+    'i7802hgu': {
+      'en': 'Text1',
+      'hr': '',
+    },
+    'r7pi7f6n': {
+      'en': 'Text2',
+      'hr': '',
+    },
+    'poivprcf': {
+      'en': 'Label here...',
+      'hr': '',
+    },
   },
   // WidgetListView
   {
-    'r6r74503': {
-      'en': 'title 1 ',
+    '4i2i9dk2': {
+      'en': 'title',
       'hr': '',
     },
-    'ym47h0ti': {
+    'we95kmem': {
       'en': 'description 1',
       'hr': '',
     },
-    'c0r5ijyt': {
+    'p2d1t81s': {
       'en': 'title 2',
       'hr': '',
     },
-    'yycg4ikh': {
+    'grf992pk': {
       'en': 'description 2',
       'hr': '',
     },
-    '5l0jxch0': {
+    'g3qpw040': {
       'en': 'title 3',
       'hr': '',
     },
-    'jiasyyrh': {
+    '0q2u6tqi': {
       'en': 'description 3',
+      'hr': '',
+    },
+    's5wgrvmj': {
+      'en': 'title 4',
+      'hr': '',
+    },
+    'ik50op98': {
+      'en': 'description 4',
+      'hr': '',
+    },
+    'v0rprgoi': {
+      'en': 'title 5',
+      'hr': '',
+    },
+    'b2b3aijh': {
+      'en': 'description 5',
+      'hr': '',
+    },
+    'onsycxde': {
+      'en': 'title 1 ',
+      'hr': '',
+    },
+    'pyt9outm': {
+      'en': 'description 1',
+      'hr': '',
+    },
+    't0v5kozs': {
+      'en': 'title 2',
+      'hr': '',
+    },
+    'kxuwcsij': {
+      'en': 'description 2',
+      'hr': '',
+    },
+    'utfcgbox': {
+      'en': 'title 3',
+      'hr': '',
+    },
+    'p6ym4vn8': {
+      'en': 'description 3',
+      'hr': '',
+    },
+    '4l097q55': {
+      'en': 'title 4',
+      'hr': '',
+    },
+    '0hqiudoh': {
+      'en': 'description 4',
       'hr': '',
     },
   },
   // WidgetGridView
   {
+    '4pxkhhoh': {
+      'en': 'Tab 1',
+      'hr': '',
+    },
     '69f9d5hy': {
       'en': 'title 1',
       'hr': '',
@@ -385,6 +509,26 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'hr': '',
     },
     'skpwsezp': {
+      'en': 'title 4',
+      'hr': '',
+    },
+    '57a6wxz2': {
+      'en': 'Tab 2',
+      'hr': '',
+    },
+    'f3sxb20e': {
+      'en': 'title 1',
+      'hr': '',
+    },
+    '8un7mt7z': {
+      'en': 'title 2',
+      'hr': '',
+    },
+    'pfmkzjey': {
+      'en': 'title 3',
+      'hr': '',
+    },
+    'oyzl9z5h': {
       'en': 'title 4',
       'hr': '',
     },
@@ -423,15 +567,20 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // WidgetFlippableCard
   {
-    '8uz1ax4v': {
+    'boeott0k': {
       'en': 'Name',
       'hr': '',
     },
-    'c6cjcvt4': {
+    '84tm4gwq': {
       'en': 'Description',
       'hr': '',
     },
-    '4ehd3bci': {
+    '2hskoz8q': {
+      'en':
+          'Bright turquoise walls surround a bustling market, filled with exotic scents and vibrant, handwoven textiles.\nBright turquoise walls surround a bustling market, filled with exotic scents and vibrant, handwoven textiles.',
+      'hr': '',
+    },
+    'ac71xlig': {
       'en':
           'Bright turquoise walls surround a bustling market, filled with exotic scents and vibrant, handwoven textiles.\nBright turquoise walls surround a bustling market, filled with exotic scents and vibrant, handwoven textiles.',
       'hr': '',
@@ -463,6 +612,30 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Content of Tab 3',
       'hr': '',
     },
+    'rqjcxxm5': {
+      'en': 'Tab 1',
+      'hr': '',
+    },
+    'ur447ue0': {
+      'en': 'Content of Tab 1',
+      'hr': '',
+    },
+    'kv3zpru7': {
+      'en': 'Tab 2',
+      'hr': '',
+    },
+    '0m6pji4i': {
+      'en': 'Content of Tab 2',
+      'hr': '',
+    },
+    'r1pw7ssj': {
+      'en': 'Tab 3',
+      'hr': '',
+    },
+    'oc90pxt9': {
+      'en': 'Content of Tab 3',
+      'hr': '',
+    },
   },
   // WidgetPageView
   {
@@ -475,6 +648,18 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'hr': '',
     },
     'zqwwfgd0': {
+      'en': 'Content of PageView 3',
+      'hr': '',
+    },
+    'cr7qxhs7': {
+      'en': 'Content of PageView 1',
+      'hr': '',
+    },
+    'wxiy9c9t': {
+      'en': 'Content of PageView 2',
+      'hr': '',
+    },
+    'e1iua974': {
       'en': 'Content of PageView 3',
       'hr': '',
     },
@@ -494,9 +679,26 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'A weathered map, edges frayed, hints at hidden paths through a forgotten forest. Sunlight filters softly.',
       'hr': '',
     },
+    'i9buhpqy': {
+      'en': 'A weathered map',
+      'hr': '',
+    },
+    'w7nypflu': {
+      'en': 'A weathered map, edges frayed...',
+      'hr': '',
+    },
+    'd3198y6e': {
+      'en':
+          'A weathered map, edges frayed, hints at hidden paths through a forgotten forest. Sunlight filters softly. A weathered map, edges frayed, hints at hidden paths through a forgotten forest. Sunlight filters softly. \nA weathered map, edges frayed, hints at hidden paths through a forgotten forest. Sunlight filters softly.',
+      'hr': '',
+    },
   },
   // WidgetWrap
   {
+    'otg95t91': {
+      'en': 'Horizontal Wrap',
+      'hr': '',
+    },
     'zbwshw1m': {
       'en': 'Horizontal Wrap',
       'hr': '',
@@ -525,6 +727,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'description 3',
       'hr': '',
     },
+    'mgiotat9': {
+      'en': 'Vertical Wrap',
+      'hr': '',
+    },
     'vgbkzmdl': {
       'en': 'Vertical Wrap',
       'hr': '',
@@ -550,6 +756,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'hr': '',
     },
     '1xo3ajrg': {
+      'en': 'Button',
+      'hr': '',
+    },
+    '8qi6ih4z': {
       'en': 'Button',
       'hr': '',
     },
@@ -601,41 +811,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'hr': '',
     },
   },
-  // WidgetStaggeredView
-  {
-    'ek5p4lz5': {
-      'en': 'title 1 ',
-      'hr': '',
-    },
-    'tz12pcci': {
-      'en': 'description 1',
-      'hr': '',
-    },
-    'onpyfryt': {
-      'en': 'title 2',
-      'hr': '',
-    },
-    'mytv6e26': {
-      'en': 'description 2',
-      'hr': '',
-    },
-    'o8ehqh6i': {
-      'en': 'title 3',
-      'hr': '',
-    },
-    'hixqgnrp': {
-      'en': 'description 3',
-      'hr': '',
-    },
-    'y2ms3i6z': {
-      'en': 'title 4',
-      'hr': '',
-    },
-    '17642uxy': {
-      'en': 'description 4',
-      'hr': '',
-    },
-  },
   // WidgetDataTable
   {
     '0vvjspov': {
@@ -649,6 +824,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // WidgetFlex
   {
+    'dv54ffzu': {
+      'en': 'Rotate your phone to see how this widget works',
+      'hr': '',
+    },
     '33bqe9xl': {
       'en': 'Name',
       'hr': '',
@@ -666,35 +845,159 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'hr': '',
     },
   },
+  // WidgetImage
+  {
+    'idcr1qzw': {
+      'en': 'Fill',
+      'hr': '',
+    },
+    '96d15v6f': {
+      'en': 'Contain',
+      'hr': '',
+    },
+    'wjbnpo0h': {
+      'en': 'Fit Width',
+      'hr': '',
+    },
+    'dwyk1tan': {
+      'en':
+          'None. Center the widget and crop any part of\nit that overflows the available space.',
+      'hr': '',
+    },
+    'm90tugyx': {
+      'en': 'Different sizes',
+      'hr': '',
+    },
+  },
   // WidgetButton
   {
-    'ew6ltfk4': {
+    'iroovwas': {
       'en': 'Button',
+      'hr': '',
+    },
+    'bc4v002a': {
+      'en': 'Log In',
+      'hr': '',
+    },
+    'xcj8k7yh': {
+      'en': 'True',
+      'hr': '',
+    },
+    'gutckpc7': {
+      'en':
+          'Buttons can be disabled based on certain conditions. A common example is on checkout pages, where the button might be disabled until the user fills out a form with their personal details. Once the form is completed, the button will be enabled automatically.',
+      'hr': '',
+    },
+    '406hv0p3': {
+      'en': 'Download',
+      'hr': '',
+    },
+    '5m6i3itv': {
+      'en':
+          'Tap the button below to see a live example of enabling and disabling.',
+      'hr': '',
+    },
+    '8z9ka7g9': {
+      'en': 'Get Started',
+      'hr': '',
+    },
+    'hhfzw4cj': {
+      'en': 'Get Started',
+      'hr': '',
+    },
+  },
+  // WidgetIconButton
+  {
+    'qjhwco7w': {
+      'en':
+          'Tap the button below to see a live example of enabling and disabling.',
       'hr': '',
     },
   },
   // WidgeListTile
   {
-    'o8hfxjxo': {
+    'awo3ywed': {
       'en': '5 Ways to Boost Your Productivity',
       'hr': '',
     },
-    '8vycte8y': {
+    'cnp9f4h6': {
+      'en': 'Simple Strategies for a More Focused You',
+      'hr': '',
+    },
+    'meht6k5e': {
+      'en': '5 Ways to Boost Your Productivity',
+      'hr': '',
+    },
+    'qexqyhhu': {
       'en': 'Simple Strategies for a More Focused You',
       'hr': '',
     },
   },
   // WidgeSlideableListTile
   {
-    '3plw2gka': {
+    'lasvuja4': {
+      'en': 'Share',
+      'hr': '',
+    },
+    '9j0nsklj': {
+      'en': 'Rename',
+      'hr': '',
+    },
+    'jbgt670d': {
       'en': 'Delete',
+      'hr': '',
+    },
+    'pzaf969q': {
+      'en': 'Subtitle goes here...',
+      'hr': '',
+    },
+  },
+  // WidgetCalendar
+  {
+    'm0zlqgqk': {
+      'en': 'Month',
+      'hr': '',
+    },
+    '3o30weqk': {
+      'en': 'Week',
+      'hr': '',
+    },
+  },
+  // WidgetToggleIcon
+  {
+    '38t79gze': {
+      'en': 'Local state',
+      'hr': '',
+    },
+    '2h98mvwy': {
+      'en': 'toggle - local state',
+      'hr': '',
+    },
+    'n7spknyk': {
+      'en': 'Toggle value:',
+      'hr': '',
+    },
+    'bvy6gpdh': {
+      'en': 'True',
+      'hr': '',
+    },
+    'i3mw0qgu': {
+      'en': 'False',
       'hr': '',
     },
   },
   // WidgetTransform
   {
-    'c7uzk1hn': {
+    '9j14fn89': {
+      'en': 'Translate',
+      'hr': '',
+    },
+    'yy83obha': {
       'en': 'Transform',
+      'hr': '',
+    },
+    '2kecknz9': {
+      'en': 'Scale',
       'hr': '',
     },
   },
@@ -709,15 +1012,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'hr': '',
     },
   },
-  // WidgetBadge
+  // WidgetLanguageSelector
   {
-    'yrhd9i57': {
-      'en': '1',
-      'hr': '',
+    'cbtvzk0f': {
+      'en': 'Hello',
+      'hr': 'Zdravo',
     },
   },
   // WidgetChart
   {
+    'ekt7bu7e': {
+      'en': 'Line',
+      'hr': '',
+    },
     'pefo2pfk': {
       'en': 'LineChart',
       'hr': '',
@@ -754,6 +1061,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Price (\$)',
       'hr': '',
     },
+    'g09sha1n': {
+      'en': 'Bar',
+      'hr': '',
+    },
     '1yakvrp0': {
       'en': 'BarChart',
       'hr': '',
@@ -774,6 +1085,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Price (\$)',
       'hr': '',
     },
+    '245y8ode': {
+      'en': 'Pie',
+      'hr': '',
+    },
     'sfgqhq69': {
       'en': 'PieChart',
       'hr': '',
@@ -791,22 +1106,76 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'hr': '',
     },
   },
+  // WidgetMouseRegion
+  {
+    'aoq9y6oi': {
+      'en': 'Tab 1',
+      'hr': '',
+    },
+    'h64lyf98': {
+      'en': 'Tab 2',
+      'hr': '',
+    },
+    'x62h8wen': {
+      'en': 'Tab 4',
+      'hr': '',
+    },
+  },
+  // WidgetBarcode
+  {
+    'iqybsqne': {
+      'en': 'QR Code',
+      'hr': '',
+    },
+    '5vy3z807': {
+      'en': 'Aztec',
+      'hr': '',
+    },
+    'zrrd894y': {
+      'en': 'Data Matrix',
+      'hr': '',
+    },
+    'z7n44imt': {
+      'en': 'PDF 417',
+      'hr': '',
+    },
+    'cumklydy': {
+      'en': 'Code 128',
+      'hr': '',
+    },
+    'rlhcj00r': {
+      'en': 'Telepen',
+      'hr': '',
+    },
+    'vpte67bz': {
+      'en': 'Codebar',
+      'hr': '',
+    },
+  },
   // WidgetTooltip
   {
-    'qtk4q1pu': {
-      'en': 'How to use Tooltip?',
+    'hpowlwkb': {
+      'en': 'To create an account, you need to press on button below. ',
+      'hr': '',
+    },
+    '5yp258yn': {
+      'en': 'Sign In',
       'hr': '',
     },
   },
   // WidgetStickyHeader
   {
-    'ouzd52rr': {
+    'adyl3n5b': {
       'en': 'A',
       'hr': '',
     },
   },
   // WidgetDraggable
   {
+    'aotb3ec7': {
+      'en': 'Example 1',
+      'hr': '',
+    },
     'y6vcpb42': {
       'en': 'Drop Me Here',
       'hr': '',
@@ -815,16 +1184,108 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Drag Me',
       'hr': '',
     },
+    'j1nt3i5i': {
+      'en': 'Example 2',
+      'hr': '',
+    },
+    'xrm5eq9t': {
+      'en': 'What\'s the capital of Spain?',
+      'hr': '',
+    },
+    'dx6a69tv': {
+      'en': 'Example 3',
+      'hr': '',
+    },
   },
   // WidgetTextField
   {
-    'b4r40mbp': {
+    'q3h2srj9': {
+      'en': 'Tab 1',
+      'hr': '',
+    },
+    'v1y2akhg': {
+      'en': 'Name',
+      'hr': '',
+    },
+    '5sui98dg': {
       'en': 'Email',
+      'hr': '',
+    },
+    'pm281ihz': {
+      'en': 'Comments…',
+      'hr': '',
+    },
+    '5b8mh0cs': {
+      'en': 'SUBMIT',
+      'hr': '',
+    },
+    '7vtc8vxh': {
+      'en': 'Tab 2',
+      'hr': '',
+    },
+    'jyz7irsj': {
+      'en': 'Email…',
+      'hr': '',
+    },
+    'utg2crza': {
+      'en': 'Only Gmail.com',
+      'hr': '',
+    },
+    'h31e2lw2': {
+      'en': 'Comments…',
+      'hr': '',
+    },
+    'shcfe0tc': {
+      'en': 'Field is required',
+      'hr': '',
+    },
+    'yqup3ijm': {
+      'en': 'Invalid email',
+      'hr': '',
+    },
+    'hep92s72': {
+      'en': 'Please choose an option from the dropdown',
+      'hr': '',
+    },
+    '9oiqgk29': {
+      'en': 'Field is required',
+      'hr': '',
+    },
+    'olyyylg5': {
+      'en': 'Only Gmail emails are accepted',
+      'hr': '',
+    },
+    '23qfigls': {
+      'en': 'Please choose an option from the dropdown',
+      'hr': '',
+    },
+    'uix1euyt': {
+      'en': 'Field is required',
+      'hr': '',
+    },
+    '2s9w8o02': {
+      'en': 'Minimum 10 chars',
+      'hr': '',
+    },
+    '3p7lja1q': {
+      'en': 'Max 100 chars',
+      'hr': '',
+    },
+    'kai3oq64': {
+      'en': 'Please choose an option from the dropdown',
+      'hr': '',
+    },
+    'nd2jp31s': {
+      'en': 'SUBMIT',
       'hr': '',
     },
   },
   // WidgetDropDown
   {
+    'm9pteza3': {
+      'en': 'Tab 1',
+      'hr': '',
+    },
     'q9sgyh1v': {
       'en': 'Select...',
       'hr': '',
@@ -845,97 +1306,259 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Option 3',
       'hr': '',
     },
+    'k4fxmib7': {
+      'en': 'DropDown Filter',
+      'hr': '',
+    },
+    'ck6t9aio': {
+      'en': 'Select you Vehicle:',
+      'hr': '',
+    },
+    '7ozvxy59': {
+      'en': 'Audi',
+      'hr': '',
+    },
+    'i0fttc4l': {
+      'en': 'Select Vehicle',
+      'hr': '',
+    },
+    'ri5rqf4b': {
+      'en': 'Audi',
+      'hr': '',
+    },
+    '0m6ghdbx': {
+      'en': 'Select Audi Model',
+      'hr': '',
+    },
+    'mcn0cpvl': {
+      'en': '210',
+      'hr': '',
+    },
+    'rxehyaax': {
+      'en': '220',
+      'hr': '',
+    },
+    '3mffyqyk': {
+      'en': '230',
+      'hr': '',
+    },
+    'by3oyxoq': {
+      'en': 'Apply',
+      'hr': '',
+    },
+    'hhp5h0ke': {
+      'en': 'Apply',
+      'hr': '',
+    },
+    'ck1ndmcn': {
+      'en': 'Tab 2',
+      'hr': '',
+    },
+    'h2gtietv': {
+      'en': 'Please select...',
+      'hr': '',
+    },
+    'fxbi3f4p': {
+      'en': 'Search for an item...',
+      'hr': '',
+    },
+    'vlwni2ru': {
+      'en': 'BMW',
+      'hr': '',
+    },
+    '124xv8tr': {
+      'en': 'Merc',
+      'hr': '',
+    },
+    't6hp421e': {
+      'en': 'Ferrari',
+      'hr': '',
+    },
+    'wnbdk3qw': {
+      'en': 'Lamborghini',
+      'hr': '',
+    },
   },
   // WidgetCheckbox
   {
-    'tu8gzu3r': {
+    'k0ecfw1g': {
+      'en': 'Hello World',
+      'hr': '',
+    },
+    '68sxkwif': {
       'en': 'Hello World',
       'hr': '',
     },
   },
   // WidgetCheckboxListTile
   {
-    'urxg1jyv': {
+    'l4gei15q': {
       'en': 'Title',
       'hr': '',
     },
-    'ma6bq2zm': {
+    'hhs5l1dv': {
+      'en': 'Subtitle',
+      'hr': '',
+    },
+    '1raxwq7n': {
+      'en': 'Title',
+      'hr': '',
+    },
+    'jk2brwr8': {
       'en': 'Subtitle',
       'hr': '',
     },
   },
   // WidgetSwitchListTile
   {
-    '7i7hvlo1': {
+    'gv9ekzfq': {
       'en': 'Title',
       'hr': '',
     },
-    'f17d4r4x': {
+    'p8cvt71m': {
+      'en': 'Subtitle',
+      'hr': '',
+    },
+    'tui8jcv4': {
+      'en': 'Title',
+      'hr': '',
+    },
+    'fbpiyr16': {
       'en': 'Subtitle',
       'hr': '',
     },
   },
   // WidgetRadioButton
   {
-    'kqqkyafw': {
+    's5xl1twv': {
       'en': 'Option 1',
       'hr': '',
     },
-    'c68r1upz': {
+    'f9ivfubh': {
       'en': 'Option 2',
       'hr': '',
     },
-    '4phdycf0': {
+    '435y8wt5': {
       'en': 'Option 3',
+      'hr': '',
+    },
+    '26t1ib1m': {
+      'en': 'Option 1',
+      'hr': '',
+    },
+    'x2lft2p0': {
+      'en': 'Option 2',
+      'hr': '',
+    },
+    '9lhhhbes': {
+      'en': 'Option 3',
+      'hr': '',
+    },
+  },
+  // WidgetCreditCardForm
+  {
+    'kxvlams2': {
+      'en': 'Make a Payment',
       'hr': '',
     },
   },
   // WidgetChoiceChips
   {
-    'udxmurb5': {
+    'xjdz8fan': {
       'en': 'Option 1',
       'hr': '',
     },
-    'lgwm2fzh': {
+    'rtt6756h': {
       'en': 'Option 2',
       'hr': '',
     },
-    'edi6h9m3': {
+    '65oos320': {
       'en': 'Option 3',
       'hr': '',
     },
-    'vkvxudlo': {
+    '789yqlik': {
       'en': 'Option 4',
       'hr': '',
     },
-    '5nx0j5m1': {
+    'hlrgvxpd': {
+      'en': 'Option 5',
+      'hr': '',
+    },
+    'kz25xiqe': {
+      'en': 'Option 2',
+      'hr': '',
+    },
+    'klz6ixwr': {
+      'en': 'Option 4',
+      'hr': '',
+    },
+    'v1ljs6ut': {
       'en': 'Option 5',
       'hr': '',
     },
   },
   // WidgetPlacePicker
   {
-    '5c98h2be': {
+    'c7ljds6w': {
       'en': 'Select Location',
+      'hr': '',
+    },
+    '026yd11t': {
+      'en': 'Choose Location',
+      'hr': '',
+    },
+    '2piqdxl4': {
+      'en': ' Loc',
+      'hr': '',
+    },
+    'ml187elt': {
+      'en': 'Location',
       'hr': '',
     },
   },
   // WidgetCheckboxGroup
   {
-    'o71kzb1j': {
+    'b5p3hjy1': {
       'en': 'Option 1',
       'hr': '',
     },
-    't1yoaj2i': {
+    'knlet9s3': {
       'en': 'Option 2',
       'hr': '',
     },
-    'y5tkhltp': {
+    'l2mmte57': {
       'en': 'Option 3',
       'hr': '',
     },
-    '10y33lqx': {
+    'bhwh2gsd': {
       'en': 'Option 4',
+      'hr': '',
+    },
+    '3srzi738': {
+      'en': 'Option 1',
+      'hr': '',
+    },
+    'wh7wjg22': {
+      'en': 'Option 2',
+      'hr': '',
+    },
+    'f12s48e7': {
+      'en': 'Option 3',
+      'hr': '',
+    },
+    'o40fbnym': {
+      'en': 'Option 4',
+      'hr': '',
+    },
+  },
+  // WidgetGemini
+  {
+    't3alyza9': {
+      'en': 'Enter text…',
+      'hr': '',
+    },
+    'p4iyi5u7': {
+      'en': 'GO!',
       'hr': '',
     },
   },

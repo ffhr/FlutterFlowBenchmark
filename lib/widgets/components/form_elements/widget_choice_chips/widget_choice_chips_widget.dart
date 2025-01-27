@@ -62,77 +62,146 @@ class _WidgetChoiceChipsWidgetState extends State<WidgetChoiceChipsWidget> {
           Padding(
             padding: EdgeInsets.all(8.0),
             child: Container(
-              width: 300.0,
-              height: 100.0,
+              width: 500.0,
+              height: 600.0,
               decoration: BoxDecoration(),
-              child: FlutterFlowChoiceChips(
-                options: [
-                  ChipData(
-                      FFLocalizations.of(context).getText(
-                        'udxmurb5' /* Option 1 */,
-                      ),
-                      Icons.food_bank_rounded),
-                  ChipData(
-                      FFLocalizations.of(context).getText(
-                        'lgwm2fzh' /* Option 2 */,
-                      ),
-                      Icons.emoji_food_beverage_rounded),
-                  ChipData(
-                      FFLocalizations.of(context).getText(
-                        'edi6h9m3' /* Option 3 */,
-                      ),
-                      Icons.fastfood_rounded),
-                  ChipData(
-                      FFLocalizations.of(context).getText(
-                        'vkvxudlo' /* Option 4 */,
-                      ),
-                      Icons.local_pizza_outlined),
-                  ChipData(
-                      FFLocalizations.of(context).getText(
-                        '5nx0j5m1' /* Option 5 */,
-                      ),
-                      Icons.water_drop)
-                ],
-                onChanged: (val) => safeSetState(
-                    () => _model.choiceChipsValue = val?.firstOrNull),
-                selectedChipStyle: ChipStyle(
-                  backgroundColor: FlutterFlowTheme.of(context).primary,
-                  textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Geist',
-                        color: FlutterFlowTheme.of(context).info,
-                        letterSpacing: 0.0,
-                        useGoogleFonts: false,
-                      ),
-                  iconColor: FlutterFlowTheme.of(context).info,
-                  iconSize: 16.0,
-                  elevation: 0.0,
-                  borderColor: FlutterFlowTheme.of(context).secondary,
-                  borderRadius: BorderRadius.circular(8.0),
-                ),
-                unselectedChipStyle: ChipStyle(
-                  backgroundColor:
-                      FlutterFlowTheme.of(context).secondaryBackground,
-                  textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Geist',
-                        color: FlutterFlowTheme.of(context).secondaryText,
-                        letterSpacing: 0.0,
-                        useGoogleFonts: false,
-                      ),
-                  iconColor: FlutterFlowTheme.of(context).secondaryText,
-                  iconSize: 16.0,
-                  elevation: 0.0,
-                  borderColor: FlutterFlowTheme.of(context).secondaryText,
-                  borderRadius: BorderRadius.circular(8.0),
-                ),
-                chipSpacing: 8.0,
-                rowSpacing: 8.0,
-                multiselect: false,
-                alignment: WrapAlignment.start,
-                controller: _model.choiceChipsValueController ??=
-                    FormFieldController<List<String>>(
-                  [],
-                ),
-                wrapped: true,
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  FlutterFlowChoiceChips(
+                    options: [
+                      ChipData(
+                          FFLocalizations.of(context).getText(
+                            'xjdz8fan' /* Option 1 */,
+                          ),
+                          Icons.food_bank_rounded),
+                      ChipData(
+                          FFLocalizations.of(context).getText(
+                            'rtt6756h' /* Option 2 */,
+                          ),
+                          Icons.emoji_food_beverage_rounded),
+                      ChipData(
+                          FFLocalizations.of(context).getText(
+                            '65oos320' /* Option 3 */,
+                          ),
+                          Icons.fastfood_rounded),
+                      ChipData(
+                          FFLocalizations.of(context).getText(
+                            '789yqlik' /* Option 4 */,
+                          ),
+                          Icons.local_pizza_outlined),
+                      ChipData(
+                          FFLocalizations.of(context).getText(
+                            'hlrgvxpd' /* Option 5 */,
+                          ),
+                          Icons.water_drop)
+                    ],
+                    onChanged: (val) =>
+                        safeSetState(() => _model.choiceChipsValues1 = val),
+                    selectedChipStyle: ChipStyle(
+                      backgroundColor: FlutterFlowTheme.of(context).primary,
+                      textStyle:
+                          FlutterFlowTheme.of(context).bodyMedium.override(
+                                fontFamily: 'Geist',
+                                color: FlutterFlowTheme.of(context).info,
+                                letterSpacing: 0.0,
+                                useGoogleFonts: false,
+                              ),
+                      iconColor: FlutterFlowTheme.of(context).info,
+                      iconSize: 16.0,
+                      elevation: 0.0,
+                      borderColor: FlutterFlowTheme.of(context).secondary,
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                    unselectedChipStyle: ChipStyle(
+                      backgroundColor:
+                          FlutterFlowTheme.of(context).secondaryBackground,
+                      textStyle: FlutterFlowTheme.of(context)
+                          .bodyMedium
+                          .override(
+                            fontFamily: 'Geist',
+                            color: FlutterFlowTheme.of(context).secondaryText,
+                            letterSpacing: 0.0,
+                            useGoogleFonts: false,
+                          ),
+                      iconColor: FlutterFlowTheme.of(context).secondaryText,
+                      iconSize: 16.0,
+                      elevation: 0.0,
+                      borderColor: FlutterFlowTheme.of(context).secondaryText,
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                    chipSpacing: 8.0,
+                    rowSpacing: 8.0,
+                    multiselect: true,
+                    initialized: _model.choiceChipsValues1 != null,
+                    alignment: WrapAlignment.center,
+                    controller: _model.choiceChipsValueController1 ??=
+                        FormFieldController<List<String>>(
+                      [],
+                    ),
+                    wrapped: true,
+                  ),
+                  FlutterFlowChoiceChips(
+                    options: [
+                      ChipData(FFLocalizations.of(context).getText(
+                        'kz25xiqe' /* Option 2 */,
+                      )),
+                      ChipData(FFLocalizations.of(context).getText(
+                        'klz6ixwr' /* Option 4 */,
+                      )),
+                      ChipData(FFLocalizations.of(context).getText(
+                        'v1ljs6ut' /* Option 5 */,
+                      ))
+                    ],
+                    onChanged: (val) => safeSetState(
+                        () => _model.choiceChipsValue2 = val?.firstOrNull),
+                    selectedChipStyle: ChipStyle(
+                      backgroundColor: FlutterFlowTheme.of(context).secondary,
+                      textStyle:
+                          FlutterFlowTheme.of(context).bodyMedium.override(
+                                fontFamily: 'Geist',
+                                color: FlutterFlowTheme.of(context).info,
+                                fontSize: 20.0,
+                                letterSpacing: 0.0,
+                                useGoogleFonts: false,
+                              ),
+                      iconColor: FlutterFlowTheme.of(context).info,
+                      iconSize: 20.0,
+                      elevation: 5.0,
+                      borderColor:
+                          FlutterFlowTheme.of(context).primaryBackground,
+                      borderWidth: 1.0,
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                    unselectedChipStyle: ChipStyle(
+                      backgroundColor:
+                          FlutterFlowTheme.of(context).primaryBackground,
+                      textStyle: FlutterFlowTheme.of(context)
+                          .bodyMedium
+                          .override(
+                            fontFamily: 'Geist',
+                            color: FlutterFlowTheme.of(context).secondaryText,
+                            fontSize: 20.0,
+                            letterSpacing: 0.0,
+                            useGoogleFonts: false,
+                          ),
+                      iconColor: FlutterFlowTheme.of(context).secondary,
+                      iconSize: 16.0,
+                      elevation: 0.0,
+                      borderColor: FlutterFlowTheme.of(context).tertiary,
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                    chipSpacing: 16.0,
+                    rowSpacing: 8.0,
+                    multiselect: false,
+                    alignment: WrapAlignment.start,
+                    controller: _model.choiceChipsValueController2 ??=
+                        FormFieldController<List<String>>(
+                      [],
+                    ),
+                    wrapped: false,
+                  ),
+                ].divide(SizedBox(height: 16.0)).around(SizedBox(height: 16.0)),
               ),
             ),
           ),

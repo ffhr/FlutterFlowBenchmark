@@ -60,23 +60,39 @@ class _WidgetVideoPlayerWidgetState extends State<WidgetVideoPlayerWidget> {
         children: [
           Container(
             width: 500.0,
-            height: 300.0,
+            height: 600.0,
             decoration: BoxDecoration(),
-            child: Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
-              child: FlutterFlowVideoPlayer(
-                path:
-                    'https://assets.mixkit.co/videos/preview/mixkit-forest-stream-in-the-sunlight-529-large.mp4',
-                videoType: VideoType.network,
-                width: 350.0,
-                height: 200.0,
-                aspectRatio: 169.0,
-                autoPlay: false,
-                looping: true,
-                showControls: true,
-                allowFullScreen: true,
-                allowPlaybackSpeedMenu: false,
-              ),
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Align(
+                  alignment: AlignmentDirectional(0.0, 0.0),
+                  child: FlutterFlowVideoPlayer(
+                    path: 'assets/videos/Comp_1_6.mp4',
+                    videoType: VideoType.asset,
+                    width: 350.0,
+                    height: 200.0,
+                    aspectRatio: 1.0,
+                    autoPlay: true,
+                    looping: true,
+                    showControls: true,
+                    allowFullScreen: true,
+                    allowPlaybackSpeedMenu: false,
+                  ),
+                ),
+                FlutterFlowVideoPlayer(
+                  path: 'assets/videos/Comp_1_6.mp4',
+                  videoType: VideoType.asset,
+                  width: 280.0,
+                  height: 340.0,
+                  aspectRatio: 1.0,
+                  autoPlay: true,
+                  looping: true,
+                  showControls: true,
+                  allowFullScreen: true,
+                  allowPlaybackSpeedMenu: false,
+                ),
+              ].divide(SizedBox(height: 16.0)),
             ),
           ),
         ].divide(SizedBox(height: 16.0)),

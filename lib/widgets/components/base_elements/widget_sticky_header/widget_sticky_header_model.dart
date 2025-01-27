@@ -1,6 +1,9 @@
+import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'dart:ui';
 import '/flutter_flow/random_data_util.dart' as random_data;
+import 'package:shadcn_u_i_kit_v48jv9/app_state.dart'
+    as shadcn_u_i_kit_v48jv9_app_state;
 import 'package:sticky_headers/sticky_headers.dart';
 import 'widget_sticky_header_widget.dart' show WidgetStickyHeaderWidget;
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';

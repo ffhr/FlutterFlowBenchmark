@@ -58,38 +58,54 @@ class _WidgetAudioPlayerWidgetState extends State<WidgetAudioPlayerWidget> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Container(
-            width: 300.0,
-            height: 150.0,
-            decoration: BoxDecoration(),
-            child: Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
-              child: FlutterFlowAudioPlayer(
-                audio: Audio.network(
-                  'https://filesamples.com/samples/audio/mp3/sample3.mp3',
-                  metas: Metas(
-                    id: 'sample3.mp3-9385131d',
-                    title: 'Title',
+          Align(
+            alignment: AlignmentDirectional(0.0, -1.0),
+            child: Container(
+              width: 300.0,
+              height: 300.0,
+              decoration: BoxDecoration(),
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Align(
+                    alignment: AlignmentDirectional(0.0, 0.0),
+                    child: Padding(
+                      padding: EdgeInsets.all(24.0),
+                      child: FlutterFlowAudioPlayer(
+                        audio: Audio.network(
+                          'https://filesamples.com/samples/audio/mp3/sample3.mp3',
+                          metas: Metas(
+                            id: 'sample3.mp3-9385131d',
+                            title: 'Title',
+                          ),
+                        ),
+                        titleTextStyle:
+                            FlutterFlowTheme.of(context).titleLarge.override(
+                                  fontFamily: 'Geist',
+                                  letterSpacing: 0.0,
+                                  useGoogleFonts: false,
+                                ),
+                        playbackDurationTextStyle:
+                            FlutterFlowTheme.of(context).labelMedium.override(
+                                  fontFamily: 'Geist',
+                                  letterSpacing: 0.0,
+                                  useGoogleFonts: false,
+                                ),
+                        fillColor:
+                            FlutterFlowTheme.of(context).secondaryBackground,
+                        playbackButtonColor:
+                            FlutterFlowTheme.of(context).tertiary,
+                        activeTrackColor:
+                            FlutterFlowTheme.of(context).secondary,
+                        inactiveTrackColor:
+                            FlutterFlowTheme.of(context).primary,
+                        elevation: 5.0,
+                        playInBackground:
+                            PlayInBackground.disabledRestoreOnForeground,
+                      ),
+                    ),
                   ),
-                ),
-                titleTextStyle:
-                    FlutterFlowTheme.of(context).titleLarge.override(
-                          fontFamily: 'Geist',
-                          letterSpacing: 0.0,
-                          useGoogleFonts: false,
-                        ),
-                playbackDurationTextStyle:
-                    FlutterFlowTheme.of(context).labelMedium.override(
-                          fontFamily: 'Geist',
-                          letterSpacing: 0.0,
-                          useGoogleFonts: false,
-                        ),
-                fillColor: FlutterFlowTheme.of(context).secondaryBackground,
-                playbackButtonColor: FlutterFlowTheme.of(context).tertiary,
-                activeTrackColor: FlutterFlowTheme.of(context).secondary,
-                inactiveTrackColor: FlutterFlowTheme.of(context).primary,
-                elevation: 0.0,
-                playInBackground: PlayInBackground.disabledRestoreOnForeground,
+                ].divide(SizedBox(height: 16.0)),
               ),
             ),
           ),

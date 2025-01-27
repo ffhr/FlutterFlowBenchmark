@@ -1,8 +1,6 @@
 import '/flutter_flow/flutter_flow_toggle_icon.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'dart:ui';
-import 'package:shadcn_u_i_kit_v48jv9/app_state.dart'
-    as shadcn_u_i_kit_v48jv9_app_state;
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -45,7 +43,7 @@ class _WidgetToggleIconWidgetState extends State<WidgetToggleIconWidget> {
 
     // On component load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
-      FFAppState().liked = true;
+      _model.liked = !_model.liked;
       safeSetState(() {});
     });
 
@@ -61,9 +59,6 @@ class _WidgetToggleIconWidgetState extends State<WidgetToggleIconWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-    context.watch<shadcn_u_i_kit_v48jv9_app_state.FFAppState>();
-
     return Container(
       decoration: BoxDecoration(),
       child: Column(
@@ -72,26 +67,126 @@ class _WidgetToggleIconWidgetState extends State<WidgetToggleIconWidget> {
           Align(
             alignment: AlignmentDirectional(0.0, 0.0),
             child: Container(
-              width: 100.0,
-              height: 100.0,
+              width: 500.0,
+              height: 400.0,
               decoration: BoxDecoration(),
-              child: ToggleIcon(
-                onPressed: () async {
-                  safeSetState(() => FFAppState().liked = !FFAppState().liked);
-                  FFAppState().liked = !(FFAppState().liked ?? true);
-                  safeSetState(() {});
-                },
-                value: FFAppState().liked,
-                onIcon: Icon(
-                  Icons.favorite_outlined,
-                  color: FlutterFlowTheme.of(context).tertiary,
-                  size: 48.0,
-                ),
-                offIcon: Icon(
-                  Icons.favorite_border,
-                  color: FlutterFlowTheme.of(context).tertiary,
-                  size: 48.0,
-                ),
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(24.0),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Text(
+                              FFLocalizations.of(context).getText(
+                                '38t79gze' /* Local state */,
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Geist',
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: false,
+                                  ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              FFLocalizations.of(context).getText(
+                                '2h98mvwy' /* toggle - local state */,
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Geist',
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: false,
+                                  ),
+                            ),
+                            ToggleIcon(
+                              onPressed: () async {
+                                safeSetState(
+                                    () => _model.toggle = !_model.toggle);
+                              },
+                              value: _model.toggle,
+                              onIcon: Icon(
+                                Icons.favorite,
+                                color: FlutterFlowTheme.of(context).tertiary,
+                                size: 25.0,
+                              ),
+                              offIcon: Icon(
+                                Icons.favorite_border,
+                                color: FlutterFlowTheme.of(context).tertiary,
+                                size: 25.0,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              FFLocalizations.of(context).getText(
+                                'n7spknyk' /* Toggle value: */,
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Geist',
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: false,
+                                  ),
+                            ),
+                            Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                if (_model.toggle)
+                                  Text(
+                                    FFLocalizations.of(context).getText(
+                                      'bvy6gpdh' /* True */,
+                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Geist',
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondary,
+                                          letterSpacing: 0.0,
+                                          useGoogleFonts: false,
+                                        ),
+                                  ),
+                                if (!_model.toggle)
+                                  Text(
+                                    FFLocalizations.of(context).getText(
+                                      'i3mw0qgu' /* False */,
+                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Geist',
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryText,
+                                          letterSpacing: 0.0,
+                                          useGoogleFonts: false,
+                                        ),
+                                  ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ].divide(SizedBox(height: 24.0)),
               ),
             ),
           ),

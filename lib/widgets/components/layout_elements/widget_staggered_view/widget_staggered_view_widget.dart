@@ -58,233 +58,108 @@ class _WidgetStaggeredViewWidgetState extends State<WidgetStaggeredViewWidget> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Container(
-            height: 400.0,
-            decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).primary,
-            ),
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Flexible(
-                  child: Padding(
-                    padding: EdgeInsets.all(16.0),
-                    child: MasonryGridView.builder(
-                      gridDelegate:
-                          SliverSimpleGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                      ),
-                      crossAxisSpacing: 10.0,
-                      mainAxisSpacing: 10.0,
-                      itemCount: 4,
-                      itemBuilder: (context, index) {
-                        return [
-                          () => Container(
-                                width: 150.0,
-                                height: 200.0,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
-                                ),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.network(
-                                        'https://picsum.photos/seed/209/600',
-                                        width: 150.0,
-                                        height: 130.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                    Text(
-                                      FFLocalizations.of(context).getText(
-                                        'ek5p4lz5' /* title 1  */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Geist',
-                                            letterSpacing: 0.0,
-                                            useGoogleFonts: false,
-                                          ),
-                                    ),
-                                    Text(
-                                      FFLocalizations.of(context).getText(
-                                        'tz12pcci' /* description 1 */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Geist',
-                                            letterSpacing: 0.0,
-                                            useGoogleFonts: false,
-                                          ),
-                                    ),
-                                  ]
-                                      .divide(SizedBox(height: 8.0))
-                                      .around(SizedBox(height: 8.0)),
-                                ),
-                              ),
-                          () => Container(
-                                width: 150.0,
-                                height: 120.0,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
-                                ),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.network(
-                                        'https://images.unsplash.com/photo-1514876246314-d9a231ea21db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw0fHxmaXJld29ya3N8ZW58MHx8fHwxNzM3MDQ4MTY3fDA&ixlib=rb-4.0.3&q=80&w=1080',
-                                        width: 150.0,
-                                        height: 50.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                    Text(
-                                      FFLocalizations.of(context).getText(
-                                        'onpyfryt' /* title 2 */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Geist',
-                                            letterSpacing: 0.0,
-                                            useGoogleFonts: false,
-                                          ),
-                                    ),
-                                    Text(
-                                      FFLocalizations.of(context).getText(
-                                        'mytv6e26' /* description 2 */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Geist',
-                                            letterSpacing: 0.0,
-                                            useGoogleFonts: false,
-                                          ),
-                                    ),
-                                  ]
-                                      .divide(SizedBox(height: 8.0))
-                                      .around(SizedBox(height: 8.0)),
-                                ),
-                              ),
-                          () => Container(
-                                width: 150.0,
-                                height: 200.0,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
-                                ),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.network(
-                                        'https://images.unsplash.com/photo-1439556838232-994e4c0d3b7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw1fHxmaXJld29ya3N8ZW58MHx8fHwxNzM3MDQ4MTY3fDA&ixlib=rb-4.0.3&q=80&w=1080',
-                                        width: 150.0,
-                                        height: 130.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                    Text(
-                                      FFLocalizations.of(context).getText(
-                                        'o8ehqh6i' /* title 3 */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Geist',
-                                            letterSpacing: 0.0,
-                                            useGoogleFonts: false,
-                                          ),
-                                    ),
-                                    Text(
-                                      FFLocalizations.of(context).getText(
-                                        'hixqgnrp' /* description 3 */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Geist',
-                                            letterSpacing: 0.0,
-                                            useGoogleFonts: false,
-                                          ),
-                                    ),
-                                  ]
-                                      .divide(SizedBox(height: 8.0))
-                                      .around(SizedBox(height: 8.0)),
-                                ),
-                              ),
-                          () => Container(
-                                width: 150.0,
-                                height: 110.0,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
-                                ),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.network(
-                                        'https://images.unsplash.com/photo-1532290082932-ad87f0fae36f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw2fHxmaXJld29ya3N8ZW58MHx8fHwxNzM3MDQ4MTY3fDA&ixlib=rb-4.0.3&q=80&w=1080',
-                                        width: 150.0,
-                                        height: 40.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                    Text(
-                                      FFLocalizations.of(context).getText(
-                                        'y2ms3i6z' /* title 4 */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Geist',
-                                            letterSpacing: 0.0,
-                                            useGoogleFonts: false,
-                                          ),
-                                    ),
-                                    Text(
-                                      FFLocalizations.of(context).getText(
-                                        '17642uxy' /* description 4 */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Geist',
-                                            letterSpacing: 0.0,
-                                            useGoogleFonts: false,
-                                          ),
-                                    ),
-                                  ]
-                                      .divide(SizedBox(height: 8.0))
-                                      .around(SizedBox(height: 8.0)),
-                                ),
-                              ),
-                        ][index]();
-                      },
-                    ),
+          Flexible(
+            child: Container(
+              height: 600.0,
+              decoration: BoxDecoration(),
+              child: Padding(
+                padding: EdgeInsets.all(16.0),
+                child: MasonryGridView.builder(
+                  physics: const NeverScrollableScrollPhysics(),
+                  gridDelegate: SliverSimpleGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
                   ),
+                  crossAxisSpacing: 10.0,
+                  mainAxisSpacing: 10.0,
+                  itemCount: 8,
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) {
+                    return [
+                      () => Align(
+                            alignment: AlignmentDirectional(-1.0, 0.0),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(8.0),
+                              child: Image.network(
+                                'https://images.unsplash.com/photo-1514876246314-d9a231ea21db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw0fHxmaXJld29ya3N8ZW58MHx8fHwxNzM3MDQ4MTY3fDA&ixlib=rb-4.0.3&q=80&w=1080',
+                                width: 150.0,
+                                height: 300.0,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                      () => Align(
+                            alignment: AlignmentDirectional(-1.0, 0.0),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(8.0),
+                              child: Image.network(
+                                'https://picsum.photos/seed/960/600',
+                                width: 200.0,
+                                height: 200.0,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                      () => Align(
+                            alignment: AlignmentDirectional(-1.0, 0.0),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(8.0),
+                              child: Image.network(
+                                'https://images.unsplash.com/photo-1713847243126-ff9ec9b40db9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw0fHxjYWxtaW5nJTIwbmF0dXJlfGVufDB8fHx8MTczNzQ4MjI5MXww&ixlib=rb-4.0.3&q=80&w=1080',
+                                width: 150.0,
+                                height: 250.0,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                      () => ClipRRect(
+                            borderRadius: BorderRadius.circular(8.0),
+                            child: Image.network(
+                              'https://images.unsplash.com/photo-1499531011814-14b20e46c785?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxMXx8dGVhfGVufDB8fHx8MTczNzQ5ODgwNnww&ixlib=rb-4.0.3&q=80&w=1080',
+                              width: 200.0,
+                              height: 100.0,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                      () => ClipRRect(
+                            borderRadius: BorderRadius.circular(8.0),
+                            child: Image.network(
+                              'https://picsum.photos/seed/122/600',
+                              width: 200.0,
+                              height: 50.0,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                      () => ClipRRect(
+                            borderRadius: BorderRadius.circular(8.0),
+                            child: Image.network(
+                              'https://images.unsplash.com/photo-1526505262320-81542978f63b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw3fHxsZWdvfGVufDB8fHx8MTczNzQ1MjgyMnww&ixlib=rb-4.0.3&q=80&w=1080',
+                              width: 100.0,
+                              height: 100.0,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                      () => ClipRRect(
+                            borderRadius: BorderRadius.circular(8.0),
+                            child: Image.network(
+                              'https://images.unsplash.com/photo-1691689380376-025c287915fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxMXx8Y2FsbWluZyUyMG5hdHVyZXxlbnwwfHx8fDE3Mzc0ODIyOTF8MA&ixlib=rb-4.0.3&q=80&w=1080',
+                              width: 100.0,
+                              height: 150.0,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                      () => ClipRRect(
+                            borderRadius: BorderRadius.circular(8.0),
+                            child: Image.network(
+                              'https://images.unsplash.com/photo-1531969179221-3946e6b5a5e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHx0ZWF8ZW58MHx8fHwxNzM3NDk4ODA2fDA&ixlib=rb-4.0.3&q=80&w=1080',
+                              width: 100.0,
+                              height: 200.0,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                    ][index]();
+                  },
                 ),
-              ].divide(SizedBox(height: 24.0)),
+              ),
             ),
           ),
         ].divide(SizedBox(height: 16.0)),

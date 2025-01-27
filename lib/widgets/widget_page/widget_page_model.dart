@@ -1,3 +1,4 @@
+import '/components/widget_gemini_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -66,7 +67,6 @@ import '/widgets/components/layout_elements/widget_form_validation/widget_form_v
 import '/widgets/components/layout_elements/widget_grid_view/widget_grid_view_widget.dart';
 import '/widgets/components/layout_elements/widget_list_view/widget_list_view_widget.dart';
 import '/widgets/components/layout_elements/widget_page_view/widget_page_view_widget.dart';
-import '/widgets/components/layout_elements/widget_row/widget_row_widget.dart';
 import '/widgets/components/layout_elements/widget_spacer/widget_spacer_widget.dart';
 import '/widgets/components/layout_elements/widget_stack/widget_stack_widget.dart';
 import '/widgets/components/layout_elements/widget_staggered_view/widget_staggered_view_widget.dart';
@@ -74,12 +74,14 @@ import '/widgets/components/layout_elements/widget_swipeable_stack/widget_swipea
 import '/widgets/components/layout_elements/widget_tab_bar/widget_tab_bar_widget.dart';
 import '/widgets/components/layout_elements/widget_vertical_divider/widget_vertical_divider_widget.dart';
 import '/widgets/components/layout_elements/widget_wrap/widget_wrap_widget.dart';
+import '/widgets/components/widget_row/widget_row_widget.dart';
 import 'dart:ui';
 import 'widget_page_widget.dart' show WidgetPageWidget;
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:webviewx_plus/webviewx_plus.dart';
 
 class WidgetPageModel extends FlutterFlowModel<WidgetPageWidget> {
   ///  State fields for stateful widgets in this page.

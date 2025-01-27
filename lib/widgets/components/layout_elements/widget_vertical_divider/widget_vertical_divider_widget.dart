@@ -69,7 +69,7 @@ class _WidgetVerticalDividerWidgetState
                 height: 100.0,
                 child: VerticalDivider(
                   thickness: 2.0,
-                  color: FlutterFlowTheme.of(context).alternate,
+                  color: FlutterFlowTheme.of(context).primaryText,
                 ),
               ),
               Text(
@@ -86,7 +86,7 @@ class _WidgetVerticalDividerWidgetState
                 height: 100.0,
                 child: VerticalDivider(
                   thickness: 2.0,
-                  color: FlutterFlowTheme.of(context).alternate,
+                  color: FlutterFlowTheme.of(context).secondaryText,
                 ),
               ),
               ClipRRect(
@@ -109,7 +109,7 @@ class _WidgetVerticalDividerWidgetState
                 height: 100.0,
                 child: VerticalDivider(
                   thickness: 2.0,
-                  color: FlutterFlowTheme.of(context).alternate,
+                  color: FlutterFlowTheme.of(context).primaryText,
                 ),
               ),
               Container(

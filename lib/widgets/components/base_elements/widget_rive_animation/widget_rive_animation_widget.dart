@@ -60,18 +60,16 @@ class _WidgetRiveAnimationWidgetState extends State<WidgetRiveAnimationWidget> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Container(
-            width: 300.0,
-            height: 300.0,
-            decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).primary,
-            ),
+            width: 500.0,
+            height: 500.0,
+            decoration: BoxDecoration(),
             child: Container(
               width: 150.0,
               height: 130.0,
               child: RiveAnimation.network(
                 'https://public.rive.app/community/runtime-files/1199-2317-jack-olantern.riv',
                 artboard: 'New Artboard',
-                fit: BoxFit.cover,
+                fit: BoxFit.contain,
                 controllers: _model.riveAnimationControllers,
               ),
             ),

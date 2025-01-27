@@ -530,3 +530,6 @@ extension BlockShortcutsExtension on TextFormField {
     );
   }
 }
+
+String getCurrentRoute(BuildContext context) =>
+    context.mounted ? MyApp.of(context).getRoute() : '';

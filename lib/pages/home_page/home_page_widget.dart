@@ -1,3 +1,4 @@
+import '/components/widgets_from_app_state_constants_widget.dart';
 import '/components/widgets_from_sql_lite_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -218,10 +219,22 @@ class _HomePageWidgetState extends State<HomePageWidget> {
         ),
         body: SafeArea(
           top: true,
-          child: wrapWithModel(
-            model: _model.widgetsFromSqlLiteModel,
-            updateCallback: () => safeSetState(() {}),
-            child: WidgetsFromSqlLiteWidget(),
+          child: Builder(
+            builder: (context) {
+              if (false) {
+                return wrapWithModel(
+                  model: _model.widgetsFromSqlLiteModel,
+                  updateCallback: () => safeSetState(() {}),
+                  child: WidgetsFromSqlLiteWidget(),
+                );
+              } else {
+                return wrapWithModel(
+                  model: _model.widgetsFromAppStateConstantsModel,
+                  updateCallback: () => safeSetState(() {}),
+                  child: WidgetsFromAppStateConstantsWidget(),
+                );
+              }
+            },
           ),
         ),
       ),

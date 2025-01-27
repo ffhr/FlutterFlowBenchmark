@@ -11,16 +11,26 @@ class WidgetPinCodeModel extends FlutterFlowModel<WidgetPinCodeWidget> {
   ///  State fields for stateful widgets in this component.
 
   // State field(s) for PinCode widget.
-  TextEditingController? pinCodeController;
-  String? Function(BuildContext, String?)? pinCodeControllerValidator;
+  TextEditingController? pinCodeController1;
+  String? Function(BuildContext, String?)? pinCodeController1Validator;
+  // State field(s) for PinCode widget.
+  TextEditingController? pinCodeController2;
+  String? Function(BuildContext, String?)? pinCodeController2Validator;
+  // State field(s) for PinCode widget.
+  TextEditingController? pinCodeController3;
+  String? Function(BuildContext, String?)? pinCodeController3Validator;
 
   @override
   void initState(BuildContext context) {
-    pinCodeController = TextEditingController();
+    pinCodeController1 = TextEditingController();
+    pinCodeController2 = TextEditingController();
+    pinCodeController3 = TextEditingController();
   }
 
   @override
   void dispose() {
-    pinCodeController?.dispose();
+    pinCodeController1?.dispose();
+    pinCodeController2?.dispose();
+    pinCodeController3?.dispose();
   }
 }

@@ -39,7 +39,8 @@ class _WidgetSwitchWidgetState extends State<WidgetSwitchWidget> {
     super.initState();
     _model = createModel(context, () => WidgetSwitchModel());
 
-    _model.switchValue = true;
+    _model.switchValue1 = false;
+    _model.switchValue2 = true;
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
@@ -59,17 +60,34 @@ class _WidgetSwitchWidgetState extends State<WidgetSwitchWidget> {
         children: [
           Container(
             width: 300.0,
-            height: 100.0,
+            height: 200.0,
             decoration: BoxDecoration(),
-            child: Switch.adaptive(
-              value: _model.switchValue!,
-              onChanged: (newValue) async {
-                safeSetState(() => _model.switchValue = newValue!);
-              },
-              activeColor: FlutterFlowTheme.of(context).secondary,
-              activeTrackColor: FlutterFlowTheme.of(context).primary,
-              inactiveTrackColor: FlutterFlowTheme.of(context).secondaryText,
-              inactiveThumbColor: Color(0x882563EB),
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Switch.adaptive(
+                  value: _model.switchValue1!,
+                  onChanged: (newValue) async {
+                    safeSetState(() => _model.switchValue1 = newValue!);
+                  },
+                  activeColor: FlutterFlowTheme.of(context).secondary,
+                  activeTrackColor: FlutterFlowTheme.of(context).primary,
+                  inactiveTrackColor:
+                      FlutterFlowTheme.of(context).secondaryText,
+                  inactiveThumbColor: Color(0x882563EB),
+                ),
+                Switch.adaptive(
+                  value: _model.switchValue2!,
+                  onChanged: (newValue) async {
+                    safeSetState(() => _model.switchValue2 = newValue!);
+                  },
+                  activeColor: FlutterFlowTheme.of(context).tertiary,
+                  activeTrackColor: Color(0x93E11D48),
+                  inactiveTrackColor: Color(0x89E11D48),
+                  inactiveThumbColor:
+                      FlutterFlowTheme.of(context).primaryBackground,
+                ),
+              ].divide(SizedBox(height: 8.0)).around(SizedBox(height: 8.0)),
             ),
           ),
         ].divide(SizedBox(height: 16.0)),

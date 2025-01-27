@@ -57,19 +57,54 @@ class _WidgetSliderWidgetState extends State<WidgetSliderWidget> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Container(
-            width: 300.0,
-            height: 100.0,
+            width: 500.0,
+            height: 300.0,
             decoration: BoxDecoration(),
-            child: Slider(
-              activeColor: FlutterFlowTheme.of(context).primary,
-              inactiveColor: FlutterFlowTheme.of(context).alternate,
-              min: 0.0,
-              max: 10.0,
-              value: _model.sliderValue ??= 5.0,
-              onChanged: (newValue) {
-                newValue = double.parse(newValue.toStringAsFixed(2));
-                safeSetState(() => _model.sliderValue = newValue);
-              },
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Slider(
+                  activeColor: FlutterFlowTheme.of(context).primary,
+                  inactiveColor: FlutterFlowTheme.of(context).secondaryText,
+                  min: 0.0,
+                  max: 10.0,
+                  value: _model.sliderValue1 ??= 5.0,
+                  onChanged: (newValue) {
+                    newValue = double.parse(newValue.toStringAsFixed(2));
+                    safeSetState(() => _model.sliderValue1 = newValue);
+                  },
+                ),
+                Padding(
+                  padding:
+                      EdgeInsetsDirectional.fromSTEB(20.0, 40.0, 20.0, 0.0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Text(
+                        _model.sliderValue2.toString(),
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'Geist',
+                              letterSpacing: 0.0,
+                              useGoogleFonts: false,
+                            ),
+                      ),
+                      Expanded(
+                        child: Slider(
+                          activeColor: FlutterFlowTheme.of(context).secondary,
+                          inactiveColor: Color(0xFF9E9E9E),
+                          min: 0.0,
+                          max: 100.0,
+                          value: _model.sliderValue2 ??= 20.0,
+                          divisions: 20,
+                          onChanged: (newValue) {
+                            safeSetState(() => _model.sliderValue2 = newValue);
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
         ].divide(SizedBox(height: 16.0)),

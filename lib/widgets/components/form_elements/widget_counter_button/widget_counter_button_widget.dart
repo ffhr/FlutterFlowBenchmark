@@ -76,6 +76,54 @@ class _WidgetCounterButtonWidgetState extends State<WidgetCounterButtonWidget> {
                   decrementIconBuilder: (enabled) => Icon(
                     Icons.remove_rounded,
                     color: enabled
+                        ? FlutterFlowTheme.of(context).secondary
+                        : Color(0xC72563EB),
+                    size: 24.0,
+                  ),
+                  incrementIconBuilder: (enabled) => Icon(
+                    Icons.add_rounded,
+                    color: enabled
+                        ? FlutterFlowTheme.of(context).secondary
+                        : Color(0xC72563EB),
+                    size: 24.0,
+                  ),
+                  countBuilder: (count) => Text(
+                    count.toString(),
+                    style: FlutterFlowTheme.of(context).titleLarge.override(
+                          fontFamily: 'Geist',
+                          color: FlutterFlowTheme.of(context).secondary,
+                          letterSpacing: 0.0,
+                          useGoogleFonts: false,
+                        ),
+                  ),
+                  count: _model.countControllerValue1 ??= 0,
+                  updateCount: (count) =>
+                      safeSetState(() => _model.countControllerValue1 = count),
+                  stepSize: 1,
+                  contentPadding:
+                      EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                ),
+              ),
+            ),
+          ),
+          Container(
+            width: 300.0,
+            height: 100.0,
+            decoration: BoxDecoration(),
+            child: Align(
+              alignment: AlignmentDirectional(0.0, 0.0),
+              child: Container(
+                width: 150.0,
+                height: 64.0,
+                decoration: BoxDecoration(
+                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                  borderRadius: BorderRadius.circular(18.0),
+                  shape: BoxShape.rectangle,
+                ),
+                child: FlutterFlowCountController(
+                  decrementIconBuilder: (enabled) => Icon(
+                    Icons.remove_rounded,
+                    color: enabled
                         ? FlutterFlowTheme.of(context).secondaryText
                         : FlutterFlowTheme.of(context).alternate,
                     size: 24.0,
@@ -95,12 +143,78 @@ class _WidgetCounterButtonWidgetState extends State<WidgetCounterButtonWidget> {
                           useGoogleFonts: false,
                         ),
                   ),
-                  count: _model.countControllerValue ??= 0,
+                  count: _model.countControllerValue2 ??= 0,
                   updateCount: (count) =>
-                      safeSetState(() => _model.countControllerValue = count),
-                  stepSize: 1,
+                      safeSetState(() => _model.countControllerValue2 = count),
+                  stepSize: 7,
                   contentPadding:
                       EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                ),
+              ),
+            ),
+          ),
+          Container(
+            width: 300.0,
+            height: 100.0,
+            decoration: BoxDecoration(),
+            child: Align(
+              alignment: AlignmentDirectional(0.0, 0.0),
+              child: Material(
+                color: Colors.transparent,
+                child: Container(
+                  width: 140.0,
+                  height: 30.0,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        FlutterFlowTheme.of(context).tertiary,
+                        FlutterFlowTheme.of(context).primary
+                      ],
+                      stops: [0.0, 1.0],
+                      begin: AlignmentDirectional(1.0, 0.87),
+                      end: AlignmentDirectional(-1.0, -0.87),
+                    ),
+                    borderRadius: BorderRadius.circular(8.0),
+                    shape: BoxShape.rectangle,
+                    border: Border.all(
+                      color: FlutterFlowTheme.of(context).info,
+                      width: 1.0,
+                    ),
+                  ),
+                  child: FlutterFlowCountController(
+                    decrementIconBuilder: (enabled) => Icon(
+                      Icons.remove_rounded,
+                      color: enabled
+                          ? FlutterFlowTheme.of(context).info
+                          : FlutterFlowTheme.of(context).alternate,
+                      size: 20.0,
+                    ),
+                    incrementIconBuilder: (enabled) => Icon(
+                      Icons.add_rounded,
+                      color: enabled
+                          ? FlutterFlowTheme.of(context).info
+                          : FlutterFlowTheme.of(context).alternate,
+                      size: 20.0,
+                    ),
+                    countBuilder: (count) => Text(
+                      count.toString(),
+                      style: FlutterFlowTheme.of(context).titleLarge.override(
+                            fontFamily: 'Geist',
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            fontSize: 20.0,
+                            letterSpacing: 0.0,
+                            useGoogleFonts: false,
+                          ),
+                    ),
+                    count: _model.countControllerValue3 ??= 0,
+                    updateCount: (count) => safeSetState(
+                        () => _model.countControllerValue3 = count),
+                    stepSize: 1,
+                    maximum: 10,
+                    contentPadding:
+                        EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                  ),
                 ),
               ),
             ),

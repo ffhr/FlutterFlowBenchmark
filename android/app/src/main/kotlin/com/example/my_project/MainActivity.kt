@@ -1,4 +1,4 @@
-package hr.ff.ffbenchmark.development
+package hr.ff.ffbenchmark.staging
 
 import io.flutter.embedding.android.FlutterActivity
 

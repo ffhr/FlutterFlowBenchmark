@@ -66,8 +66,46 @@ class _WidgetConditionalBuilderWidgetState
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
+                Builder(
+                  builder: (context) {
+                    if (_model.isHome == true) {
+                      return Align(
+                        alignment: AlignmentDirectional(0.0, 0.0),
+                        child: Container(
+                          width: 100.0,
+                          height: 100.0,
+                          decoration: BoxDecoration(
+                            color: FlutterFlowTheme.of(context).secondary,
+                          ),
+                          child: Icon(
+                            Icons.home,
+                            color: FlutterFlowTheme.of(context).info,
+                            size: 24.0,
+                          ),
+                        ),
+                      );
+                    } else {
+                      return Align(
+                        alignment: AlignmentDirectional(0.0, 0.0),
+                        child: Container(
+                          width: 100.0,
+                          height: 100.0,
+                          decoration: BoxDecoration(
+                            color: FlutterFlowTheme.of(context).tertiary,
+                          ),
+                          child: Icon(
+                            Icons.person,
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            size: 24.0,
+                          ),
+                        ),
+                      );
+                    }
+                  },
+                ),
                 Container(
-                  width: 100.0,
+                  width: 200.0,
                   height: 60.0,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).alternate,
@@ -107,45 +145,6 @@ class _WidgetConditionalBuilderWidgetState
                       ),
                     ],
                   ),
-                ),
-                Builder(
-                  builder: (context) {
-                    if (_model.isHome == true) {
-                      return Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
-                        child: Container(
-                          width: 100.0,
-                          height: 100.0,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context).secondary,
-                          ),
-                          child: Icon(
-                            Icons.home,
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
-                            size: 24.0,
-                          ),
-                        ),
-                      );
-                    } else {
-                      return Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
-                        child: Container(
-                          width: 100.0,
-                          height: 100.0,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context).tertiary,
-                          ),
-                          child: Icon(
-                            Icons.person,
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
-                            size: 24.0,
-                          ),
-                        ),
-                      );
-                    }
-                  },
                 ),
               ].divide(SizedBox(height: 16.0)).around(SizedBox(height: 16.0)),
             ),

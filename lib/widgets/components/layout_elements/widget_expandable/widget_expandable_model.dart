@@ -11,13 +11,17 @@ class WidgetExpandableModel extends FlutterFlowModel<WidgetExpandableWidget> {
   ///  State fields for stateful widgets in this component.
 
   // State field(s) for Expandable widget.
-  late ExpandableController expandableExpandableController;
+  late ExpandableController expandableExpandableController1;
+
+  // State field(s) for Expandable widget.
+  late ExpandableController expandableExpandableController2;
 
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {
-    expandableExpandableController.dispose();
+    expandableExpandableController1.dispose();
+    expandableExpandableController2.dispose();
   }
 }

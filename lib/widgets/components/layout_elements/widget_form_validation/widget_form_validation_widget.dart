@@ -1,8 +1,12 @@
+import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'dart:ui';
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'widget_form_validation_model.dart';
@@ -27,9 +31,11 @@ class WidgetFormValidationWidget extends StatefulWidget {
       _WidgetFormValidationWidgetState();
 }
 
-class _WidgetFormValidationWidgetState
-    extends State<WidgetFormValidationWidget> {
+class _WidgetFormValidationWidgetState extends State<WidgetFormValidationWidget>
+    with TickerProviderStateMixin {
   late WidgetFormValidationModel _model;
+
+  final animationsMap = <String, AnimationInfo>{};
 
   @override
   void setState(VoidCallback callback) {
@@ -50,6 +56,29 @@ class _WidgetFormValidationWidgetState
 
     _model.textController3 ??= TextEditingController();
     _model.textFieldFocusNode3 ??= FocusNode();
+
+    animationsMap.addAll({
+      'textFieldOnActionTriggerAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onActionTrigger,
+        applyInitialState: true,
+        effectsBuilder: () => [
+          ShakeEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 1000.0.ms,
+            hz: 3,
+            offset: Offset(0.0, 0.0),
+            rotation: 0.052,
+          ),
+        ],
+      ),
+    });
+    setupAnimations(
+      animationsMap.values.where((anim) =>
+          anim.trigger == AnimationTrigger.onActionTrigger ||
+          !anim.applyInitialState),
+      this,
+    );
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -98,6 +127,13 @@ class _WidgetFormValidationWidgetState
                                 .labelMedium
                                 .override(
                                   fontFamily: 'Geist',
+                                  color: valueOrDefault<Color>(
+                                    _model.validated == 'validated'
+                                        ? FlutterFlowTheme.of(context)
+                                            .primaryText
+                                        : FlutterFlowTheme.of(context).error,
+                                    FlutterFlowTheme.of(context).primaryText,
+                                  ),
                                   letterSpacing: 0.0,
                                   useGoogleFonts: false,
                                 ),
@@ -154,6 +190,8 @@ class _WidgetFormValidationWidgetState
                           validator: _model.textController1Validator
                               .asValidator(context),
                         ),
+                      ).animateOnActionTrigger(
+                        animationsMap['textFieldOnActionTriggerAnimation']!,
                       ),
                       Container(
                         width: 200.0,
@@ -296,8 +334,44 @@ class _WidgetFormValidationWidgetState
                         ),
                       ),
                       FFButtonWidget(
-                        onPressed: () {
-                          print('Button pressed ...');
+                        onPressed: () async {
+                          _model.form1 = true;
+                          if (_model.formKey.currentState == null ||
+                              !_model.formKey.currentState!.validate()) {
+                            safeSetState(() => _model.form1 = false);
+                            return;
+                          }
+                          if (_model.form1 == true) {
+                            _model.validated = 'validated';
+                            safeSetState(() {});
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text(
+                                  'Success',
+                                  style: TextStyle(
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryBackground,
+                                  ),
+                                ),
+                                duration: Duration(milliseconds: 6000),
+                                backgroundColor:
+                                    FlutterFlowTheme.of(context).secondary,
+                              ),
+                            );
+                          } else {
+                            if (animationsMap[
+                                    'textFieldOnActionTriggerAnimation'] !=
+                                null) {
+                              await animationsMap[
+                                      'textFieldOnActionTriggerAnimation']!
+                                  .controller
+                                  .forward(from: 0.0);
+                            }
+                            _model.validated = 'error';
+                            safeSetState(() {});
+                          }
+
+                          safeSetState(() {});
                         },
                         text: FFLocalizations.of(context).getText(
                           'ouzplb5p' /* Sign Up */,
@@ -320,6 +394,30 @@ class _WidgetFormValidationWidgetState
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                       ),
+                      if (_model.validated == 'validated')
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 24.0, 0.0, 0.0),
+                          child: Text(
+                            valueOrDefault<String>(
+                              _model.validated,
+                              'validated',
+                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Geist',
+                                  color: valueOrDefault<Color>(
+                                    _model.validated == 'validated'
+                                        ? FlutterFlowTheme.of(context).success
+                                        : FlutterFlowTheme.of(context).error,
+                                    FlutterFlowTheme.of(context).success,
+                                  ),
+                                  letterSpacing: 0.0,
+                                  useGoogleFonts: false,
+                                ),
+                          ),
+                        ),
                     ].divide(SizedBox(height: 8.0)),
                   ),
                 ),

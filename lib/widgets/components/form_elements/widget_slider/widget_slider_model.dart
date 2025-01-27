@@ -10,7 +10,9 @@ class WidgetSliderModel extends FlutterFlowModel<WidgetSliderWidget> {
   ///  State fields for stateful widgets in this component.
 
   // State field(s) for Slider widget.
-  double? sliderValue;
+  double? sliderValue1;
+  // State field(s) for Slider widget.
+  double? sliderValue2;
 
   @override
   void initState(BuildContext context) {}

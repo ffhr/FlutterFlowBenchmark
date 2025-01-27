@@ -1,8 +1,6 @@
 import '/flutter_flow/flutter_flow_data_table.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'dart:ui';
-import 'package:shadcn_u_i_kit_v48jv9/app_state.dart'
-    as shadcn_u_i_kit_v48jv9_app_state;
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -54,9 +52,6 @@ class _WidgetDataTableWidgetState extends State<WidgetDataTableWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-    context.watch<shadcn_u_i_kit_v48jv9_app_state.FFAppState>();
-
     return Container(
       constraints: BoxConstraints(
         maxHeight: 1024.0,
@@ -72,7 +67,7 @@ class _WidgetDataTableWidgetState extends State<WidgetDataTableWidget> {
             ),
             child: Builder(
               builder: (context) {
-                final data = FFAppState().DataTableStrings.toList();
+                final data = _model.dataTableStrings.toList();
 
                 return FlutterFlowDataTable<String>(
                   controller: _model.paginatedDataTableController,
@@ -143,7 +138,7 @@ class _WidgetDataTableWidgetState extends State<WidgetDataTableWidget> {
                   paginated: true,
                   selectable: true,
                   hidePaginator: false,
-                  showFirstLastButtons: false,
+                  showFirstLastButtons: true,
                   height: 512.0,
                   headingRowHeight: 56.0,
                   dataRowHeight: 48.0,
@@ -155,11 +150,14 @@ class _WidgetDataTableWidgetState extends State<WidgetDataTableWidget> {
                   addTopAndBottomDivider: false,
                   hideDefaultHorizontalDivider: true,
                   horizontalDividerColor:
-                      FlutterFlowTheme.of(context).secondaryBackground,
+                      FlutterFlowTheme.of(context).secondary,
                   horizontalDividerThickness: 1.0,
-                  addVerticalDivider: false,
+                  addVerticalDivider: true,
+                  verticalDividerColor: FlutterFlowTheme.of(context).secondary,
+                  verticalDividerThickness: 1.0,
                   checkboxUnselectedFillColor: Colors.transparent,
-                  checkboxSelectedFillColor: Colors.transparent,
+                  checkboxSelectedFillColor:
+                      FlutterFlowTheme.of(context).primary,
                   checkboxCheckColor: Color(0x8A000000),
                   checkboxUnselectedBorderColor: Color(0x8A000000),
                   checkboxSelectedBorderColor: Color(0x8A000000),

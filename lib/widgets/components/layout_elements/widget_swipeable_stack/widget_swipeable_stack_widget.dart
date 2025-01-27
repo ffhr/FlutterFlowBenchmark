@@ -58,80 +58,142 @@ class _WidgetSwipeableStackWidgetState
     return Container(
       decoration: BoxDecoration(),
       child: Column(
-        mainAxisSize: MainAxisSize.min,
+        mainAxisSize: MainAxisSize.max,
         children: [
           Container(
-            width: double.infinity,
-            height: 400.0,
-            decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).primary,
-            ),
-            child: FlutterFlowSwipeableStack(
-              onSwipeFn: (index) {},
-              onLeftSwipe: (index) {},
-              onRightSwipe: (index) {},
-              onUpSwipe: (index) {},
-              onDownSwipe: (index) {},
-              itemBuilder: (context, index) {
-                return [
-                  () => Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8.0),
-                          child: Image.network(
-                            'https://picsum.photos/seed/539/600',
-                            width: double.infinity,
-                            height: 300.0,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                  () => Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8.0),
-                          child: Image.network(
-                            'https://picsum.photos/seed/246/600',
-                            width: double.infinity,
-                            height: 300.0,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                  () => Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8.0),
-                          child: Image.network(
-                            'https://picsum.photos/seed/615/600',
-                            width: double.infinity,
-                            height: 300.0,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                  () => Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8.0),
-                          child: Image.network(
-                            'https://picsum.photos/seed/703/600',
-                            width: double.infinity,
-                            height: 300.0,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                ][index]();
-              },
-              itemCount: 4,
-              controller: _model.swipeableStackController,
-              loop: true,
-              cardDisplayCount: 3,
-              scale: 0.85,
+            height: 600.0,
+            decoration: BoxDecoration(),
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
+                    width: 500.0,
+                    height: 320.0,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).primary,
+                    ),
+                    child: FlutterFlowSwipeableStack(
+                      onSwipeFn: (index) {},
+                      onLeftSwipe: (index) {},
+                      onRightSwipe: (index) {},
+                      onUpSwipe: (index) {},
+                      onDownSwipe: (index) {},
+                      itemBuilder: (context, index) {
+                        return [
+                          () => Align(
+                                alignment: AlignmentDirectional(0.0, 0.0),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  child: Image.network(
+                                    'https://picsum.photos/seed/539/600',
+                                    width: double.infinity,
+                                    height: 200.0,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                          () => Align(
+                                alignment: AlignmentDirectional(0.0, 0.0),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  child: Image.network(
+                                    'https://picsum.photos/seed/246/600',
+                                    width: double.infinity,
+                                    height: 200.0,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                          () => Align(
+                                alignment: AlignmentDirectional(0.0, 0.0),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  child: Image.network(
+                                    'https://picsum.photos/seed/615/600',
+                                    width: double.infinity,
+                                    height: 200.0,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                        ][index]();
+                      },
+                      itemCount: 3,
+                      controller: _model.swipeableStackController1,
+                      loop: true,
+                      cardDisplayCount: 3,
+                      scale: 0.85,
+                      allowedSwipeDirection:
+                          AllowedSwipeDirection.symmetric(horizontal: true),
+                    ),
+                  ),
+                  Container(
+                    width: 500.0,
+                    height: 320.0,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).primary,
+                    ),
+                    child: FlutterFlowSwipeableStack(
+                      onSwipeFn: (index) {},
+                      onLeftSwipe: (index) {},
+                      onRightSwipe: (index) {},
+                      onUpSwipe: (index) {},
+                      onDownSwipe: (index) {},
+                      itemBuilder: (context, index) {
+                        return [
+                          () => Align(
+                                alignment: AlignmentDirectional(0.0, 0.0),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  child: Image.network(
+                                    'https://images.unsplash.com/photo-1628498188873-579210ce622e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw1fHxzdGFycnklMjBuaWdodHxlbnwwfHx8fDE3Mzc0OTYxODV8MA&ixlib=rb-4.0.3&q=80&w=1080',
+                                    width: 200.0,
+                                    height: 200.0,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                          () => Align(
+                                alignment: AlignmentDirectional(0.0, 0.0),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  child: Image.network(
+                                    'https://images.unsplash.com/photo-1677598262431-648095efa66a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw2fHxiZWF1dGlmdWwlMjBvY2VhbnxlbnwwfHx8fDE3Mzc0NjE4MzV8MA&ixlib=rb-4.0.3&q=80&w=1080',
+                                    width: 200.0,
+                                    height: 200.0,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                          () => Align(
+                                alignment: AlignmentDirectional(0.0, 0.0),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  child: Image.network(
+                                    'https://images.unsplash.com/photo-1531967802777-e0f8fc276609?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMXx8dGVhfGVufDB8fHx8MTczNzQ5ODgwNnww&ixlib=rb-4.0.3&q=80&w=1080',
+                                    width: 200.0,
+                                    height: 200.0,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                        ][index]();
+                      },
+                      itemCount: 3,
+                      controller: _model.swipeableStackController2,
+                      loop: true,
+                      cardDisplayCount: 3,
+                      scale: 0.85,
+                      allowedSwipeDirection:
+                          AllowedSwipeDirection.symmetric(vertical: true),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
-        ].divide(SizedBox(height: 16.0)),
+        ],
       ),
     );
   }
