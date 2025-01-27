@@ -100,8 +100,8 @@ class _WidgetPageViewWidgetState extends State<WidgetPageViewWidget> {
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Geist',
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryBackground,
+                                          color:
+                                              FlutterFlowTheme.of(context).info,
                                           letterSpacing: 0.0,
                                           useGoogleFonts: false,
                                         ),
@@ -134,8 +134,8 @@ class _WidgetPageViewWidgetState extends State<WidgetPageViewWidget> {
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Geist',
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryBackground,
+                                          color:
+                                              FlutterFlowTheme.of(context).info,
                                           letterSpacing: 0.0,
                                           useGoogleFonts: false,
                                         ),
@@ -168,8 +168,8 @@ class _WidgetPageViewWidgetState extends State<WidgetPageViewWidget> {
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Geist',
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryBackground,
+                                          color:
+                                              FlutterFlowTheme.of(context).info,
                                           letterSpacing: 0.0,
                                           useGoogleFonts: false,
                                         ),
@@ -258,8 +258,8 @@ class _WidgetPageViewWidgetState extends State<WidgetPageViewWidget> {
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Geist',
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryBackground,
+                                          color:
+                                              FlutterFlowTheme.of(context).info,
                                           letterSpacing: 0.0,
                                           useGoogleFonts: false,
                                         ),
@@ -292,8 +292,8 @@ class _WidgetPageViewWidgetState extends State<WidgetPageViewWidget> {
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Geist',
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryBackground,
+                                          color:
+                                              FlutterFlowTheme.of(context).info,
                                           letterSpacing: 0.0,
                                           useGoogleFonts: false,
                                         ),
@@ -326,8 +326,8 @@ class _WidgetPageViewWidgetState extends State<WidgetPageViewWidget> {
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Geist',
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryBackground,
+                                          color:
+                                              FlutterFlowTheme.of(context).info,
                                           letterSpacing: 0.0,
                                           useGoogleFonts: false,
                                         ),

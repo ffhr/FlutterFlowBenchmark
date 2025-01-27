@@ -231,6 +231,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Hello World',
       'hr': '',
     },
+    'm2ae2c6a': {
+      'en': 'Gemini',
+      'hr': '',
+    },
     'z8m415ny': {
       'en': 'Home',
       'hr': '',
@@ -304,6 +308,18 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Hello World',
       'hr': '',
     },
+    '80xeil39': {
+      'en': 'Hello World',
+      'hr': '',
+    },
+    'fybv3l40': {
+      'en': 'Hello World',
+      'hr': '',
+    },
+    'kajniits': {
+      'en': 'Hello World',
+      'hr': '',
+    },
     '94on63aj': {
       'en': 'Hello World',
       'hr': '',
@@ -324,6 +340,22 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'hr': '',
     },
     '87tb9g3t': {
+      'en': 'Hello World',
+      'hr': '',
+    },
+    'pwmhs84a': {
+      'en': 'Introducing the ',
+      'hr': '',
+    },
+    'ombg7dfz': {
+      'en': '\"Aura\" ',
+      'hr': '',
+    },
+    'flfqnpwh': {
+      'en': 'Smartwatch',
+      'hr': '',
+    },
+    'cmxmmqgq': {
       'en': 'Hello World',
       'hr': '',
     },
@@ -792,6 +824,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // WidgetFlex
   {
+    'dv54ffzu': {
+      'en': 'Rotate your phone to see how this widget works',
+      'hr': '',
+    },
     '33bqe9xl': {
       'en': 'Name',
       'hr': '',
@@ -952,15 +988,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // WidgetTransform
   {
-    'gv1pvxlf': {
-      'en': 'Translate&Skew',
+    '9j14fn89': {
+      'en': 'Translate',
       'hr': '',
     },
-    'c7uzk1hn': {
+    'yy83obha': {
       'en': 'Transform',
       'hr': '',
     },
-    'bvwl7l46': {
+    '2kecknz9': {
       'en': 'Scale',
       'hr': '',
     },
@@ -1067,21 +1103,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '1c6wgn8q': {
       'en': 'Price (\$)',
-      'hr': '',
-    },
-  },
-  // WidgetMuxBroadcast
-  {
-    'g4s5cbu6': {
-      'en': 'Live',
-      'hr': '',
-    },
-    's0brskn1': {
-      'en': 'Live',
-      'hr': '',
-    },
-    '3g0i821e': {
-      'en': 'Start Stream',
       'hr': '',
     },
   },
@@ -1210,7 +1231,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Only Gmail.com',
       'hr': '',
     },
-    'psre57cc': {
+    'h31e2lw2': {
       'en': 'Comments…',
       'hr': '',
     },
@@ -1254,7 +1275,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Please choose an option from the dropdown',
       'hr': '',
     },
-    'kut5x72n': {
+    'nd2jp31s': {
       'en': 'SUBMIT',
       'hr': '',
     },
@@ -1431,6 +1452,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '9lhhhbes': {
       'en': 'Option 3',
+      'hr': '',
+    },
+  },
+  // WidgetCreditCardForm
+  {
+    'kxvlams2': {
+      'en': 'Make a Payment',
       'hr': '',
     },
   },

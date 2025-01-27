@@ -165,11 +165,19 @@ class _WidgetCounterButtonWidgetState extends State<WidgetCounterButtonWidget> {
                   width: 140.0,
                   height: 30.0,
                   decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).tertiary,
+                    gradient: LinearGradient(
+                      colors: [
+                        FlutterFlowTheme.of(context).tertiary,
+                        FlutterFlowTheme.of(context).primary
+                      ],
+                      stops: [0.0, 1.0],
+                      begin: AlignmentDirectional(1.0, 0.87),
+                      end: AlignmentDirectional(-1.0, -0.87),
+                    ),
                     borderRadius: BorderRadius.circular(8.0),
                     shape: BoxShape.rectangle,
                     border: Border.all(
-                      color: FlutterFlowTheme.of(context).primaryBackground,
+                      color: FlutterFlowTheme.of(context).info,
                       width: 1.0,
                     ),
                   ),
@@ -177,14 +185,14 @@ class _WidgetCounterButtonWidgetState extends State<WidgetCounterButtonWidget> {
                     decrementIconBuilder: (enabled) => Icon(
                       Icons.remove_rounded,
                       color: enabled
-                          ? FlutterFlowTheme.of(context).secondaryBackground
+                          ? FlutterFlowTheme.of(context).info
                           : FlutterFlowTheme.of(context).alternate,
                       size: 20.0,
                     ),
                     incrementIconBuilder: (enabled) => Icon(
                       Icons.add_rounded,
                       color: enabled
-                          ? FlutterFlowTheme.of(context).primaryBackground
+                          ? FlutterFlowTheme.of(context).info
                           : FlutterFlowTheme.of(context).alternate,
                       size: 20.0,
                     ),

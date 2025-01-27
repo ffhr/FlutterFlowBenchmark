@@ -144,8 +144,7 @@ class _WidgetTabBarWidgetState extends State<WidgetTabBarWidget>
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Geist',
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryBackground,
+                                      color: FlutterFlowTheme.of(context).info,
                                       letterSpacing: 0.0,
                                       useGoogleFonts: false,
                                     ),
@@ -247,8 +246,7 @@ class _WidgetTabBarWidgetState extends State<WidgetTabBarWidget>
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Geist',
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryBackground,
+                                      color: FlutterFlowTheme.of(context).info,
                                       letterSpacing: 0.0,
                                       useGoogleFonts: false,
                                     ),

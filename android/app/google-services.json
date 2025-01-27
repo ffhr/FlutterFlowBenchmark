@@ -7,42 +7,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:776187583115:android:86744be33ace1366ce528e",
-        "android_client_info": {
-          "package_name": "hr.ff.ffbenchmark"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "776187583115-9tjaq8gl647kcp640p6vhi1ei973k309.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDfWKzeerlW2fpRsGGX0MFPelpR3229gZY"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "776187583115-9tjaq8gl647kcp640p6vhi1ei973k309.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "776187583115-dqo4fisuurn6b046jqni8tloht7gdhpb.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "hr.ff.ffbenchmark.staging"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:776187583115:android:9261c77cee0b788cce528e",
         "android_client_info": {
           "package_name": "hr.ff.ffbenchmark.staging"

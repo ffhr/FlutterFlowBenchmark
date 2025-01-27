@@ -54,30 +54,89 @@ class _WidgetColumnWidgetState extends State<WidgetColumnWidget> {
     return Container(
       decoration: BoxDecoration(),
       child: Column(
-        mainAxisSize: MainAxisSize.min,
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
-            width: 100.0,
-            height: 100.0,
-            decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).primary,
+            width: 500.0,
+            height: 600.0,
+            decoration: BoxDecoration(),
+            child: Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    width: 100.0,
+                    height: 400.0,
+                    decoration: BoxDecoration(),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Container(
+                          width: 100.0,
+                          height: 100.0,
+                          decoration: BoxDecoration(
+                            color: FlutterFlowTheme.of(context).primary,
+                          ),
+                        ),
+                        Container(
+                          width: 100.0,
+                          height: 100.0,
+                          decoration: BoxDecoration(
+                            color: FlutterFlowTheme.of(context).secondary,
+                          ),
+                        ),
+                        Container(
+                          width: 100.0,
+                          height: 100.0,
+                          decoration: BoxDecoration(
+                            color: FlutterFlowTheme.of(context).tertiary,
+                          ),
+                        ),
+                      ].divide(SizedBox(height: 16.0)),
+                    ),
+                  ),
+                  Container(
+                    width: 150.0,
+                    height: 200.0,
+                    decoration: BoxDecoration(),
+                    child: SingleChildScrollView(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Container(
+                            width: 100.0,
+                            height: 100.0,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context).primary,
+                            ),
+                          ),
+                          Container(
+                            width: 100.0,
+                            height: 100.0,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context).secondary,
+                            ),
+                          ),
+                          Container(
+                            width: 100.0,
+                            height: 100.0,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context).tertiary,
+                            ),
+                          ),
+                        ].divide(SizedBox(height: 16.0)),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
-          Container(
-            width: 100.0,
-            height: 100.0,
-            decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).secondary,
-            ),
-          ),
-          Container(
-            width: 100.0,
-            height: 100.0,
-            decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).tertiary,
-            ),
-          ),
-        ].divide(SizedBox(height: 16.0)),
+        ],
       ),
     );
   }

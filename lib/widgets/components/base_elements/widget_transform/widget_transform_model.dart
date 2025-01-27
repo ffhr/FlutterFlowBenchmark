@@ -8,15 +8,18 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class WidgetTransformModel extends FlutterFlowModel<WidgetTransformWidget> {
+  ///  Local state fields for this component.
+
+  double? scaleX = 1.0;
+
+  double? scaleY = 1.0;
+
   ///  State fields for stateful widgets in this component.
 
   // State field(s) for TabBar widget.
   TabController? tabBarController;
   int get tabBarCurrentIndex =>
       tabBarController != null ? tabBarController!.index : 0;
-
-  // State field(s) for MouseRegion widget.
-  bool mouseRegionHovered = false;
 
   @override
   void initState(BuildContext context) {}

@@ -79,8 +79,7 @@ class _WidgetConditionalBuilderWidgetState
                           ),
                           child: Icon(
                             Icons.home,
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
+                            color: FlutterFlowTheme.of(context).info,
                             size: 24.0,
                           ),
                         ),

@@ -91,6 +91,49 @@ class _WidgetRichTextWidgetState extends State<WidgetRichTextWidget> {
               children: [
                 TextSpan(
                   text: FFLocalizations.of(context).getText(
+                    'pwmhs84a' /* Introducing the  */,
+                  ),
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        fontFamily: 'Geist',
+                        letterSpacing: 0.0,
+                        decoration: TextDecoration.underline,
+                        useGoogleFonts: false,
+                      ),
+                ),
+                TextSpan(
+                  text: FFLocalizations.of(context).getText(
+                    'ombg7dfz' /* "Aura"  */,
+                  ),
+                  style: TextStyle(
+                    color: FlutterFlowTheme.of(context).tertiary,
+                    decoration: TextDecoration.lineThrough,
+                  ),
+                ),
+                TextSpan(
+                  text: FFLocalizations.of(context).getText(
+                    'flfqnpwh' /* Smartwatch */,
+                  ),
+                  style: TextStyle(
+                    color: FlutterFlowTheme.of(context).secondary,
+                    decoration: TextDecoration.lineThrough,
+                    fontStyle: FontStyle.italic,
+                  ),
+                )
+              ],
+              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    fontFamily: 'Geist',
+                    fontSize: 20.0,
+                    letterSpacing: 0.0,
+                    useGoogleFonts: false,
+                  ),
+            ),
+          ),
+          RichText(
+            textScaler: MediaQuery.of(context).textScaler,
+            text: TextSpan(
+              children: [
+                TextSpan(
+                  text: FFLocalizations.of(context).getText(
                     'n0v02cj2' /* Introducing the  */,
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -98,6 +141,7 @@ class _WidgetRichTextWidgetState extends State<WidgetRichTextWidget> {
                         color: FlutterFlowTheme.of(context).borderdestructive,
                         fontSize: 18.0,
                         letterSpacing: 0.0,
+                        fontStyle: FontStyle.italic,
                         useGoogleFonts: false,
                       ),
                 ),
@@ -108,6 +152,7 @@ class _WidgetRichTextWidgetState extends State<WidgetRichTextWidget> {
                   style: TextStyle(
                     color: FlutterFlowTheme.of(context).warning,
                     fontSize: 24.0,
+                    fontStyle: FontStyle.italic,
                   ),
                 ),
                 TextSpan(
@@ -117,6 +162,7 @@ class _WidgetRichTextWidgetState extends State<WidgetRichTextWidget> {
                   style: TextStyle(
                     color: FlutterFlowTheme.of(context).tertiary,
                     fontSize: 28.0,
+                    fontStyle: FontStyle.italic,
                   ),
                 )
               ],

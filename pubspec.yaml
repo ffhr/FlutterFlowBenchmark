@@ -28,7 +28,6 @@ dependencies:
   flutter_web_plugins:
     sdk: flutter
   aligned_tooltip: 0.0.1
-  apivideo_live_stream: 1.0.7
   app_links: 6.3.2
   app_links_platform_interface: 2.0.2
   assets_audio_player: 3.1.1
@@ -67,6 +66,7 @@ dependencies:
   fl_chart: 0.68.0
   flip_card: 0.7.0
   flutter_animate: 4.5.0
+  flutter_braintree: 4.0.0
   flutter_cache_manager: 3.4.1
   flutter_card_swiper: 6.0.0
   flutter_credit_card: 
@@ -110,7 +110,6 @@ dependencies:
   map_launcher: 3.5.0
   mapbox_search: 4.2.2
   mime_type: 1.0.0
-  native_device_orientation: 1.2.1
   package_info_plus: 8.0.2
   package_info_plus_platform_interface: 3.0.1
   page_transition: 2.1.0
@@ -147,6 +146,7 @@ dependencies:
   sign_in_with_apple_platform_interface: 1.1.0
   sign_in_with_apple_web: 2.1.0
   signature: 5.4.0
+  simple_gradient_text: 1.2.3
   smooth_page_indicator: 1.1.0
   sqflite: 2.3.3+1
   sqflite_common: 2.5.4+3
@@ -172,8 +172,6 @@ dependencies:
   video_player_avfoundation: 2.6.2
   video_player_platform_interface: 6.2.3
   video_player_web: 2.3.2
-  wakelock_plus: any
-  wakelock_plus_platform_interface: 1.2.1
   webview_flutter: 4.9.0
   webview_flutter_android: 3.16.7
   webview_flutter_platform_interface: 2.10.0

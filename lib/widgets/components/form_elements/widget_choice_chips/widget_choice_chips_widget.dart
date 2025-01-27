@@ -191,7 +191,7 @@ class _WidgetChoiceChipsWidgetState extends State<WidgetChoiceChipsWidget> {
                       borderColor: FlutterFlowTheme.of(context).tertiary,
                       borderRadius: BorderRadius.circular(8.0),
                     ),
-                    chipSpacing: 4.0,
+                    chipSpacing: 16.0,
                     rowSpacing: 8.0,
                     multiselect: false,
                     alignment: WrapAlignment.start,

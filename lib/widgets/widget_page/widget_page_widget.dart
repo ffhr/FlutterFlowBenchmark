@@ -1,3 +1,4 @@
+import '/components/widget_gemini_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -66,7 +67,6 @@ import '/widgets/components/layout_elements/widget_form_validation/widget_form_v
 import '/widgets/components/layout_elements/widget_grid_view/widget_grid_view_widget.dart';
 import '/widgets/components/layout_elements/widget_list_view/widget_list_view_widget.dart';
 import '/widgets/components/layout_elements/widget_page_view/widget_page_view_widget.dart';
-import '/widgets/components/layout_elements/widget_row/widget_row_widget.dart';
 import '/widgets/components/layout_elements/widget_spacer/widget_spacer_widget.dart';
 import '/widgets/components/layout_elements/widget_stack/widget_stack_widget.dart';
 import '/widgets/components/layout_elements/widget_staggered_view/widget_staggered_view_widget.dart';
@@ -74,11 +74,13 @@ import '/widgets/components/layout_elements/widget_swipeable_stack/widget_swipea
 import '/widgets/components/layout_elements/widget_tab_bar/widget_tab_bar_widget.dart';
 import '/widgets/components/layout_elements/widget_vertical_divider/widget_vertical_divider_widget.dart';
 import '/widgets/components/layout_elements/widget_wrap/widget_wrap_widget.dart';
+import '/widgets/components/widget_row/widget_row_widget.dart';
 import 'dart:ui';
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:webviewx_plus/webviewx_plus.dart';
 import 'widget_page_model.dart';
 export 'widget_page_model.dart';
 
@@ -769,6 +771,44 @@ class _WidgetPageWidgetState extends State<WidgetPageWidget> {
                       );
                     }
                   },
+                ),
+                InkWell(
+                  splashColor: Colors.transparent,
+                  focusColor: Colors.transparent,
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  onTap: () async {
+                    await showModalBottomSheet(
+                      isScrollControlled: true,
+                      backgroundColor: Colors.transparent,
+                      enableDrag: false,
+                      context: context,
+                      builder: (context) {
+                        return WebViewAware(
+                          child: GestureDetector(
+                            onTap: () {
+                              FocusScope.of(context).unfocus();
+                              FocusManager.instance.primaryFocus?.unfocus();
+                            },
+                            child: Padding(
+                              padding: MediaQuery.viewInsetsOf(context),
+                              child: WidgetGeminiWidget(),
+                            ),
+                          ),
+                        );
+                      },
+                    ).then((value) => safeSetState(() {}));
+                  },
+                  child: Text(
+                    FFLocalizations.of(context).getText(
+                      'm2ae2c6a' /* Gemini */,
+                    ),
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'Geist',
+                          letterSpacing: 0.0,
+                          useGoogleFonts: false,
+                        ),
+                  ),
                 ),
               ],
             ),

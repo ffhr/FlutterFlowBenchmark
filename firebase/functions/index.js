@@ -2,86 +2,88 @@ const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 admin.initializeApp();
 
-const Mux = require("@mux/mux-node");
+const braintree = require("braintree");
 
-const kTokenId = "69368ae1-0dc9-4eb5-8a73-af934040078a";
-const kTokenSecret =
-  "w2oIBjJq9cHvTs68PnLwye8hLJz+5YTG9q4rNSt9BRauTU8xAqFuCxn4Pkban8Dpt264vrXPN8T";
+// Test credentials
+const kTestMerchantId = "7d2bhgmwbrc5vss9";
+const kTestPublicKey = "qwy45f4jx2bmmhfh";
+const kTestPrivateKey = "sandbox_5rwpgsrn_7d2bhgmwbrc5vss9";
 
-const { Video } = new Mux(kTokenId, kTokenSecret);
+// Prod credentials
+const kProdMerchantId = "";
+const kProdPublicKey = "";
+const kProdPrivateKey = "";
 
-exports.createLiveStream = functions.https.onCall(async (data, context) => {
-  try {
-    const response = await Video.LiveStreams.create({
-      latency_mode: data.latency_mode || "standard",
-      playback_policy: "public",
-      new_asset_settings: { playback_policy: "public" },
-    });
-    return response;
-  } catch (err) {
-    console.error(
-      `Unable to start the live stream ${context.auth.uid}. 
-          Error ${err}`,
-    );
-    throw new functions.https.HttpsError(
-      "aborted",
-      "Could not create live stream",
-    );
-  }
-});
+const merchantId = (isProd) => (isProd ? kProdMerchantId : kTestMerchantId);
+const publicKey = (isProd) => (isProd ? kProdPublicKey : kTestPublicKey);
+const privateKey = (isProd) => (isProd ? kProdPrivateKey : kTestPrivateKey);
 
-exports.retrieveLiveStreams = functions.https.onCall(async (data, context) => {
-  try {
-    const liveStreams = await Video.LiveStreams.list();
-    const responseList = liveStreams.map((liveStream) => ({
-      id: liveStream.id,
-      status: liveStream.status,
-      playback_ids: liveStream.playback_ids,
-      created_at: liveStream.created_at,
-    }));
-    return responseList;
-  } catch (err) {
-    console.error(
-      `Unable to retrieve live streams. 
-          Error ${err}`,
-    );
-    throw new functions.https.HttpsError(
-      "aborted",
-      "Could not retrieve live streams",
-    );
-  }
-});
+/**
+ *
+ */
+exports.processBraintreePayment = functions.https.onCall(
+  async (data, context) => {
+    if (!context.auth) {
+      return "Unauthenticated calls are not allowed.";
+    }
+    const amount = data.amount;
+    const paymentNonce = data.paymentNonce;
+    const deviceData = data.deviceData;
+    return await processTransaction(amount, paymentNonce, deviceData, true);
+  },
+);
 
-exports.retrieveLiveStream = functions.https.onCall(async (data, context) => {
-  try {
-    const liveStreamId = data.liveStreamId;
-    const liveStream = await Video.LiveStreams.get(liveStreamId);
-    return liveStream;
-  } catch (err) {
-    console.error(
-      `Unable to retrieve live stream, id: ${data.liveStreamId}. 
-          Error ${err}`,
-    );
-    throw new functions.https.HttpsError(
-      "aborted",
-      "Could not retrieve live stream",
-    );
-  }
-});
+/**
+ *
+ */
+exports.processBraintreeTestPayment = functions.https.onCall(
+  async (data, context) => {
+    if (!context.auth) {
+      return "Unauthenticated calls are not allowed.";
+    }
+    const amount = data.amount;
+    const paymentNonce = data.paymentNonce;
+    const deviceData = data.deviceData;
+    return await processTransaction(amount, paymentNonce, deviceData, false);
+  },
+);
 
-exports.deleteLiveStream = functions.https.onCall(async (data, context) => {
-  try {
-    const liveStreamId = data.liveStreamId;
-    const response = await Video.LiveStreams.del(liveStreamId);
-    return response;
-  } catch (err) {
-    console.error(
-      `Unable to delete live stream, id: ${data.liveStreamId}. 
-        Error ${err}`,
+async function processTransaction(amount, paymentNonce, deviceData, isProd) {
+  const gateway = new braintree.BraintreeGateway({
+    environment: isProd
+      ? braintree.Environment.Production
+      : braintree.Environment.Sandbox,
+    merchantId: merchantId(isProd),
+    publicKey: publicKey(isProd),
+    privateKey: privateKey(isProd),
+  });
+  return await gateway.transaction
+    .sale({
+      amount,
+      paymentMethodNonce: paymentNonce,
+      deviceData,
+      options: {
+        submitForSettlement: true,
+      },
+    })
+    .then(
+      (result) => {
+        return result.success
+          ? { transactionId: result.transaction.id }
+          : { error: "Error processing payment." };
+      },
+      async (error) => {
+        console.log(`Error: ${error}`);
+        return { error: userFacingMessage(error) };
+      },
     );
-    throw new functions.https.HttpsError(
-      "aborted",
-      "Could not delete live stream",
-    );
-  }
-});
+}
+
+/**
+ * Sanitize the error message for the user.
+ */
+function userFacingMessage(error) {
+  return error.type
+    ? error.message
+    : "An error occurred, developers have been alerted";
+}

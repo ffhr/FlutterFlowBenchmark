@@ -82,13 +82,14 @@ class _WidgetExpandableWidgetState extends State<WidgetExpandableWidget> {
                           FFLocalizations.of(context).getText(
                             '9efdit2w' /* A weathered map */,
                           ),
-                          style:
-                              FlutterFlowTheme.of(context).titleLarge.override(
-                                    fontFamily: 'Geist',
-                                    color: Colors.black,
-                                    letterSpacing: 0.0,
-                                    useGoogleFonts: false,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .titleLarge
+                              .override(
+                                fontFamily: 'Geist',
+                                color: FlutterFlowTheme.of(context).primaryText,
+                                letterSpacing: 0.0,
+                                useGoogleFonts: false,
+                              ),
                         ),
                         collapsed: Column(
                           mainAxisSize: MainAxisSize.min,
@@ -102,7 +103,8 @@ class _WidgetExpandableWidgetState extends State<WidgetExpandableWidget> {
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'Geist',
-                                    color: Color(0x8A000000),
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryText,
                                     letterSpacing: 0.0,
                                     useGoogleFonts: false,
                                   ),
@@ -134,6 +136,7 @@ class _WidgetExpandableWidgetState extends State<WidgetExpandableWidget> {
                           headerAlignment:
                               ExpandablePanelHeaderAlignment.center,
                           hasIcon: true,
+                          iconColor: FlutterFlowTheme.of(context).primaryText,
                         ),
                       ),
                     ),
@@ -158,8 +161,7 @@ class _WidgetExpandableWidgetState extends State<WidgetExpandableWidget> {
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Geist',
-                                  color: FlutterFlowTheme.of(context)
-                                      .primaryBackground,
+                                  color: FlutterFlowTheme.of(context).info,
                                   fontSize: 28.0,
                                   letterSpacing: 0.0,
                                   useGoogleFonts: false,
@@ -181,8 +183,7 @@ class _WidgetExpandableWidgetState extends State<WidgetExpandableWidget> {
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Geist',
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryBackground,
+                                      color: FlutterFlowTheme.of(context).info,
                                       fontSize: 20.0,
                                       letterSpacing: 0.0,
                                       useGoogleFonts: false,
@@ -224,8 +225,7 @@ class _WidgetExpandableWidgetState extends State<WidgetExpandableWidget> {
                           hasIcon: true,
                           expandIcon: Icons.arrow_drop_up,
                           collapseIcon: Icons.arrow_drop_down_sharp,
-                          iconColor:
-                              FlutterFlowTheme.of(context).primaryBackground,
+                          iconColor: FlutterFlowTheme.of(context).info,
                         ),
                       ),
                     ),

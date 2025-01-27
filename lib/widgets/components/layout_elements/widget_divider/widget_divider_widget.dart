@@ -72,11 +72,11 @@ class _WidgetDividerWidgetState extends State<WidgetDividerWidget> {
           ),
           Divider(
             thickness: 2.0,
-            color: FlutterFlowTheme.of(context).alternate,
+            color: FlutterFlowTheme.of(context).primaryText,
           ),
           Divider(
             thickness: 2.0,
-            color: FlutterFlowTheme.of(context).alternate,
+            color: FlutterFlowTheme.of(context).secondaryText,
           ),
         ],
       ),

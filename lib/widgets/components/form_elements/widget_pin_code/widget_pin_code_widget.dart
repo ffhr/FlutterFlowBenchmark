@@ -128,7 +128,7 @@ class _WidgetPinCodeWidgetState extends State<WidgetPinCodeWidget> {
                   pinTheme: PinTheme(
                     fieldHeight: 52.0,
                     fieldWidth: 52.0,
-                    borderWidth: 8.0,
+                    borderWidth: 4.0,
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(8.0),
                       bottomRight: Radius.circular(8.0),

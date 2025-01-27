@@ -63,7 +63,10 @@ class _WidgetTransformWidgetState extends State<WidgetTransformWidget>
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Expanded(
+          Container(
+            width: 500.0,
+            height: 600.0,
+            decoration: BoxDecoration(),
             child: Column(
               children: [
                 Align(
@@ -85,15 +88,16 @@ class _WidgetTransformWidgetState extends State<WidgetTransformWidget>
                               useGoogleFonts: false,
                             ),
                     indicatorColor: FlutterFlowTheme.of(context).primary,
+                    padding: EdgeInsets.all(10.0),
                     tabs: [
                       Tab(
                         text: FFLocalizations.of(context).getText(
-                          'gv1pvxlf' /* Translate&Skew */,
+                          '9j14fn89' /* Translate */,
                         ),
                       ),
                       Tab(
                         text: FFLocalizations.of(context).getText(
-                          'bvwl7l46' /* Scale */,
+                          '2kecknz9' /* Scale */,
                         ),
                       ),
                     ],
@@ -116,38 +120,34 @@ class _WidgetTransformWidgetState extends State<WidgetTransformWidget>
                             width: 300.0,
                             height: 100.0,
                             decoration: BoxDecoration(),
-                            child: Transform(
-                              transform: Matrix4.skew(-0.3, -0.1),
-                              child: Transform.translate(
-                                offset: Offset(78.0, 32.0),
-                                child: FFButtonWidget(
-                                  onPressed: () {
-                                    print('Button pressed ...');
-                                  },
-                                  text: FFLocalizations.of(context).getText(
-                                    'c7uzk1hn' /* Transform */,
-                                  ),
-                                  options: FFButtonOptions(
-                                    width: 200.0,
-                                    height: 40.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        16.0, 0.0, 16.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
-                                    color:
-                                        FlutterFlowTheme.of(context).secondary,
-                                    textStyle: FlutterFlowTheme.of(context)
-                                        .titleSmall
-                                        .override(
-                                          fontFamily: 'Geist',
-                                          color: FlutterFlowTheme.of(context)
-                                              .secondaryBackground,
-                                          letterSpacing: 0.0,
-                                          useGoogleFonts: false,
-                                        ),
-                                    elevation: 0.0,
-                                    borderRadius: BorderRadius.circular(10.0),
-                                  ),
+                            child: Transform.translate(
+                              offset: Offset(13.0, 15.0),
+                              child: FFButtonWidget(
+                                onPressed: () {
+                                  print('Button pressed ...');
+                                },
+                                text: FFLocalizations.of(context).getText(
+                                  'yy83obha' /* Transform */,
+                                ),
+                                options: FFButtonOptions(
+                                  width: 200.0,
+                                  height: 40.0,
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      16.0, 0.0, 16.0, 0.0),
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 0.0),
+                                  color: FlutterFlowTheme.of(context).secondary,
+                                  textStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .override(
+                                        fontFamily: 'Geist',
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryBackground,
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: false,
+                                      ),
+                                  elevation: 0.0,
+                                  borderRadius: BorderRadius.circular(10.0),
                                 ),
                               ),
                             ),
@@ -156,16 +156,31 @@ class _WidgetTransformWidgetState extends State<WidgetTransformWidget>
                       ),
                       Align(
                         alignment: AlignmentDirectional(0.0, -1.0),
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 100.0, 0.0, 0.0),
-                          child: MouseRegion(
-                            opaque: false,
-                            cursor: MouseCursor.defer ?? MouseCursor.defer,
-                            child: Stack(
-                              children: [
-                                if (!_model.mouseRegionHovered!)
-                                  ClipRRect(
+                        child: Container(
+                          width: 400.0,
+                          height: 200.0,
+                          child: Stack(
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            children: [
+                              Transform.scale(
+                                scaleX: _model.scaleX!,
+                                scaleY: _model.scaleY!,
+                                child: InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onTap: () async {
+                                    _model.scaleX = 1.4;
+                                    _model.scaleY = 1.4;
+                                    safeSetState(() {});
+                                  },
+                                  onDoubleTap: () async {
+                                    _model.scaleX = 1.0;
+                                    _model.scaleY = 1.0;
+                                    safeSetState(() {});
+                                  },
+                                  child: ClipRRect(
                                     borderRadius: BorderRadius.circular(8.0),
                                     child: Image.network(
                                       'https://picsum.photos/seed/304/600',
@@ -174,32 +189,9 @@ class _WidgetTransformWidgetState extends State<WidgetTransformWidget>
                                       fit: BoxFit.cover,
                                     ),
                                   ),
-                                Transform.scale(
-                                  scaleX: 1.2,
-                                  scaleY: 1.2,
-                                  child: Visibility(
-                                    visible: _model.mouseRegionHovered ?? true,
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.network(
-                                        'https://picsum.photos/seed/304/600',
-                                        width: 200.0,
-                                        height: 100.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
                                 ),
-                              ],
-                            ),
-                            onEnter: ((event) async {
-                              safeSetState(
-                                  () => _model.mouseRegionHovered = true);
-                            }),
-                            onExit: ((event) async {
-                              safeSetState(
-                                  () => _model.mouseRegionHovered = false);
-                            }),
+                              ),
+                            ],
                           ),
                         ),
                       ),

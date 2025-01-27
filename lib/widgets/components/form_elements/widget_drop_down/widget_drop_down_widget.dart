@@ -262,6 +262,11 @@ class _WidgetDropDownWidgetState extends State<WidgetDropDownWidget>
                                                       .getText(
                                                     'i0fttc4l' /* Select Vehicle */,
                                                   ),
+                                                  icon: Icon(
+                                                    Icons.arrow_drop_down_sharp,
+                                                    color: Color(0xFF101010),
+                                                    size: 15.0,
+                                                  ),
                                                   fillColor: Colors.white,
                                                   elevation: 2.0,
                                                   borderColor:
@@ -326,6 +331,11 @@ class _WidgetDropDownWidgetState extends State<WidgetDropDownWidget>
                                                           context)
                                                       .getText(
                                                     '0m6ghdbx' /* Select Audi Model */,
+                                                  ),
+                                                  icon: Icon(
+                                                    Icons.arrow_drop_down,
+                                                    color: Color(0xFF0B0B0B),
+                                                    size: 15.0,
                                                   ),
                                                   fillColor: Colors.white,
                                                   elevation: 2.0,

@@ -93,6 +93,36 @@ class _WidgetLanguageSelectorWidgetState
                       onChanged: (lang) => setAppLanguage(context, lang),
                     ),
                   ),
+                  Align(
+                    alignment: AlignmentDirectional(0.0, 0.0),
+                    child: FlutterFlowLanguageSelector(
+                      width: 130.0,
+                      height: 50.0,
+                      backgroundColor: FlutterFlowTheme.of(context).primary,
+                      borderColor:
+                          FlutterFlowTheme.of(context).primaryBackground,
+                      dropdownColor: FlutterFlowTheme.of(context).primary,
+                      dropdownIconColor:
+                          FlutterFlowTheme.of(context).primaryBackground,
+                      borderRadius: 20.0,
+                      textStyle: FlutterFlowTheme.of(context)
+                          .bodyMedium
+                          .override(
+                            fontFamily: 'Geist',
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            letterSpacing: 0.0,
+                            fontWeight: FontWeight.w500,
+                            useGoogleFonts: false,
+                          ),
+                      hideFlags: false,
+                      flagSize: 24.0,
+                      flagTextGap: 8.0,
+                      currentLanguage: FFLocalizations.of(context).languageCode,
+                      languages: FFLocalizations.languages(),
+                      onChanged: (lang) => setAppLanguage(context, lang),
+                    ),
+                  ),
                   Text(
                     FFLocalizations.of(context).getText(
                       'cbtvzk0f' /* Hello */,

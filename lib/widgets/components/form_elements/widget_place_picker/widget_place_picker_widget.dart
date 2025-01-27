@@ -221,12 +221,33 @@ class _WidgetPlacePickerWidgetState extends State<WidgetPlacePickerWidget> {
                                         size: 24.0,
                                       ),
                                       onPressed: () async {
-                                        await launchMap(
-                                          address:
-                                              _model.placePickerValue1.address,
-                                          title: _model.googleMapsCenter!
-                                              .toString(),
-                                        );
+                                        if (isWeb) {
+                                          ScaffoldMessenger.of(context)
+                                              .showSnackBar(
+                                            SnackBar(
+                                              content: Text(
+                                                'ERROR: Launch Map is not supported on Web platform.',
+                                                style: TextStyle(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primaryText,
+                                                ),
+                                              ),
+                                              duration:
+                                                  Duration(milliseconds: 4000),
+                                              backgroundColor:
+                                                  FlutterFlowTheme.of(context)
+                                                      .tertiary,
+                                            ),
+                                          );
+                                        } else {
+                                          await launchMap(
+                                            address: _model
+                                                .placePickerValue1.address,
+                                            title: _model.googleMapsCenter!
+                                                .toString(),
+                                          );
+                                        }
                                       },
                                     ),
                                   ),

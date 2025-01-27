@@ -734,7 +734,7 @@ class _WidgetTextFieldWidgetState extends State<WidgetTextFieldWidget>
                                                 labelText:
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                  'psre57cc' /* Comments… */,
+                                                  'h31e2lw2' /* Comments… */,
                                                 ),
                                                 labelStyle:
                                                     FlutterFlowTheme.of(context)
@@ -823,7 +823,7 @@ class _WidgetTextFieldWidgetState extends State<WidgetTextFieldWidget>
                                       print('Button pressed ...');
                                     },
                                     text: FFLocalizations.of(context).getText(
-                                      'kut5x72n' /* SUBMIT */,
+                                      'nd2jp31s' /* SUBMIT */,
                                     ),
                                     options: FFButtonOptions(
                                       height: 40.0,

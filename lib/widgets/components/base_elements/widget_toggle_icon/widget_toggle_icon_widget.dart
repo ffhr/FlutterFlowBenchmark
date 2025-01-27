@@ -73,48 +73,6 @@ class _WidgetToggleIconWidgetState extends State<WidgetToggleIconWidget> {
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      ToggleIcon(
-                        onPressed: () async {
-                          safeSetState(() => _model.liked = !_model.liked);
-                          _model.liked = !_model.liked;
-                          safeSetState(() {});
-                        },
-                        value: _model.liked,
-                        onIcon: Icon(
-                          Icons.favorite_outlined,
-                          color: FlutterFlowTheme.of(context).tertiary,
-                          size: 48.0,
-                        ),
-                        offIcon: Icon(
-                          Icons.favorite_border,
-                          color: FlutterFlowTheme.of(context).tertiary,
-                          size: 48.0,
-                        ),
-                      ),
-                      ToggleIcon(
-                        onPressed: () async {
-                          safeSetState(() => _model.liked = !_model.liked);
-                          _model.liked = !_model.liked;
-                          safeSetState(() {});
-                        },
-                        value: _model.liked,
-                        onIcon: Icon(
-                          Icons.headphones_rounded,
-                          color: FlutterFlowTheme.of(context).alternate,
-                          size: 64.0,
-                        ),
-                        offIcon: Icon(
-                          Icons.headphones_outlined,
-                          color: FlutterFlowTheme.of(context).secondaryText,
-                          size: 64.0,
-                        ),
-                      ),
-                    ],
-                  ),
                   Padding(
                     padding: EdgeInsets.all(24.0),
                     child: Column(
@@ -160,13 +118,13 @@ class _WidgetToggleIconWidgetState extends State<WidgetToggleIconWidget> {
                               },
                               value: _model.toggle,
                               onIcon: Icon(
-                                Icons.check_box,
-                                color: FlutterFlowTheme.of(context).secondary,
+                                Icons.favorite,
+                                color: FlutterFlowTheme.of(context).tertiary,
                                 size: 25.0,
                               ),
                               offIcon: Icon(
-                                Icons.check_box_outline_blank,
-                                color: Colors.black,
+                                Icons.favorite_border,
+                                color: FlutterFlowTheme.of(context).tertiary,
                                 size: 25.0,
                               ),
                             ),
@@ -216,7 +174,7 @@ class _WidgetToggleIconWidgetState extends State<WidgetToggleIconWidget> {
                                         .override(
                                           fontFamily: 'Geist',
                                           color: FlutterFlowTheme.of(context)
-                                              .alternate,
+                                              .primaryText,
                                           letterSpacing: 0.0,
                                           useGoogleFonts: false,
                                         ),

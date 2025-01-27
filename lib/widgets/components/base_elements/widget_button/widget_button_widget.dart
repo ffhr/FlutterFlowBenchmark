@@ -142,13 +142,15 @@ class _WidgetButtonWidgetState extends State<WidgetButtonWidget>
                       iconPadding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).alternate,
-                      textStyle:
-                          FlutterFlowTheme.of(context).titleSmall.override(
-                                fontFamily: 'Geist',
-                                color: Colors.white,
-                                letterSpacing: 0.0,
-                                useGoogleFonts: false,
-                              ),
+                      textStyle: FlutterFlowTheme.of(context)
+                          .titleSmall
+                          .override(
+                            fontFamily: 'Geist',
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            letterSpacing: 0.0,
+                            useGoogleFonts: false,
+                          ),
                       elevation: 10.0,
                       borderSide: BorderSide(
                         color: FlutterFlowTheme.of(context).primary,

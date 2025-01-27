@@ -80,7 +80,7 @@ class _WidgetIconWidgetState extends State<WidgetIconWidget> {
                   size: 56.0,
                 ),
                 Icon(
-                  Icons.check_box,
+                  Icons.check_box_sharp,
                   color: FlutterFlowTheme.of(context).success,
                   size: 72.0,
                 ),

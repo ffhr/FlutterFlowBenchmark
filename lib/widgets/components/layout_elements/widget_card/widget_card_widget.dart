@@ -117,7 +117,7 @@ class _WidgetCardWidgetState extends State<WidgetCardWidget>
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Geist',
-                        color: FlutterFlowTheme.of(context).primaryBackground,
+                        color: FlutterFlowTheme.of(context).info,
                         letterSpacing: 0.0,
                         useGoogleFonts: false,
                       ),
@@ -144,7 +144,7 @@ class _WidgetCardWidgetState extends State<WidgetCardWidget>
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Geist',
-                        color: FlutterFlowTheme.of(context).primaryBackground,
+                        color: FlutterFlowTheme.of(context).info,
                         letterSpacing: 0.0,
                         useGoogleFonts: false,
                       ),
@@ -155,7 +155,7 @@ class _WidgetCardWidgetState extends State<WidgetCardWidget>
           Card(
             clipBehavior: Clip.antiAliasWithSaveLayer,
             color: FlutterFlowTheme.of(context).error,
-            elevation: 0.0,
+            elevation: 10.0,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8.0),
             ),
@@ -171,7 +171,7 @@ class _WidgetCardWidgetState extends State<WidgetCardWidget>
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Geist',
-                        color: FlutterFlowTheme.of(context).primaryBackground,
+                        color: FlutterFlowTheme.of(context).info,
                         letterSpacing: 0.0,
                         useGoogleFonts: false,
                       ),
@@ -263,8 +263,8 @@ class _WidgetCardWidgetState extends State<WidgetCardWidget>
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Geist',
-                                      color:
-                                          FlutterFlowTheme.of(context).primary,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryText,
                                       letterSpacing: 0.0,
                                       useGoogleFonts: false,
                                     ),
